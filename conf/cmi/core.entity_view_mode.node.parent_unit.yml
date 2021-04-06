@@ -1,0 +1,12 @@
+uuid: 0ca1b554-7cbc-4409-9325-43f9db8b9a33
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: qAfnvYLCL0D-7kpfRA6r1mjxQ0PonU7EnxDxBCr2btY
+id: node.parent_unit
+label: 'Parent unit'
+targetEntityType: node
+cache: true
