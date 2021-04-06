@@ -7,7 +7,7 @@
 // Configure the database.
 if (getenv('PLATFORM_RELATIONSHIPS')) {
   $relationships = json_decode(base64_decode(getenv('PLATFORM_RELATIONSHIPS')), TRUE);
-  if (empty($databases['default']) && !empty($relationships)) {
+  // if (empty($databases['default']) && !empty($relationships)) {
     foreach ($relationships as $key => $relationship) {
       $drupal_key = ($key === 'database') ? 'default' : $key;
       foreach ($relationship as $instance) {
@@ -35,26 +35,26 @@ if (getenv('PLATFORM_RELATIONSHIPS')) {
         }
       }
     }
-  }
+  // }
 }
 
 if (getenv('PLATFORM_APP_DIR')) {
 
   // Configure private and temporary file paths.
-  if (!isset($settings['file_private_path'])) {
+  // if (!isset($settings['file_private_path'])) {
     $settings['file_private_path'] = getenv('PLATFORM_APP_DIR') . '/private';
-  }
-  if (!isset($config['system.file']['path']['temporary'])) {
+  // }
+  // if (!isset($config['system.file']['path']['temporary'])) {
     $config['system.file']['path']['temporary'] = getenv('PLATFORM_APP_DIR') . '/tmp';
-  }
+  // }
 
   // Configure the default PhpStorage and Twig template cache directories.
-  if (!isset($settings['php_storage']['default'])) {
+  // if (!isset($settings['php_storage']['default'])) {
     $settings['php_storage']['default']['directory'] = $settings['file_private_path'];
-  }
-  if (!isset($settings['php_storage']['twig'])) {
+  // }
+  // if (!isset($settings['php_storage']['twig'])) {
     $settings['php_storage']['twig']['directory'] = $settings['file_private_path'];
-  }
+  // }
 
 }
 
