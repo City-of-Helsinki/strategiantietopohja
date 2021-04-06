@@ -53,7 +53,7 @@ hooks:
     set -e
     cd public
     drush -y cache-rebuild
-    drush -y updatedb
+    drush -y deploy
     drush -y locale-check
     drush -y locale-update
     drush -y cache-rebuild
