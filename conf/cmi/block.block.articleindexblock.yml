@@ -1,0 +1,28 @@
+uuid: f247caa9-2ed1-47ba-8d1f-96dee7401551
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - helstra_article
+  theme:
+    - hdbt
+id: articleindexblock
+theme: hdbt
+region: before_content
+weight: 0
+provider: null
+plugin: article_index_block
+settings:
+  id: article_index_block
+  label: 'Article index block'
+  provider: helstra_article
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
