@@ -61,9 +61,6 @@ class ArticleSectionTitleFormatter extends FormatterBase {
       $elements[$delta]['title'] = [
         '#markup' => $this->viewValue($item),
       ];
-      $elements[$delta]['link'] = [
-        '#markup' => $this->buildAnchor($item),
-      ];
     }
 
     return $elements;
@@ -84,27 +81,31 @@ class ArticleSectionTitleFormatter extends FormatterBase {
     // should equal the output, including newlines.
     $section = $this->getSection($entity);
     $value = nl2br(Html::escape($item->value));
+    $id = $this->buildAnchor($item);
 
     if (empty($section))
-      $title = sprintf("<h2>%s</h2>",$value);
+      $title = sprintf("<h2 id=%s>%s</h2>", $id, $value);
     else
-      $title = sprintf("<h2>%s %s</h2>", $section, $value);
+      $title = sprintf("<h2 id=%s>%s %s</h2>", $id, $section, $value);
 
     return $title;
   }
 
+  /**
+   * Build anchor link from item.
+   *
+   * @param FieldItemInterface $item
+   * @return string
+   */
   protected function buildAnchor(FieldItemInterface $item) {
     $entity = $item->getEntity();
     $section = $this->getSection($entity);
     $value = Html::cleanCssIdentifier($item->value);
-
     if (empty($section))
-      $id = sprintf("#%s", $value);
+      $id = sprintf("%s", $value);
     else
-      $id = sprintf("#%s-%s", $section, $value);
-
-    $url = Url::fromUserInput($id);
-    return Link::fromTextAndUrl('', $url)->toString();
+      $id = sprintf("%s-%s", $section, $value);
+    return $id;
   }
 
   /**

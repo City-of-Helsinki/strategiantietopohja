@@ -12,7 +12,16 @@
     'clear-both',
 ] %}
 <div{{ attributes.addClass(classes) }}>
-    {% for value in content %}
-        <p>{{value}}</p>
+  <ul class="article-index">
+    {% for item in index %}
+      <li class="item"><a href="{{ item.link_url }}">{{ item.title }}</a></li>
+      {% if item.children %}
+        <ul class="children">
+          {% for child in item.children %}
+            <li class="item"><a href="{{ child.link_url }}">{{ child.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     {% endfor %}
+  </ul>
 </div>

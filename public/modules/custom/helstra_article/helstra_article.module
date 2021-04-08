@@ -24,13 +24,31 @@ function helstra_article_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function helstra_article_form_node_form_alter(&$form, &$form_state, $form_id) {
+  if (
+    $form_id == 'node_article_edit_form' ||
+    $form_id == 'node_article_form'
+  ) {
+    // Control Hero paragraph visibility via checkbox states.
+    $form['field_hero']['#states'] = [
+      'visible' => [
+        ':input[name="field_has_hero[value]"]' => ['checked' => TRUE],
+      ],
+    ];
+  }
+}
+
+
+/**
  * Implements hook_theme().
  */
 function helstra_article_theme() {
   return [
     'article_index_block' => [
       'variables' => [
-        'content' => NULL
+        'index' => NULL
       ],
       'render element' => 'children',
     ],
