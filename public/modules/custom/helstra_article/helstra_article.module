@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Contains helstra_article.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function helstra_article_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the helstra_article module.
+    case 'help.page.helstra_article':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides customizations for articles') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function helstra_article_form_node_form_alter(&$form, &$form_state, $form_id) {
+  if (
+    $form_id == 'node_article_edit_form' ||
+    $form_id == 'node_article_form'
+  ) {
+    // Control Hero paragraph visibility via checkbox states.
+    $form['field_hero']['#states'] = [
+      'visible' => [
+        ':input[name="field_has_hero[value]"]' => ['checked' => TRUE],
+      ],
+    ];
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function helstra_article_theme() {
+  return [
+    'article_index_block' => [
+      'variables' => [
+        'index' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}
