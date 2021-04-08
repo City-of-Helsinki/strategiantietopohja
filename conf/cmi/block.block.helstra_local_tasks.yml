@@ -1,0 +1,20 @@
+uuid: e15fb628-1c3a-45cc-8777-69e5a6e041c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - helstra
+id: helstra_local_tasks
+theme: helstra
+region: tools
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
