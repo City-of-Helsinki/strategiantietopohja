@@ -1,4 +1,4 @@
-uuid: f247caa9-2ed1-47ba-8d1f-96dee7401551
+uuid: 561e1795-0307-4aa2-ac66-af3cc56363a5
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - ctools
     - helstra_article
   theme:
-    - hdbt
-id: articleindexblock
-theme: hdbt
+    - helstra
+id: helstra_articleindexblock
+theme: helstra
 region: before_content
 weight: 0
 provider: null
