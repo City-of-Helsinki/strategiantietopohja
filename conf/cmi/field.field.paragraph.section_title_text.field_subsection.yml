@@ -1,0 +1,23 @@
+uuid: 6848419a-484b-4c7e-aded-18880b33b090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subsection
+    - paragraphs.paragraphs_type.section_title_text
+id: paragraph.section_title_text.field_subsection
+field_name: field_subsection
+entity_type: paragraph
+bundle: section_title_text
+label: Subsection
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
