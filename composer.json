@@ -19,6 +19,7 @@
         "drupal/helfi_platform_config": "^1.1",
         "drupal/helfi_tpr": "^1.0",
         "drupal/helfi_tunnistamo": "^1.0",
+        "drupal/superfish": "^1.4",
         "drush/drush": "^10.4"
     },
     "require-dev": {
@@ -84,6 +85,19 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+            "name": "mehrpadin/Superfish-for-Drupal",
+            "version": "2.1",
+            "type": "drupal-library",
+            "source": {
+                "url": "https://github.com/mehrpadin/Superfish-for-Drupal.git",
+                "type": "git",
+                "reference": "2.1"
+                }
+            }
         }
     ],
     "scripts": { }
