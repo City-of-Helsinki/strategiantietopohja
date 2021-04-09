@@ -1,0 +1,16 @@
+uuid: 1ed51c94-1ebe-44ef-abd9-0aedd5821ed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.phenomena
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.phenomena
+target_entity_type_id: taxonomy_term
+target_bundle: phenomena
+default_langcode: site_default
+language_alterable: true
