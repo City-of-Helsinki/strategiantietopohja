@@ -81,6 +81,8 @@
 ]
 %}
 
+      {{ dump(content) }}
+      {{ content.article_toc_field }}
 <article{{ attributes.addClass(classes) }}>
   {% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_header'} %}
     {% block container_content %}
@@ -97,13 +99,11 @@
     {% endif %}
     {% endblock container_content %}
   {% endembed %}
-
   {% if content.field_content|render %}
     <div class="{{ node.bundle|clean_class }}__content">
       {{ content.field_content }}
     </div>
   {% endif %}
-
   {% if content.field_keywords|render %}
     <div class="{{ node.bundle|clean_class }}__keywords">
       {% embed "@hdbt/misc/container.twig" with {container_element: 'keywords'} %}

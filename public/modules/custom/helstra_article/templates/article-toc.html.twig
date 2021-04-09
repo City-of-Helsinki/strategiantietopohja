@@ -1,19 +1,9 @@
-{#
-/**
-* @file
-* Default theme implementation to display a block.
-*
-* @see template_preprocess_block()
-*
-* @ingroup themeable
-*/
-#}
 {% set classes = [
-    'clear-both',
+    'article-table-of-contents',
 ] %}
 <div{{ attributes.addClass(classes) }}>
   <ul class="article-toc">
-    {% for item in index %}
+    {% for item in toc %}
       <li class="item"><a href="{{ item.link_url }}">{{ item.title }}</a></li>
       {% if item.children %}
         <ul class="children">
