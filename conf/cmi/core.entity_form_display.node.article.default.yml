@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_phenomena
     - node.type.article
   module:
     - media_library
@@ -101,6 +102,16 @@ content:
       sidebar: false
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_phenomena:
+    weight: 7
+    settings:
+      width: 100%
+      match_operator: CONTAINS
+      match_limit: 10
+      autocomplete: false
+    third_party_settings: {  }
+    type: select2_entity_reference
     region: content
   langcode:
     type: language_select
