@@ -74,17 +74,16 @@ function helstra_article_form_node_form_alter(&$form, &$form_state, $form_id) {
  */
 function helstra_article_theme() {
   return [
-    'article_index_block' => [
-      'variables' => [
-        'index' => NULL
-      ],
-      'render element' => 'children',
-    ],
     'article_toc' => [
       'variables' => [
         'toc' => NULL
       ],
       'render element' => 'children',
+    ],
+    'powerbi_embed_paragraph' => [
+      'variables' => [
+        'url' => NULL
+      ],
     ],
   ];
 }

@@ -1,0 +1,19 @@
+uuid: 332269e7-6956-4d27-88b4-bb15b2012662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_powebi_url
+    - paragraphs.paragraphs_type.powerbi_embed
+id: paragraph.powerbi_embed.field_powebi_url
+field_name: field_powebi_url
+entity_type: paragraph
+bundle: powerbi_embed
+label: URL
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
