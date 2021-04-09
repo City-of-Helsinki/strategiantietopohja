@@ -1,0 +1,39 @@
+.node--type-article  {
+  &.node--view-mode-full {
+    display: flex;
+
+    .main_content {
+      flex-basis: 100%;
+      max-width: max-content;
+    }
+
+    .sidebar {
+      flex-basis: 33%;
+      max-width: max-content;
+
+      .article-toc__container {
+        background-color: var(--color-black-10);
+        padding: 32px 24px;
+
+        .article-table-of-contents {
+          .label {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+          }
+
+          ul {
+            list-style: decimal;
+            margin: 0 16px;
+            padding: 0;
+
+            li {
+              font-size: 1.2rem;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,15 @@
-{% set classes = [
+{%
+  set classes = [
     'article-table-of-contents',
-] %}
+  ]
+%}
+{%
+  set title_classes = [
+    'label',
+  ]
+%}
 <div{{ attributes.addClass(classes) }}>
+  <span{{ title_attributes.addClass(title_classes) }}>{{ 'Table of contents'|t }}: </span>
   <ul class="article-toc">
     {% for item in toc %}
       <li class="item"><a href="{{ item.link_url }}">{{ item.title }}</a></li>
