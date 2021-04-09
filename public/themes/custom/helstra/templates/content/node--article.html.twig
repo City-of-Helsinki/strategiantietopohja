@@ -107,6 +107,17 @@
       {{ content.field_content }}
     </div>
   {% endif %}
+  {% if content.field_downloadable_material|render %}
+    <div class="{{ node.bundle|clean_class }}__downloadable-material">
+      {% embed "@hdbt/misc/container.twig" with {container_element: 'downloadable_material'} %}
+        {% block container_content %}
+          <div class="downloadable_material__wrapper">
+            {{ content.field_downloadable_material }}
+          </div>
+        {% endblock container_content %}
+      {% endembed %}
+    </div>
+  {% endif %}
   {% if content.field_keywords|render %}
     <div class="{{ node.bundle|clean_class }}__keywords">
       {% embed "@hdbt/misc/container.twig" with {container_element: 'keywords'} %}
