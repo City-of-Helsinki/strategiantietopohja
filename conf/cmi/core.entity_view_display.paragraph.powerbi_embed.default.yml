@@ -1,0 +1,22 @@
+uuid: 0e201dbf-cc2b-4f52-b258-b2973c41e183
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.powerbi_embed.field_powebi_url
+    - paragraphs.paragraphs_type.powerbi_embed
+  module:
+    - helstra_article
+id: paragraph.powerbi_embed.default
+targetEntityType: paragraph
+bundle: powerbi_embed
+mode: default
+content:
+  field_powebi_url:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: powerbi_embed_formatter
+    region: content
+hidden: {  }
