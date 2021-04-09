@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_phenomena
     - node.type.article
   module:
     - user
@@ -35,5 +36,6 @@ hidden:
   field_keywords: true
   field_lead: true
   field_metatags: true
+  field_phenomena: true
   langcode: true
   links: true
