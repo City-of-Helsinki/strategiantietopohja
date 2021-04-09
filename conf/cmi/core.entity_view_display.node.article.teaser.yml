@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.field_author
     - field.field.node.article.field_content
+    - field.field.node.article.field_downloadable_material
     - field.field.node.article.field_insights
     - field.field.node.article.field_keywords
     - field.field.node.article.field_lead
@@ -34,6 +35,7 @@ hidden:
   article_toc_field: true
   field_author: true
   field_content: true
+  field_downloadable_material: true
   field_insights: true
   field_keywords: true
   field_lead: true

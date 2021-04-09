@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.article.field_author
     - field.field.node.article.field_content
+    - field.field.node.article.field_downloadable_material
     - field.field.node.article.field_insights
     - field.field.node.article.field_keywords
     - field.field.node.article.field_lead
@@ -43,6 +44,15 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_downloadable_material:
+    type: entity_reference_entity_view
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   field_insights:
     type: entity_reference_revisions_entity_view
