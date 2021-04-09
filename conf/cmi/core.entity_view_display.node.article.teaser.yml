@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.field_author
     - field.field.node.article.field_content
+    - field.field.node.article.field_insights
     - field.field.node.article.field_keywords
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
@@ -32,6 +33,7 @@ content:
 hidden:
   field_author: true
   field_content: true
+  field_insights: true
   field_keywords: true
   field_lead: true
   field_metatags: true

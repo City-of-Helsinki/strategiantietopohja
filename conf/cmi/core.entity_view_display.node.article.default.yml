@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.article.field_author
     - field.field.node.article.field_content
+    - field.field.node.article.field_insights
     - field.field.node.article.field_keywords
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
@@ -37,6 +38,15 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_insights:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_keywords:
     weight: 4
