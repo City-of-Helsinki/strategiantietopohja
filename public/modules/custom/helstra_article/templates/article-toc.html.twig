@@ -12,11 +12,11 @@
   <span{{ title_attributes.addClass(title_classes) }}>{{ 'Table of contents'|t }}: </span>
   <ul class="article-toc">
     {% for item in toc %}
-      <li class="item"><a href="{{ item.link_url }}">{{ item.title }}</a></li>
+      <li class="item"><a href="{{ item.link_url }}">{{ item.section}} {{ item.title }}</a></li>
       {% if item.children %}
         <ul class="children">
           {% for child in item.children %}
-            <li class="item"><a href="{{ child.link_url }}">{{ child.title }}</a></li>
+            <li class="item"><a href="{{ child.link_url }}">{{ child.section}} {{ child.title }}</a></li>
           {% endfor %}
         </ul>
       {% endif %}

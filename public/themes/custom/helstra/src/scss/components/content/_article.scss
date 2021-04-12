@@ -9,9 +9,9 @@
 
     .sidebar {
       flex-basis: 33%;
-      max-width: max-content;
 
       .article-toc__container {
+        max-width: max-content;
         background-color: var(--color-black-10);
         padding: 32px 24px;
 
@@ -23,7 +23,7 @@
           }
 
           ul {
-            list-style: decimal;
+            list-style: none;
             margin: 0 16px;
             padding: 0;
 
