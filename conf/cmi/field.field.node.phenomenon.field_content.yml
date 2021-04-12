@@ -1,25 +1,18 @@
-uuid: 5aa8c0c6-b50e-4909-bd64-37d1bef8a167
-langcode: en
+uuid: 2098d86e-eef6-4d34-90a9-81b1e8aa4bed
+langcode: fi
 status: true
 dependencies:
   config:
     - field.storage.node.field_content
-    - node.type.landing_page
-    - paragraphs.paragraphs_type.banner
-    - paragraphs.paragraphs_type.columns
-    - paragraphs.paragraphs_type.content_cards
+    - node.type.phenomenon
     - paragraphs.paragraphs_type.liftup_with_image
-    - paragraphs.paragraphs_type.list_of_links
-    - paragraphs.paragraphs_type.phenomenon_liftup
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: VuuTI6N8J827CZsvm_RrLmPzFcwY5kjDh9oF94YecsI
-id: node.landing_page.field_content
+id: node.phenomenon.field_content
 field_name: field_content
 entity_type: node
-bundle: landing_page
-label: Content
+bundle: phenomenon
+label: Sisältö
 description: ''
 required: false
 translatable: true
@@ -30,52 +23,47 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      columns: columns
-      banner: banner
-      list_of_links: list_of_links
       liftup_with_image: liftup_with_image
-      content_cards: content_cards
-      phenomenon_liftup: phenomenon_liftup
     target_bundles_drag_drop:
       accordion:
-        weight: -22
+        weight: 18
         enabled: false
       accordion_item:
-        weight: -21
+        weight: 19
         enabled: false
       banner:
-        enabled: true
-        weight: -26
+        weight: 20
+        enabled: false
       columns:
-        enabled: true
-        weight: -27
+        weight: 21
+        enabled: false
       content_cards:
-        enabled: true
-        weight: -23
+        weight: 22
+        enabled: false
       gallery:
-        weight: -20
+        weight: 23
         enabled: false
       gallery_slide:
-        weight: -19
+        weight: 24
         enabled: false
       hero:
-        weight: -18
+        weight: 25
         enabled: false
       image:
-        weight: -17
+        weight: 26
         enabled: false
       liftup_with_image:
         enabled: true
-        weight: -24
+        weight: 27
       list_of_links:
-        enabled: true
-        weight: -25
+        weight: 28
+        enabled: false
       list_of_links_item:
-        weight: -16
+        weight: 29
         enabled: false
       phenomenon_liftup:
-        enabled: true
         weight: 30
+        enabled: false
       powerbi_embed:
         weight: 31
         enabled: false
@@ -83,7 +71,7 @@ settings:
         weight: 32
         enabled: false
       text:
-        weight: -15
+        weight: 33
         enabled: false
       title_text:
         weight: 34

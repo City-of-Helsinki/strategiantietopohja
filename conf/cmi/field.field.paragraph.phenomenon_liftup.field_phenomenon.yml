@@ -1,0 +1,29 @@
+uuid: 07ac6ace-d50e-4feb-8f69-b97fc12b5dd7
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phenomenon
+    - node.type.phenomenon
+    - paragraphs.paragraphs_type.phenomenon_liftup
+id: paragraph.phenomenon_liftup.field_phenomenon
+field_name: field_phenomenon
+entity_type: paragraph
+bundle: phenomenon_liftup
+label: Phenomenon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      phenomenon: phenomenon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

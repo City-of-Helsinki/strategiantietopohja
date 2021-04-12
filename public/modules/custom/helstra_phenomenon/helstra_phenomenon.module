@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Contains helstra_phenomenon.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function helstra_phenomenon_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the helstra_phenomenon module.
+    case 'help.page.helstra_phenomenon':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides customization for phenomenons') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ *
+ * Hero designs:
+ *   background-image     = "Background image"
+ *   diagonal             = "Diagonal"
+ *   with-image-bottom    = "Image on the bottom"
+ *   with-image-left      = "Image on the left"
+ *   with-image-right     = "Image on the right"
+ *   without-image-center = "Without image, align center"
+ *   without-image-left   = "Without image, align left"
+ */
+function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  // Perform alterations to Hero paragraph.
+  if ($element['#paragraph_type'] == 'hero') {
+    // Hero designs & hero design selection.
+    $design_select = 'select[name="field_hero[' . $element['#delta'] . '][subform][field_hero_design]"';
+    // Show description only if design needs it.
+    $element['subform']['field_hero_desc']['#states'] = [
+      'visible' => [
+        [$design_select => ['value' => 'background-image']],
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function helstra_phenomenon_theme() {
+  return [
+    'helstra_phenomenon' => [
+      'render element' => 'children',
+    ],
+  ];
+}

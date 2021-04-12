@@ -1,0 +1,43 @@
+uuid: 0cebb05f-6ab7-4e22-bddd-99879caf0d3d
+langcode: fi
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.phenomenon.field_content
+    - field.field.node.phenomenon.field_hero
+    - field.field.node.phenomenon.field_lead
+    - field.field.node.phenomenon.field_liftup_image
+    - field.field.node.phenomenon.field_phenomena
+    - node.type.phenomenon
+  module:
+    - entity_reference_revisions
+    - helstra_phenomenon
+    - user
+id: node.phenomenon.teaser
+targetEntityType: node
+bundle: phenomenon
+mode: teaser
+content:
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_phenomena:
+    type: phenomenon_article_list_field_formatter
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_content: true
+  field_lead: true
+  field_liftup_image: true
+  langcode: true
+  links: true

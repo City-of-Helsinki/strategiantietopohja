@@ -1,0 +1,7 @@
+name: 'Helsinki Phenomenon'
+type: module
+description: 'Provides customization for phenomenons'
+core_version_requirement: '^8.9 || ^9'
+package: 'Custom'
+dependencies:
+  - helfi_content

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_phenomena
     - node.type.article
   module:
     - entity_reference_revisions
@@ -92,4 +93,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_liftup_image: true
+  field_phenomena: true
   langcode: true

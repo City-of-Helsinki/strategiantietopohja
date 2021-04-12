@@ -41,41 +41,53 @@ settings:
     target_bundles_drag_drop:
       accordion:
         enabled: true
-        weight: -25
+        weight: -33
       accordion_item:
-        weight: -20
+        weight: -27
         enabled: false
       banner:
-        weight: -16
+        weight: -23
         enabled: false
       columns:
         enabled: true
-        weight: -26
+        weight: -34
       content_cards:
         enabled: true
-        weight: -21
+        weight: -29
       gallery:
         enabled: true
-        weight: -23
+        weight: -31
       gallery_slide:
-        weight: -19
+        weight: -26
         enabled: false
       hero:
-        weight: -18
+        weight: -25
         enabled: false
       image:
         enabled: true
-        weight: -24
+        weight: -32
       liftup_with_image:
-        weight: -15
+        weight: -22
         enabled: false
       list_of_links:
         enabled: true
-        weight: -22
+        weight: -30
       list_of_links_item:
-        weight: -17
+        weight: -24
+        enabled: false
+      phenomenon_liftup:
+        weight: -28
+        enabled: false
+      powerbi_embed:
+        weight: -21
+        enabled: false
+      section_title_text:
+        weight: -20
         enabled: false
       text:
         enabled: true
-        weight: -27
+        weight: -35
+      title_text:
+        weight: -19
+        enabled: false
 field_type: entity_reference_revisions
