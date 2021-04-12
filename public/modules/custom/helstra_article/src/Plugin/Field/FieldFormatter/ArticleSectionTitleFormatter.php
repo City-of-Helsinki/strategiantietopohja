@@ -119,6 +119,6 @@ class ArticleSectionTitleFormatter extends FormatterBase {
       return '';
     if (empty($subsection))
       return sprintf('%s.', $section);
-    return sprintf('%s.%s.', $section, $subsection);
+    return sprintf('%s.%s', $section, $subsection);
   }
 }
