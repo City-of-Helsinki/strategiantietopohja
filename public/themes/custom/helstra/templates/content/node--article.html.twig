@@ -82,26 +82,25 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
+  {# Article main content column #}
+  <div class="main_content">
   {% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_header'} %}
     {% block container_content %}
-      <h1 class="title" >{{ label }}</h1>
+      <div class="article__title">
+        <h1 class="title" >{{ label }}</h1>
+      </div>
       {% if content.field_lead|render %}
         <div class="{{ node.bundle|clean_class }}__lead">
           {{ content.field_lead }}
         </div>
       {% endif %}
       {% if content.field_insights|render %}
-        <div class="{{ node.bundle|clean_class }}__lead">
+        <div class="{{ node.bundle|clean_class }}__insights">
           {{ content.field_insights }}
         </div>
     {% endif %}
     {% endblock container_content %}
   {% endembed %}
-  {% if content.article_toc_field|render %}
-    <div class="{ node.bundle|clean_class }}__toc">
-      {{ content.article_toc_field }}
-    </div>
-  {% endif %}
   {% if content.field_content|render %}
     <div class="{{ node.bundle|clean_class }}__content">
       {{ content.field_content }}
@@ -128,5 +127,17 @@
         {% endblock container_content %}
       {% endembed %}
     </div>
+  {% endif %}
+  </div>
+
+  {# Article sidebar column #}
+  {% if content.article_toc_field|render %}
+    {% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_toc'} %}
+      {% block container_content %}
+      <div class="{{ node.bundle|clean_class }}__toc">
+        {{ content.article_toc_field }}
+      </div>
+      {% endblock container_content %}
+    {% endembed %}
   {% endif %}
 </article>

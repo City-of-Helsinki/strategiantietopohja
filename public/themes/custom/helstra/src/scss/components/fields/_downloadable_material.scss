@@ -1,0 +1,21 @@
+.downloadable_material__wrapper {
+  background-color: var(--color-black-10);
+  padding: 32px 24px;
+
+  .label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .hds-button {
+    background-color: var(--hdbt-color-black);
+    border-color: var(--hdbt-color-black);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-black-80);
+      border-color: var(--color-black-80);
+    }
+  }
+}
