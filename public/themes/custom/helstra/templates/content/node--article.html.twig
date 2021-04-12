@@ -130,7 +130,6 @@
 
   {# Article sidebar column #}
   {% if content.article_toc_field|render %}
-    <div class="sidebar">
     {% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_toc'} %}
       {% block container_content %}
       <div class="{{ node.bundle|clean_class }}__toc">
@@ -138,6 +137,5 @@
       </div>
       {% endblock container_content %}
     {% endembed %}
-    </div>
   {% endif %}
 </article>
