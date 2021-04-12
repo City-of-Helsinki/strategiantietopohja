@@ -41,6 +41,7 @@ module:
   helfi_platform_config: 0
   helfi_units: 0
   helstra_article: 0
+  helstra_phenomenon: 0
   image: 0
   image_style_quality: 0
   imagecache_external: 0
