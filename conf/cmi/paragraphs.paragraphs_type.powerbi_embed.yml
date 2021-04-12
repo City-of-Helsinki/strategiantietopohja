@@ -6,5 +6,5 @@ id: powerbi_embed
 label: 'PowerBI embed'
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'Provides a paragraph for embedding PowerBI content.'
 behavior_plugins: {  }

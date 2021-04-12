@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\helstra_article\Plugin\Block;
+namespace Drupal\helstra_article;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Access\AccessResult;
@@ -15,15 +15,7 @@ use Drupal\paragraphs\ParagraphInterface;
 use Drupal\paragraphs\Plugin\migrate\source\d7\ParagraphsItem;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-/**
- * Provides a 'ArticleIndexBlock' block.
- *
- * @Block(
- *  id = "article_index_block",
- *  admin_label = @Translation("Article index block"),
- * )
- */
-class ArticleIndexBlock extends BlockBase implements ContainerFactoryPluginInterface {
+class ArticleTocController {
 
   /**
    * Drupal\Core\Entity\EntityTypeManagerInterface definition.
@@ -38,34 +30,32 @@ class ArticleIndexBlock extends BlockBase implements ContainerFactoryPluginInter
   protected $routeMatch;
 
   /**
-   * {@inheritdoc}
+   * ArticleToc constructor.
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    $instance = new static($configuration, $plugin_id, $plugin_definition);
-    $instance->entityTypeManager = $container->get('entity_type.manager');
-    $instance->routeMatch = $container->get('current_route_match');
-
-    return $instance;
+  public function __construct() {
+    $this->entityTypeManager = \Drupal::service('entity_type.manager');
+    $this->routeMatch = \Drupal::service('current_route_match');
   }
 
   /**
    * {@inheritdoc}
    */
-  public function build() {
-    $index = $this->buildArticleIndex();
+  public function build(NodeInterface $node) {
     $build = [];
-    $build['#theme'] = 'article_index_block';
-    $build['#index'] = $index;
+    $build['#theme'] = 'article_toc';
+    $build['#toc'] = $this->buildArticleToc($node);
     return $build;
   }
 
   /**
    * @return array
    */
-  protected function buildArticleIndex() {
+  protected function buildArticleToc(NodeInterface $node) {
     $index = [];
-    $node = $this->getNode();
+    if (empty($node->field_content))
+      return [];
     $paragraphs = $node->field_content;
+
     if (empty($paragraphs))
       return [];
 
@@ -98,48 +88,6 @@ class ArticleIndexBlock extends BlockBase implements ContainerFactoryPluginInter
   }
 
   /**
-   * @return NodeInterface
-   */
-  protected function getNode() : NodeInterface {
-    $obj = $this->routeMatch->getParameter('node');
-    if (!$obj instanceof NodeInterface) {
-      throw new \UnexpectedValueException("Not a node page");
-    }
-
-    return $obj;
-  }
-
-  /**
-   * @param AccountInterface $account
-   * @return AccessResult|\Drupal\Core\Access\AccessResultForbidden
-   */
-  protected function blockAccess(AccountInterface $account) {
-    try {
-      $node = $this->getNode();
-    }
-    catch (\UnexpectedValueException $ex) {
-      return AccessResult::forbidden();
-    }
-    if ($node->bundle() != 'article')
-      return AccessResult::forbidden();
-    return parent::blockAccess($account);
-  }
-  /**
-   * @return array|string[]
-   */
-  public function getCacheTags() {
-    $node = $this->getNode();
-    return Cache::mergeTags(parent::getCacheTags(), ['node:' . $node->id()]);
-  }
-
-  /**
-   * @return array|string[]
-   */
-  public function getCacheContexts() {
-    return Cache::mergeContexts(parent::getCacheContexts(), ['route']);
-  }
-
-  /**
    * Build anchor link from item.
    *
    * @param ParagraphInterface $entity
@@ -168,7 +116,6 @@ class ArticleIndexBlock extends BlockBase implements ContainerFactoryPluginInter
       return '';
     if (empty($subsection))
       return sprintf('%s.', $section);
-    return sprintf('%s.%s.', $section, $subsection);
+    return sprintf('%s.%s', $section, $subsection);
   }
-
 }

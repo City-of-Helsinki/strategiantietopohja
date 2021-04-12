@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.node.article.field_author
     - field.field.node.article.field_content
+    - field.field.node.article.field_downloadable_material
+    - field.field.node.article.field_insights
     - field.field.node.article.field_keywords
     - field.field.node.article.field_lead
     - field.field.node.article.field_liftup_image
     - field.field.node.article.field_metatags
+    - field.field.node.article.field_phenomena
     - node.type.article
   module:
     - entity_reference_revisions
@@ -21,8 +24,13 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
+  article_toc_field:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_author:
-    weight: 2
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -30,7 +38,7 @@ content:
     type: string
     region: content
   field_content:
-    weight: 3
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -38,8 +46,26 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
+  field_downloadable_material:
+    type: entity_reference_entity_view
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_insights:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_keywords:
-    weight: 4
+    weight: 6
     label: above
     settings:
       link: true
@@ -47,24 +73,25 @@ content:
     type: entity_reference_label
     region: content
   field_lead:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_metatags:
-    weight: 5
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   links:
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_liftup_image: true
+  field_phenomena: true
   langcode: true
