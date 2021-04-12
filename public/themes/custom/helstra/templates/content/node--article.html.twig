@@ -86,7 +86,9 @@
   <div class="main_content">
   {% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_header'} %}
     {% block container_content %}
-      <h1 class="title" >{{ label }}</h1>
+      <div class="article__title">
+        <h1 class="title" >{{ label }}</h1>
+      </div>
       {% if content.field_lead|render %}
         <div class="{{ node.bundle|clean_class }}__lead">
           {{ content.field_lead }}
