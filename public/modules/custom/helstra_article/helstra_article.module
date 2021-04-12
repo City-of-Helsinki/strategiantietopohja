@@ -6,6 +6,9 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\helstra_article\ArticleTocController;
 
 /**
  * Implements hook_help().
@@ -20,6 +23,31 @@ function helstra_article_help($route_name, RouteMatchInterface $route_match) {
       return $output;
 
     default:
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function helstra_article_entity_extra_field_info() {
+  $extra = array();
+  $extra['node']['article']['display']['article_toc_field'] = array(
+    'label' => t('Table of contents'),
+    'description' => t('Table of contents field'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function helstra_article_node_view(array &$build, EntityInterface $entity, EntityViewDisplay $display, $view_mode) {
+  if ($display->getComponent('article_toc_field')) {
+    $toc_controller = new ArticleTocController();
+    $build['article_toc_field'] =  $toc_controller->build($entity);
+    $build = $build;
   }
 }
 
@@ -46,9 +74,9 @@ function helstra_article_form_node_form_alter(&$form, &$form_state, $form_id) {
  */
 function helstra_article_theme() {
   return [
-    'article_index_block' => [
+    'article_toc' => [
       'variables' => [
-        'index' => NULL
+        'toc' => NULL
       ],
       'render element' => 'children',
     ],
