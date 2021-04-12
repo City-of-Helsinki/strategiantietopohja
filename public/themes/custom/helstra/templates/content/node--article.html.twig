@@ -80,7 +80,14 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-
+{# Article insights element #}
+{% if content.field_insights|render %}
+  <div class="{{ node.bundle|clean_class }}__insights">
+    <div class="insights__wrapper">
+      {{ content.field_insights }}
+    </div>
+  </div>
+{% endif %}
 <article{{ attributes.addClass(classes) }}>
   {# Article main content column #}
   <div class="main_content">
@@ -94,11 +101,6 @@
           {{ content.field_lead }}
         </div>
       {% endif %}
-      {% if content.field_insights|render %}
-        <div class="{{ node.bundle|clean_class }}__insights">
-          {{ content.field_insights }}
-        </div>
-    {% endif %}
     {% endblock container_content %}
   {% endembed %}
   {% if content.field_content|render %}
