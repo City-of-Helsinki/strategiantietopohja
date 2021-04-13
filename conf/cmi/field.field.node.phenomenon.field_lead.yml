@@ -1,5 +1,5 @@
 uuid: c5efceef-b96d-4aee-858f-e391e5b867bd
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -9,7 +9,7 @@ id: node.phenomenon.field_lead
 field_name: field_lead
 entity_type: node
 bundle: phenomenon
-label: Ingressi
+label: Lead
 description: ''
 required: false
 translatable: true

@@ -1,5 +1,5 @@
 uuid: 5d02dfe6-0e40-4ad7-9dde-80562fa5e990
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ id: node.phenomenon.field_hero
 field_name: field_hero
 entity_type: node
 bundle: phenomenon
-label: Hero-lohko
+label: Hero
 description: ''
 required: true
 translatable: true
