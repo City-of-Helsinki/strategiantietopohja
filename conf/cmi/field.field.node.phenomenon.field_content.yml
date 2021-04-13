@@ -1,5 +1,5 @@
 uuid: 2098d86e-eef6-4d34-90a9-81b1e8aa4bed
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ id: node.phenomenon.field_content
 field_name: field_content
 entity_type: node
 bundle: phenomenon
-label: Sisältö
+label: Content
 description: ''
 required: false
 translatable: true

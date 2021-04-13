@@ -1,5 +1,5 @@
 uuid: 7515e450-b683-4573-a947-bbff17b8f29c
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: node.phenomenon.field_liftup_image
 field_name: field_liftup_image
 entity_type: node
 bundle: phenomenon
-label: Nostokuva
+label: 'Liftup image'
 description: ''
 required: false
 translatable: false

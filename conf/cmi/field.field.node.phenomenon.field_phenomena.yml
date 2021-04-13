@@ -1,5 +1,5 @@
 uuid: bea1bf00-4267-44ba-acff-220c46bb067a
-langcode: fi
+langcode: en
 status: true
 dependencies:
   config:
@@ -10,7 +10,7 @@ id: node.phenomenon.field_phenomena
 field_name: field_phenomena
 entity_type: node
 bundle: phenomenon
-label: 'Ilmiön artikkelit'
+label: 'Related articles'
 description: ''
 required: false
 translatable: true
