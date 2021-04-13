@@ -23,12 +23,17 @@ use Drupal\taxonomy\Plugin\views\wizard\TaxonomyTerm;
  */
 class PhenomenonArticleListFieldFormatter extends FormatterBase {
 
+  protected const SELECT_OPTIONS = [
+    'list' => 'Dropdown List',
+    'grid' => 'Grid list'
+  ];
+
   /**
    * {@inheritdoc}
    */
   public static function defaultSettings() {
     return [
-      // Implement default settings.
+      'display_type' => 'list',
     ] + parent::defaultSettings();
   }
 
@@ -36,17 +41,21 @@ class PhenomenonArticleListFieldFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
-    return [
-      // Implement settings form.
-    ] + parent::settingsForm($form, $form_state);
+    $form = parent::settingsForm($form, $form_state);
+    $form['display_type'] = [
+      '#type' => 'select',
+      '#label' => $this->t('Select display type'),
+      '#options' => $this::SELECT_OPTIONS,
+    ];
+    return $form;
   }
 
   /**
    * {@inheritdoc}
    */
   public function settingsSummary() {
-    $summary = [];
-    // Implement settings summary.
+    $settings = $this->getSettings();
+    $summary[] = $this->t('Selected display type: @selected', ['@selected' => $this::SELECT_OPTIONS[$settings['display_type']]]);
 
     return $summary;
   }
@@ -78,22 +87,22 @@ class PhenomenonArticleListFieldFormatter extends FormatterBase {
     $nodes = $this->getArticles($term);
     if (empty($nodes))
       return '';
-
-    $renderer = \Drupal::service('renderer');
-    $options = [
-      '#type' => 'container',
-      '#title' => Html::escape($term->label()),
-      '#attributes' => [
-        'class' => [
-          'phenomenon-article-links'
-        ],
-      ],
-      0 => '',
-    ];
+    $template = sprintf('helstra_phenomenon_field_%s', $this->getSetting('display_type'));
+    $content = [];
     foreach ($nodes as $node) {
-      $options[] =  $node->toLink()->toRenderable();
+      $content['nodes'][] = [
+        'entity' => \Drupal::entityTypeManager()->getViewBuilder('node')->view($node, 'teaser'),
+        'label' => $node->getTitle(),
+        'link' => $node->toLink()->toRenderable(),
+      ];
     }
-    return $renderer->render($options);
+    $render = [
+      '#theme' => $template,
+      '#content' => $content,
+      '#count' => count($nodes)
+    ];
+    $renderer = \Drupal::service('renderer');
+    return $renderer->render($render);
   }
 
   /**

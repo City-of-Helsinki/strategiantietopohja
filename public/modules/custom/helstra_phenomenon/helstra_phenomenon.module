@@ -57,5 +57,17 @@ function helstra_phenomenon_theme() {
     'helstra_phenomenon' => [
       'render element' => 'children',
     ],
+    'helstra_phenomenon_field_grid' => [
+      'variables' => [
+        'content' => NULL,
+        'count' => NULL
+      ],
+    ],
+    'helstra_phenomenon_field_list' => [
+      'variables' => [
+        'content' => NULL,
+        'count' => NULL
+      ]
+    ]
   ];
 }

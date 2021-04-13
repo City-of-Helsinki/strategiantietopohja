@@ -1,0 +1,12 @@
+<!-- Add you custom twig html here -->
+{% if content.nodes is not empty %}
+  <div id="content-related-to-phenomenon">
+    <h2>{{ 'Articles related to the phenomenon'|t }}</h2>
+    <div class="container content">
+      <div class="count">{{ count }} {{ 'articles'|t }}</div>
+      {% for node in content.nodes %}
+        {{ node.entity }}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
