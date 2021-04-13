@@ -6,7 +6,7 @@
  */
 function helstra_preprocess_paragraph(&$variables) {
   $paragraph =  $variables['paragraph'];
-  if ($paragraph->getType() == 'hero') {
+  if ($paragraph->getType() == 'hero' && $variables['view_mode'] == 'preview') {
     $parent = $paragraph->getParentEntity();
     if ($parent->getType() != 'phenomenon')
       return;
