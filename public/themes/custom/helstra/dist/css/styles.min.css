@@ -55,6 +55,45 @@
       background-color: var(--color-black-80);
       border-color: var(--color-black-80); }
 
+.phenomena-grid__container {
+  margin-bottom: -128px; }
+  .phenomena-grid__container .phenomena-grid__wrapper {
+    background-color: var(--color-black-10);
+    padding: 32px 24px 128px 24px; }
+    .phenomena-grid__container .phenomena-grid__wrapper .label {
+      float: left;
+      font-size: 1.75rem;
+      margin-bottom: 16px; }
+    .phenomena-grid__container .phenomena-grid__wrapper .count {
+      float: right;
+      font-size: 1.2rem;
+      margin-bottom: 16px; }
+      .phenomena-grid__container .phenomena-grid__wrapper .count .number {
+        font-weight: bold; }
+    .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 25%;
+                flex: 1 1 25%;
+        background-color: var(--color-white);
+        padding: 16px 24px;
+        margin: 4px; }
+        .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__link {
+          color: var(--color-black-60); }
+        .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__title, .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__arrow {
+          display: block;
+          color: var(--color-black);
+          margin-bottom: 8px; }
+
 ul.sf-menu li {
   z-index: 100; }
 
