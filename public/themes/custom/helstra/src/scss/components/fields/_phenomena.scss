@@ -27,6 +27,7 @@
       justify-content: space-between;
     
       .content-card {
+        position: relative;
         flex: 1 1 25%;
         background-color: var(--color-white);
         padding: 16px 24px;
@@ -34,13 +35,21 @@
 
         .content-card__link {
           color: var(--color-black-60);
+          height: 100%;
+          padding-bottom: 42px;
         }
 
-        .content-card__title,
-        .content-card__arrow {
-          display: block;
+        .content-card__title {
           color: var(--color-black);
+          display: block;
           margin-bottom: 8px;
+        }
+
+        .content-card__arrow {
+          color: var(--color-black);
+          position: absolute;
+          bottom: 8px;
+          left: 18px;
         }
       }
     }
