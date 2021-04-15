@@ -23,6 +23,7 @@ runtime:
 relationships:
   database: "mysqldb:mysql"
   redis: "rediscache:redis"
+  elasticsearch: "elasticsearch:elasticsearch"
   #solr: "solrsearch:solr"
 
 # The size of the persistent disk of the application (in MB).
