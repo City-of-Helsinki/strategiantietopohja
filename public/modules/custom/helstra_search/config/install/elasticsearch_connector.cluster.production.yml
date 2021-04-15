@@ -1,0 +1,18 @@
+langcode: fi
+status: '1'
+dependencies: {  }
+cluster_id: production
+name: Production
+url: 'https://mxqqgovxqyyubt3jvqfuvrxl2u.elasticsearch.service._.eu-5.platformsh.site'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 0
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '3'
+  rewrite:
+    rewrite_index: 0
+    index:
+      prefix: ''
+      suffix: ''
