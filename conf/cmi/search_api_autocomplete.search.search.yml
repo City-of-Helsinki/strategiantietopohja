@@ -1,0 +1,32 @@
+uuid: e0eb4f7b-5fd1-49d0-a496-c5e5ff4743cd
+langcode: fi
+status: true
+dependencies:
+  config:
+    - search_api.index.site_search
+    - views.view.search
+  module:
+    - views
+    - search_api_autocomplete
+id: search
+label: Search
+index_id: site_search
+suggester_settings:
+  server:
+    fields: {  }
+suggester_weights:
+  server: -50
+suggester_limits:
+  server: 5
+search_settings:
+  'views:search':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 5
+  min_length: 3
+  show_count: true
+  autosubmit: true
+  submit_button_selector: ':submit'
+  delay: null

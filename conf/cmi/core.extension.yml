@@ -17,6 +17,7 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  elasticsearch_connector: 0
   entity_reference_revisions: 0
   features: 0
   field: 0
@@ -42,6 +43,7 @@ module:
   helfi_units: 0
   helstra_article: 0
   helstra_phenomenon: 0
+  helstra_search: 0
   image: 0
   image_style_quality: 0
   imagecache_external: 0
@@ -69,6 +71,8 @@ module:
   redirect: 0
   responsive_image: 0
   scheduler: 0
+  search_api: 0
+  search_api_autocomplete: 0
   select2: 0
   select2_icon: 0
   serialization: 0
