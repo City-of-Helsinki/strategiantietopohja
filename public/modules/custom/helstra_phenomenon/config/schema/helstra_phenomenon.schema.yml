@@ -1,0 +1,7 @@
+field.formatter.settings.phenomenon_article_list_field_formatter:
+  type: mapping
+  label: 'Phenomenon article field formatter display type'
+  mapping:
+    display_type:
+      type: string
+      label: 'Display type'

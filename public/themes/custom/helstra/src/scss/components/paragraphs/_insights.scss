@@ -1,3 +1,39 @@
-.insights {
-  
+.insights__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -12px;
+
+  @include breakpoint($breakpoint-l) {
+    margin: 0 -4px;
+  }
+
+  .insight-item {
+    flex: 1 1 32%;
+    position: relative;
+    margin: 4px;
+    padding: 48px 32px;
+    background-color: var(--color-fog);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: 10px;
+      width: 90px;
+      height: 90px;
+      background-image: url('../../src/images/icon-insight.png');
+      background-size: contain;
+      filter: brightness(0.4);
+    }
+
+    .title {
+      font-size: 1.25rem;
+    }
+
+    .text {
+      font-size: 1.05rem;
+      margin-top: 8px;
+    }
+  }
 }
