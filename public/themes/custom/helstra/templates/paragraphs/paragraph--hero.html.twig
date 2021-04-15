@@ -62,12 +62,24 @@
             {{ content.field_hero_title }}
           </h1>
           {% if description[0]['#text'] is not empty %}
-            <div class="hero__description">
-              {{ description }}
-            </div>
+            {% if
+              design == "without-image-left" or
+              design == "without-image-center" or
+              design == "with-image-right" or
+              design == "with-image-left" or
+              design == "with-image-bottom" or
+              design == "diagonal"
+            %}
+              <div class="hero__description">
+                {{ description }}
+              </div>
+            {% endif %}
           {% endif %}
+
           {% if parent__phenomenon_link is not empty %}
-            {{ parent__phenomenon_link }}
+            <div class="field-parent">
+              {{ parent__phenomenon_link }}
+            </div>
           {% endif %}
           {% if parent__field_phenomena is not empty %}
             {{ parent__field_phenomena }}
@@ -126,9 +138,11 @@
         {% endif %}
 
         <div class="hero__image-container">
+          {% include '@hdbt/misc/koro.twig' with {koro: koro, flip: true } %}
           {{ drupal_image(image_id, image_style, responsive=true) }}
         </div>
       {% endif %}
     {% endif %}
+    {% include '@hdbt/misc/koro.twig' with {koro: koro, flip: false } %}
   </div>
 {% endblock paragraph %}
