@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains helstra_search.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\views\Views;
+use Drupal\Core\Form\FormState;
+
+/**
+ * Implements hook_help().
+ */
+function helstra_search_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the helstra_search module.
+    case 'help.page.helstra_search':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides features and customization for search') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function helstra_search_entity_extra_field_info() {
+  $extra = array();
+  $content_types = [
+    'landing_page',
+    'phenomenon'
+  ];
+  foreach ($content_types as $content_type) {
+    $extra['node'][$content_type]['display']['search_field'] = array(
+      'label' => t('Search'),
+      'description' => t('Provides search field for '),
+      'weight' => 100,
+      'visible' => TRUE,
+    );
+  }
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function helstra_search_node_view(array &$build, EntityInterface $entity, EntityViewDisplay $display, $view_mode) {
+  if ($display->getComponent('search_field')) {
+    $build['search_field'] =  _helstra_search_embed_views_exposed_form('search', 'page');
+  }
+}
+
+function _helstra_search_embed_views_exposed_form($view_id, $display_id) {
+  $view = Views::getView($view_id);
+  $view->setDisplay($display_id);
+  $view->initHandlers();
+  $view->display_handler->setOption('exposed_block', TRUE);
+  return $view->display_handler->viewExposedFormBlocks();
+}

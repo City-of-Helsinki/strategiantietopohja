@@ -1,0 +1,9 @@
+name: 'Helsinki Strategiantietopohja Search'
+type: module
+description: 'Provides features and customization for search'
+core_version_requirement: '^8.9 || ^9'
+package: 'Custom'
+dependencies:
+  - search_api
+  - elasticsearch_connector
+  - search_api_autocomplete

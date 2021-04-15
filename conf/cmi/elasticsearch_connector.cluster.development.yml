@@ -1,0 +1,19 @@
+uuid: f6ac2875-6548-4bb5-aa56-d17e62df012e
+langcode: fi
+status: '1'
+dependencies: {  }
+cluster_id: development
+name: Development
+url: 'http://elastic:9200'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 0
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '3'
+  rewrite:
+    rewrite_index: 0
+    index:
+      prefix: ''
+      suffix: ''

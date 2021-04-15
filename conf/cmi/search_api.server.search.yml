@@ -1,0 +1,14 @@
+uuid: 1a7e10c9-ff6d-4cb0-87de-6889deefac84
+langcode: en
+status: true
+dependencies:
+  module:
+    - elasticsearch_connector
+id: search
+name: Search
+description: ''
+backend: elasticsearch
+backend_config:
+  cluster_settings:
+    cluster: development
+  fuzziness: auto

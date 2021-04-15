@@ -47,7 +47,6 @@ function helstra_article_node_view(array &$build, EntityInterface $entity, Entit
   if ($display->getComponent('article_toc_field')) {
     $toc_controller = new ArticleTocController();
     $build['article_toc_field'] =  $toc_controller->build($entity);
-    $build = $build;
   }
 }
 
