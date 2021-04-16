@@ -60,5 +60,12 @@ function _helstra_search_embed_views_exposed_form($view_id, $display_id) {
   $view->setDisplay($display_id);
   $view->initHandlers();
   $view->display_handler->setOption('exposed_block', TRUE);
-  return $view->display_handler->viewExposedFormBlocks();
+  $exposed_form = $view->display_handler->viewExposedFormBlocks();
+
+  // Prevent access to sort, order and items per page elements when rendering in field instance.
+  $exposed_form['sort_by']['#access'] = FALSE;
+  $exposed_form['sort_order']['#access'] = FALSE;
+  $exposed_form['items_per_page']['#access'] = FALSE;
+
+  return $exposed_form;
 }
