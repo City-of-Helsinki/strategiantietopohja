@@ -1,9 +1,9 @@
-uuid: f6ac2875-6548-4bb5-aa56-d17e62df012e
+uuid: ac2063d1-2323-48d0-8d46-c5c0004c85a3
 langcode: fi
 status: '1'
 dependencies: {  }
-cluster_id: development
-name: Development
+cluster_id: search
+name: Search
 url: 'http://elastic:9200'
 options:
   multiple_nodes_connection: false

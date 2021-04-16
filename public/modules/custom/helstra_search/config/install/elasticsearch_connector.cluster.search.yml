@@ -1,10 +1,9 @@
-uuid: ba3e4dd5-2b5c-439a-bb43-1de16f2c3e58
 langcode: fi
 status: '1'
 dependencies: {  }
-cluster_id: production
-name: Production
-url: 'elasticsearch.internal'
+cluster_id: search
+name: Search
+url: 'http://elastic:9200'
 options:
   multiple_nodes_connection: false
   use_authentication: 0

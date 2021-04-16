@@ -1,9 +1,0 @@
-uuid: 17f9e771-59a9-45d8-8cd8-8655b1e71530
-langcode: en
-status: true
-dependencies: {  }
-index_id: site_search
-name: 'Site search'
-num_of_shards: 5
-num_of_replica: 1
-server: development

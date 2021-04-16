@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-index_id: site_search
-name: 'Site search'
-num_of_shards: 5
-num_of_replica: 1
-server: development
