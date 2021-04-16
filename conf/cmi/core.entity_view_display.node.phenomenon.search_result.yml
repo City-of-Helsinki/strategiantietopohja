@@ -1,0 +1,35 @@
+uuid: 3c325e32-ac9b-4e1c-8ab5-0bbb1609b3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.phenomenon.field_content
+    - field.field.node.phenomenon.field_hero
+    - field.field.node.phenomenon.field_lead
+    - field.field.node.phenomenon.field_liftup_image
+    - field.field.node.phenomenon.field_phenomena
+    - node.type.phenomenon
+  module:
+    - user
+id: node.phenomenon.search_result
+targetEntityType: node
+bundle: phenomenon
+mode: search_result
+content:
+  field_lead:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  field_content: true
+  field_hero: true
+  field_liftup_image: true
+  field_phenomena: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  search_field: true
