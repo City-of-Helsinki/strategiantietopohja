@@ -10,8 +10,8 @@ dependencies:
     - field.field.node.page.field_metatags
     - node.type.page
   module:
+    - entity_reference_revisions
     - metatag
-    - paragraphs
     - user
 _core:
   default_config_hash: LdH98wEwWah2p-D2t_x-i8icjsnkoRBG4kbrbTH8KYs
@@ -21,23 +21,36 @@ bundle: page
 mode: default
 content:
   field_content:
-    type: paragraph_summary
-    weight: 0
+    type: entity_reference_revisions_entity_view
+    weight: 2
     region: content
     label: hidden
-    settings: {  }
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-  field_metatags:
+  field_hero:
     weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_metatags:
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_has_hero: true
-  field_hero: true
   field_liftup_image: true
   langcode: true
-  links: true
-  search_api_excerpt: true
