@@ -4,7 +4,7 @@ status: '1'
 dependencies: {  }
 cluster_id: production
 name: Production
-url: 'https://mxqqgovxqyyubt3jvqfuvrxl2u.elasticsearch.service._.eu-5.platformsh.site'
+url: 'elasticsearch.internal'
 options:
   multiple_nodes_connection: false
   use_authentication: 0
