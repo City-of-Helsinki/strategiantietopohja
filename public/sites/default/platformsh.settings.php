@@ -112,3 +112,11 @@ if (getenv('PLATFORM_PROJECT_ENTROPY') && empty($settings['hash_salt'])) {
 if (getenv('PLATFORM_TREE_ID') && empty($settings['deployment_identifier'])) {
   $settings['deployment_identifier'] = getenv('PLATFORM_TREE_ID');
 }
+
+if (getenv('PLATFORM_RELATIONSHIPS')) {
+  $relationships = json_decode(base64_decode(getenv('PLATFORM_RELATIONSHIPS')), TRUE);
+  if (!empty($relationships['elasticsearch'])) {
+    $elasticsearch = $relationships['elasticsearch'];
+    $config['elasticsearch_connector.cluster.search']['url'] = $elasticsearch[0]['host'];
+  }
+}

@@ -95,11 +95,3 @@ if ($env = getenv('APP_ENV')) {
     include __DIR__ . '/local.settings.php';
   }
 }
-
-if (getenv('PLATFORM_RELATIONSHIPS')) {
-  $relationships = json_decode(base64_decode(getenv('PLATFORM_RELATIONSHIPS')), TRUE);
-  if (!empty($relationships['elasticsearch'])) {
-    $elasticsearch = $relationships['elasticsearch'];
-    $config['elasticsearch_connector.cluster.search']['url'] = $elasticsearch[0]['host'];
-  }
-}
