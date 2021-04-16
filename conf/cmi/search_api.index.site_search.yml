@@ -2,16 +2,41 @@ uuid: 70142625-1495-4423-a126-1a5ec2bb74de
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.node.field_author
+    - search_api.server.search
   module:
     - node
     - search_api
-  config:
-    - search_api.server.search
 id: site_search
 name: 'Site search'
 description: ''
 read_only: false
 field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_author
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_author
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -58,6 +83,7 @@ datasource_settings:
     bundles:
       default: true
       selected:
+        - landing_page
         - unit
     languages:
       default: true
@@ -82,6 +108,7 @@ processor_settings:
   html_filter:
     all_fields: true
     fields:
+      - field_author
       - rendered_item
     title: true
     alt: true
@@ -97,6 +124,7 @@ processor_settings:
   ignorecase:
     all_fields: true
     fields:
+      - field_author
       - rendered_item
     weights:
       preprocess_index: -20
@@ -118,6 +146,7 @@ processor_settings:
   transliteration:
     all_fields: true
     fields:
+      - field_author
       - rendered_item
     weights:
       preprocess_index: -20

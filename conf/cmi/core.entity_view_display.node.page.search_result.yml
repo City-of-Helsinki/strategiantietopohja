@@ -1,8 +1,9 @@
-uuid: a72e3132-2d03-4e09-b044-2284e94c069e
+uuid: 6d15413c-8600-4ce0-afd5-ef7806d5c39e
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_result
     - field.field.node.page.field_content
     - field.field.node.page.field_has_hero
     - field.field.node.page.field_hero
@@ -10,15 +11,14 @@ dependencies:
     - field.field.node.page.field_metatags
     - node.type.page
   module:
-    - metatag
     - paragraphs
     - user
 _core:
   default_config_hash: LdH98wEwWah2p-D2t_x-i8icjsnkoRBG4kbrbTH8KYs
-id: node.page.default
+id: node.page.search_result
 targetEntityType: node
 bundle: page
-mode: default
+mode: search_result
 content:
   field_content:
     type: paragraph_summary
@@ -27,17 +27,11 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_metatags:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
 hidden:
   field_has_hero: true
   field_hero: true
   field_liftup_image: true
+  field_metatags: true
   langcode: true
   links: true
   search_api_excerpt: true
