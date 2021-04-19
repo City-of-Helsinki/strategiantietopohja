@@ -1,6 +1,6 @@
 {% if content.nodes is not empty %}
   <div class="dropdown">
-    <button class="dropbtn">Dropdown</button>
+    <button class="dropbtn">{{ 'Select'|t }}</button>
     <div class="dropdown-content">
       {% for node in content.nodes %}
         {{ node.link|render }}
