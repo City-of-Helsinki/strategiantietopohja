@@ -2,10 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0px -4px;
+  margin: 0 -12px;
 
-  @media (max-width: 992px) {
-    margin: 0 -12px;
+  @include breakpoint($breakpoint-l) {
+    margin: 0 -4px;
   }
 
   .insight-item {

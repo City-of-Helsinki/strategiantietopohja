@@ -1,0 +1,59 @@
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.field.node.phenomenon.field_content
+    - field.field.node.phenomenon.field_hero
+    - field.field.node.phenomenon.field_lead
+    - field.field.node.phenomenon.field_liftup_image
+    - field.field.node.phenomenon.field_phenomena
+    - node.type.phenomenon
+  module:
+    - entity_reference_revisions
+    - user
+id: node.phenomenon.default
+targetEntityType: node
+bundle: phenomenon
+mode: default
+content:
+  field_content:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_hero:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_lead:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_phenomena:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_liftup_image: true
+  langcode: true

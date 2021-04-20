@@ -1,5 +1,5 @@
 name: 'Helsinki Article'
 type: module
 description: 'Provides customizations for articles'
-core_version_requirement: 9.x
+core_version_requirement: '^8.9 || ^9'
 package: 'Custom'

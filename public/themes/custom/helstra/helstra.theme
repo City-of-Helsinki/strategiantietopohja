@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements template_preprocess_paragraph().
+ * @param $variables
+ */
+function helstra_preprocess_paragraph(&$variables) {
+  $paragraph =  $variables['paragraph'];
+  if ($paragraph->getType() == 'hero' && $variables['view_mode'] == 'preview') {
+    $parent = $paragraph->getParentEntity();
+    if ($parent->getType() != 'phenomenon')
+      return;
+    $variables['parent__field_phenomena'] = $parent->field_phenomena->view('teaser');
+    $variables['parent__phenomenon_link'] = $parent->toLink();
+  }
+}

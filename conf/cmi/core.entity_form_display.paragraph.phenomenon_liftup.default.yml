@@ -1,0 +1,25 @@
+uuid: 18ecd5f2-58b2-4105-a448-97f718fe6170
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.phenomenon_liftup.field_phenomenon
+    - paragraphs.paragraphs_type.phenomenon_liftup
+id: paragraph.phenomenon_liftup.default
+targetEntityType: paragraph
+bundle: phenomenon_liftup
+mode: default
+content:
+  field_phenomenon:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

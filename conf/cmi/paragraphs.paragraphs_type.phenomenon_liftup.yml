@@ -1,0 +1,10 @@
+uuid: ad28f8f8-9ea5-4d74-abdc-33281439caa7
+langcode: en
+status: true
+dependencies: {  }
+id: phenomenon_liftup
+label: 'Phenomenon liftup'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.content_cards
     - paragraphs.paragraphs_type.liftup_with_image
     - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.phenomenon_liftup
   module:
     - entity_reference_revisions
 _core:
@@ -34,6 +35,7 @@ settings:
       list_of_links: list_of_links
       liftup_with_image: liftup_with_image
       content_cards: content_cards
+      phenomenon_liftup: phenomenon_liftup
     target_bundles_drag_drop:
       accordion:
         weight: -22
@@ -71,7 +73,19 @@ settings:
       list_of_links_item:
         weight: -16
         enabled: false
+      phenomenon_liftup:
+        enabled: true
+        weight: 30
+      powerbi_embed:
+        weight: 31
+        enabled: false
+      section_title_text:
+        weight: 32
+        enabled: false
       text:
         weight: -15
+        enabled: false
+      title_text:
+        weight: 34
         enabled: false
 field_type: entity_reference_revisions

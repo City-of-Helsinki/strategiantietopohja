@@ -1,0 +1,78 @@
+langcode: fi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.phenomenon
+    - paragraphs.paragraphs_type.liftup_with_image
+  module:
+    - entity_reference_revisions
+id: node.phenomenon.field_content
+field_name: field_content
+entity_type: node
+bundle: phenomenon
+label: Sisältö
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      liftup_with_image: liftup_with_image
+    target_bundles_drag_drop:
+      accordion:
+        weight: 18
+        enabled: false
+      accordion_item:
+        weight: 19
+        enabled: false
+      banner:
+        weight: 20
+        enabled: false
+      columns:
+        weight: 21
+        enabled: false
+      content_cards:
+        weight: 22
+        enabled: false
+      gallery:
+        weight: 23
+        enabled: false
+      gallery_slide:
+        weight: 24
+        enabled: false
+      hero:
+        weight: 25
+        enabled: false
+      image:
+        weight: 26
+        enabled: false
+      liftup_with_image:
+        enabled: true
+        weight: 27
+      list_of_links:
+        weight: 28
+        enabled: false
+      list_of_links_item:
+        weight: 29
+        enabled: false
+      phenomenon_liftup:
+        weight: 30
+        enabled: false
+      powerbi_embed:
+        weight: 31
+        enabled: false
+      section_title_text:
+        weight: 32
+        enabled: false
+      text:
+        weight: 33
+        enabled: false
+      title_text:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions
