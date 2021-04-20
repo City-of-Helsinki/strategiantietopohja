@@ -1,15 +1,19 @@
 .paragraph--type--phenomenon-liftup:nth-child(odd) {
   .content-card--phenomenon.content-card--design-teaser {
-    .hero {
-      justify-content: flex-end;
+    .hero__container {
+      @include breakpoint($breakpoint-l) {
+        margin-right: 12px;
+      }
     }
   }
 }
 
 .paragraph--type--phenomenon-liftup:nth-child(even) {
   .content-card--phenomenon.content-card--design-teaser {
-    .hero {
-      justify-content: flex-start;
+    .hero__container {
+      @include breakpoint($breakpoint-l) {
+        margin-left: 12px;
+      }
     }
   }
 }
