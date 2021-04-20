@@ -41,15 +41,13 @@
           font-size: 1.2rem;
           line-height: 1.5; }
 
-.paragraph--type--phenomenon-liftup:nth-child(odd) .content-card--phenomenon.content-card--design-teaser .hero {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+@media (min-width: 992px) {
+  .paragraph--type--phenomenon-liftup:nth-child(odd) .content-card--phenomenon.content-card--design-teaser .hero__container {
+    margin-right: 12px; } }
 
-.paragraph--type--phenomenon-liftup:nth-child(even) .content-card--phenomenon.content-card--design-teaser .hero {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+@media (min-width: 992px) {
+  .paragraph--type--phenomenon-liftup:nth-child(even) .content-card--phenomenon.content-card--design-teaser .hero__container {
+    margin-left: 12px; } }
 
 .content-card--phenomenon.content-card--design-teaser {
   padding: 24px 48px;
