@@ -11,6 +11,6 @@ function helstra_preprocess_paragraph(&$variables) {
     if ($parent->getType() != 'phenomenon')
       return;
     $variables['parent__field_phenomena'] = $parent->field_phenomena->view('teaser');
-    $variables['parent__phenomenon_link'] = $parent->toLink('Explore phenomenon')->toRenderable();
+    $variables['parent__phenomenon_link'] = $parent->toLink();
   }
 }
