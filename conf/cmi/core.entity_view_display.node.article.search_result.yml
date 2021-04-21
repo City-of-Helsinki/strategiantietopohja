@@ -23,30 +23,21 @@ targetEntityType: node
 bundle: article
 mode: search_result
 content:
-  field_keywords:
-    type: entity_reference_label
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_lead:
+  search_api_excerpt:
     weight: 0
-    label: hidden
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: content
 hidden:
   article_toc_field: true
   field_author: true
   field_content: true
   field_downloadable_material: true
   field_insights: true
+  field_keywords: true
+  field_lead: true
   field_liftup_image: true
   field_metatags: true
   field_phenomena: true
   langcode: true
   links: true
-  search_api_excerpt: true

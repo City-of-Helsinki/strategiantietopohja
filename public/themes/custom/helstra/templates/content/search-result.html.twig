@@ -80,26 +80,13 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{# Article insights element #}
-{% if content.field_insights|render %}
-  <div class="{{ node.bundle|clean_class }}__insights">
-    <div class="insights__wrapper">
-      {{ content.field_insights }}
-    </div>
-  </div>
-{% endif %}
 <div {{ attributes.addClass(classes) }}>
-  {# Article main content column #}
   <div class="main_content">
     <h2 class="title" >
       <a href="{{ url }}" rel="bookmark">
         {{ label }}
       </a>
     </h2>
+    {{ content }}
   </div>
-  {% if content.field_lead|render %}
-    <div class="{{ node.bundle|clean_class }}__lead">
-      {{ content.field_lead }}
-    </div>
-  {% endif %}
 </div>

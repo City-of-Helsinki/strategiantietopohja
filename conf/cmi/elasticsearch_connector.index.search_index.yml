@@ -1,9 +1,9 @@
 uuid: 50a62a41-eed2-475c-af95-ce6210678f2c
-langcode: fi
+langcode: en
 status: true
 dependencies: {  }
-index_id: seach_index
-name: 'Seach index'
+index_id: search_index
+name: 'Search index'
 num_of_shards: 5
 num_of_replica: 1
 server: search

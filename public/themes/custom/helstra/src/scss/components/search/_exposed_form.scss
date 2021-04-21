@@ -1,25 +1,23 @@
-article {
-  #views-exposed-form-search-default {
-    margin: 24px 48px;
-    padding: 32px;
-    background-color: #9ec9eb;
-    border-left: 3px solid black;
+#views-exposed-form-search-page-1 {
+  margin: 24px 48px;
+  padding: 32px;
+  background-color: #9ec9eb;
+  border-left: 3px solid black;
 
-    .form-item-search-api-fulltext {
-      label {
-        font-size: 1.25rem;
-        font-weight: 500;
-      }
+  .form-item-search-api-fulltext {
+    label {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
 
-      input {
-        width: 100%;
-        padding: 12px;
+    input {
+      width: 100%;
+      padding: 12px;
 
-        &.form-autocomplete {
-          background-image: url('../../src/images/icon-search.png');
-          background-size: 25px;
-          background-position-x: 99%;
-        }
+      &.form-autocomplete {
+        background-image: url('../../src/images/icon-search.png');
+        background-size: 25px;
+        background-position-x: 99%;
       }
     }
   }
