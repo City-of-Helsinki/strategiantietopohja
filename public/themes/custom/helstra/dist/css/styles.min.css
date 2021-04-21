@@ -418,8 +418,10 @@ ul.sf-menu li {
     margin: 0 48px;
     border-bottom: 1px solid #9ec9eb;
     padding-bottom: 24px; }
-    #views-exposed-form-search-page-1 ~ .views-row h2 {
+    #views-exposed-form-search-page-1 ~ .views-row .main_content h2 {
       margin-top: 24px; }
+    #views-exposed-form-search-page-1 ~ .views-row .main_content strong {
+      background-color: yellow; }
 
 
 /*# sourceMappingURL=styles.min.css.map*/

@@ -27,8 +27,14 @@
     border-bottom: 1px solid #9ec9eb;
     padding-bottom: 24px;
 
-    h2 {
-      margin-top: 24px;
+    .main_content {
+      h2 {
+        margin-top: 24px;
+      }
+
+      strong {
+        background-color: yellow;
+      }
     }
   }
 }
