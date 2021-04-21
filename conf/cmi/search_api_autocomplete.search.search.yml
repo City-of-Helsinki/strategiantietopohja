@@ -12,29 +12,21 @@ id: search
 label: Search
 index_id: site_search
 suggester_settings:
-  live_results:
-    fields: {  }
-    view_modes:
-      'entity:node':
-        article: ''
-        page: ''
-        phenomenon: ''
   server:
-    fields: {  }
+    fields:
+      - title
 suggester_weights:
-  live_results: -50
   server: 0
 suggester_limits:
-  live_results: 10
-  server: 10
+  server: 5
 search_settings:
   'views:search':
     displays:
       default: true
       selected: {  }
 options:
-  limit: 5
-  min_length: 3
+  limit: 10
+  min_length: 2
   show_count: true
   autosubmit: true
   submit_button_selector: ':submit'

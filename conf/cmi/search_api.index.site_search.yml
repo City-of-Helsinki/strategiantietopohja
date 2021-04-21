@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_author
+    - field.storage.node.field_lead
     - search_api.server.search
   module:
     - node
@@ -37,6 +38,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_author
+  field_lead:
+    label: Lead
+    datasource_id: 'entity:node'
+    property_path: field_lead
+    type: text
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_lead
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -65,6 +75,15 @@ field_settings:
     type: boolean
     indexed_locked: true
     type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 5
     dependencies:
       module:
         - node
@@ -109,7 +128,9 @@ processor_settings:
     all_fields: true
     fields:
       - field_author
+      - field_lead
       - rendered_item
+      - title
     title: true
     alt: true
     tags:
@@ -125,17 +146,20 @@ processor_settings:
     all_fields: true
     fields:
       - field_author
+      - field_lead
       - rendered_item
+      - title
     weights:
       preprocess_index: -20
       preprocess_query: -20
   language_with_fallback: {  }
   rendered_item: {  }
-  reverse_entity_references: {  }
   tokenizer:
     all_fields: true
     fields:
+      - field_lead
       - rendered_item
+      - title
     ignored: ._-
     spaces: ''
     overlap_cjk: 1
@@ -147,7 +171,9 @@ processor_settings:
     all_fields: true
     fields:
       - field_author
+      - field_lead
       - rendered_item
+      - title
     weights:
       preprocess_index: -20
       preprocess_query: -20
