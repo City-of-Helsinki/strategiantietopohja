@@ -2,13 +2,13 @@ uuid: 70142625-1495-4423-a126-1a5ec2bb74de
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
+    - search_api
   config:
     - field.storage.node.field_author
     - field.storage.node.field_lead
     - search_api.server.search
-  module:
-    - node
-    - search_api
 id: site_search
 name: 'Site search'
 description: ''
@@ -116,7 +116,7 @@ processor_settings:
   entity_status: {  }
   highlight:
     highlight: always
-    highlight_partial: false
+    highlight_partial: true
     excerpt: true
     excerpt_length: 256
     exclude_fields: {  }
