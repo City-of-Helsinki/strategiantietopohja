@@ -1,8 +1,0 @@
-langcode: fi
-status: true
-dependencies: {  }
-index_id: seach_index
-name: 'Seach index'
-num_of_shards: 5
-num_of_replica: 1
-server: search
