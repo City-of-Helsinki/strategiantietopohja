@@ -1,8 +1,10 @@
-<!-- Add you custom twig html here -->
 {% if content.nodes is not empty %}
-  <div class="phenomenon-article-links">
-    {% for node in content.nodes %}
-      {{ node.link|render }}
-    {% endfor %}
+  <div class="dropdown">
+    <button class="dropbtn">{{ 'Select'|t }}</button>
+    <div class="dropdown-content">
+      {% for node in content.nodes %}
+        {{ node.link|render }}
+      {% endfor %}
+    </div>
   </div>
 {% endif %}

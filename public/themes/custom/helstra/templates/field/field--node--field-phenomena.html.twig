@@ -42,15 +42,13 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-<div class="field-phenomena">
-{% if label_hidden %}
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
-{% else %}
-  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}: </div>
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
+{% if items[0].content['#markup'] %}
+  <div class="field-phenomena">
+    <div{{ title_attributes.addClass(title_classes) }}>
+      {{ label }}
+    </div>
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  </div>
 {% endif %}
-</div>
