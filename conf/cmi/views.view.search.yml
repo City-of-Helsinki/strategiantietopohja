@@ -196,9 +196,7 @@ display:
           parse_mode: terms
           min_length: 3
           fields:
-            - field_content
-            - field_lead
-            - title
+            - rendered_item
           plugin_id: search_api_fulltext
         search_api_language:
           id: search_api_language

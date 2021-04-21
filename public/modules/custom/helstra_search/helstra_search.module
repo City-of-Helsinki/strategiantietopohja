@@ -51,7 +51,7 @@ function helstra_search_entity_extra_field_info() {
  */
 function helstra_search_node_view(array &$build, EntityInterface $entity, EntityViewDisplay $display, $view_mode) {
   if ($display->getComponent('search_field')) {
-    $build['search_field'] =  _helstra_search_embed_views_exposed_form('search', 'page');
+    $build['search_field'] =  _helstra_search_embed_views_exposed_form('search', 'page_1');
   }
 }
 

@@ -12,12 +12,21 @@ id: search
 label: Search
 index_id: site_search
 suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes:
+      'entity:node':
+        article: ''
+        page: ''
+        phenomenon: ''
   server:
     fields: {  }
 suggester_weights:
-  server: -50
+  live_results: -50
+  server: 0
 suggester_limits:
-  server: 5
+  live_results: 10
+  server: 10
 search_settings:
   'views:search':
     displays:
