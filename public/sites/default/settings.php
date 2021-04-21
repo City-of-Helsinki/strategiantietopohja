@@ -95,4 +95,3 @@ if ($env = getenv('APP_ENV')) {
     include __DIR__ . '/local.settings.php';
   }
 }
-
