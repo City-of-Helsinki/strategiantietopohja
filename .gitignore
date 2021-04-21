@@ -23,3 +23,4 @@ public/modules/custom/helfi_*
 !*.gitkeep
 !*.keepme
 *.orig
+*.sql
