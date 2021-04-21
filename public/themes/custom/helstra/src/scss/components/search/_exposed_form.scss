@@ -21,4 +21,14 @@
       }
     }
   }
+
+  & ~ .views-row {
+    margin: 0 48px;
+    border-bottom: 1px solid #9ec9eb;
+    padding-bottom: 24px;
+
+    h2 {
+      margin-top: 24px;
+    }
+  }
 }
