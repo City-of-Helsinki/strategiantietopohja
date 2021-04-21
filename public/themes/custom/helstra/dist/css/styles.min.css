@@ -54,7 +54,7 @@
   width: 100%; }
   .content-card--phenomenon.content-card--design-teaser .hero__container {
     overflow: visible;
-    max-width: 900px;
+    max-width: 860px;
     width: 100%; }
     .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content {
       max-width: unset;
@@ -248,6 +248,22 @@ ul.sf-menu li {
     .insights__wrapper .insight-item .text {
       font-size: 1.05rem;
       margin-top: 8px; }
+
+article #views-exposed-form-search-default {
+  margin: 24px 48px;
+  padding: 32px;
+  background-color: #9ec9eb;
+  border-left: 3px solid black; }
+  article #views-exposed-form-search-default .form-item-search-api-fulltext label {
+    font-size: 1.25rem;
+    font-weight: 500; }
+  article #views-exposed-form-search-default .form-item-search-api-fulltext input {
+    width: 100%;
+    padding: 12px; }
+    article #views-exposed-form-search-default .form-item-search-api-fulltext input.form-autocomplete {
+      background-image: url(../media/icon-search.png?68fb97ff5bfee0ce9bbaf240b0eda395);
+      background-size: 25px;
+      background-position-x: 99%; }
 
 
 /*# sourceMappingURL=styles.min.css.map*/
