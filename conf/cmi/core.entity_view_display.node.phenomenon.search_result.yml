@@ -17,19 +17,17 @@ targetEntityType: node
 bundle: phenomenon
 mode: search_result
 content:
-  field_lead:
+  search_api_excerpt:
     weight: 0
-    label: hidden
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: content
 hidden:
   field_content: true
   field_hero: true
+  field_lead: true
   field_liftup_image: true
   field_phenomena: true
   langcode: true
   links: true
-  search_api_excerpt: true
   search_field: true
