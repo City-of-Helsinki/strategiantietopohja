@@ -1,8 +1,6 @@
 #views-exposed-form-search-page-1 {
-  margin: 24px 48px;
-  padding: 32px;
+  padding: 12px 15% 48px;
   background-color: #9ec9eb;
-  border-left: 3px solid black;
 
   .form-item-search-api-fulltext {
     label {
@@ -37,4 +35,8 @@
       }
     }
   }
+}
+
+.hero--diagonal + #views-exposed-form-search-page-1 {
+  padding: 48px 15%;
 }

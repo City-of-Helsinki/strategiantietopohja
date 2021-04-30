@@ -1,0 +1,11 @@
+.node--type-landing-page  {
+  &.node--view-mode-full {
+    .hero--default:not(.hero--diagonal) {
+      @include breakpoint($breakpoint-m) {
+        .hds-koros {
+          color: #9ec9eb;
+        }
+      }   
+    }
+  }
+}
