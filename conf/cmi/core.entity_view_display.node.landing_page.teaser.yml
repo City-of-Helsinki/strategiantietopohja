@@ -1,6 +1,6 @@
 uuid: ab6934ba-e842-423c-82f2-d0fe65ebb5a1
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.landing_page.field_hero
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_trends
     - node.type.landing_page
   module:
     - user
@@ -33,5 +34,8 @@ hidden:
   field_has_hero: true
   field_hero: true
   field_metatags: true
+  field_trends: true
   langcode: true
   links: true
+  search_api_excerpt: true
+  search_field: true

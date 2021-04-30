@@ -46,6 +46,26 @@
   .node--type-landing-page.node--view-mode-full .hero--default:not(.hero--diagonal) .hds-koros {
     color: #9ec9eb; } }
 
+.node--type-landing-page.node--view-mode-full .trends__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .node--type-landing-page.node--view-mode-full .trends__container .trends-liftup {
+    margin: 12px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 33%;
+            flex: 1 1 33%; }
+    .node--type-landing-page.node--view-mode-full .trends__container .trends-liftup .paragraph {
+      max-width: 100%;
+      font-weight: bold;
+      text-decoration: none; }
+      .node--type-landing-page.node--view-mode-full .trends__container .trends-liftup .paragraph picture {
+        max-width: 100%; }
+        .node--type-landing-page.node--view-mode-full .trends__container .trends-liftup .paragraph picture img {
+          max-width: 100%; }
+      .node--type-landing-page.node--view-mode-full .trends__container .trends-liftup .paragraph p {
+        font-weight: normal; }
+
 @media (min-width: 768px) {
   .node--type-phenomenon.node--view-mode-full .hero--default:not(.hero--diagonal) .hds-koros {
     color: var(--color-black-10); } }
