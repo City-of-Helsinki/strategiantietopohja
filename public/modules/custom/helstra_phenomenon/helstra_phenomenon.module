@@ -24,32 +24,6 @@ function helstra_phenomenon_help($route_name, RouteMatchInterface $route_match) 
 }
 
 /**
- * Implements hook_field_widget_WIDGET_TYPE_form_alter().
- *
- * Hero designs:
- *   background-image     = "Background image"
- *   diagonal             = "Diagonal"
- *   with-image-bottom    = "Image on the bottom"
- *   with-image-left      = "Image on the left"
- *   with-image-right     = "Image on the right"
- *   without-image-center = "Without image, align center"
- *   without-image-left   = "Without image, align left"
- */
-function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
-  // Perform alterations to Hero paragraph.
-  if ($element['#paragraph_type'] == 'hero') {
-    // Hero designs & hero design selection.
-    $design_select = 'select[name="field_hero[' . $element['#delta'] . '][subform][field_hero_design]"';
-    // Show description only if design needs it.
-    $element['subform']['field_hero_desc']['#states'] = [
-      'visible' => [
-        [$design_select => ['value' => 'background-image']],
-      ],
-    ];
-  }
-}
-
-/**
  * Implements hook_theme().
  */
 function helstra_phenomenon_theme() {
