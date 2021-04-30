@@ -33,6 +33,9 @@ function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form
     // Design selection.
     $design_select = 'select[name="field_content[' . $element['#delta'] . '][subform][field_liftup_with_image_design]"';
     // Hide design selection field, defaults to image-on-right. 
+    // TODO: instead of hiding, make this limit options to
+    //  image-on-right|Kuva oikealla
+    //  image-on-left|Kuva vasemmalla
     $element['subform']['field_liftup_with_image_design'] = [];
   }
 }
