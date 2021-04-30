@@ -24,6 +24,20 @@ function helstra_phenomenon_help($route_name, RouteMatchInterface $route_match) 
 }
 
 /**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ *
+ */
+function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  // Perform alterations to liftup_with_image paragraph.
+  if ($element['#paragraph_type'] == 'liftup_with_image') {
+    // Design selection.
+    $design_select = 'select[name="field_content[' . $element['#delta'] . '][subform][field_liftup_with_image_design]"';
+    // Hide design selection field, defaults to image-on-right. 
+    $element['subform']['field_liftup_with_image_design'] = [];
+  }
+}
+
+/**
  * Implements hook_theme().
  */
 function helstra_phenomenon_theme() {
