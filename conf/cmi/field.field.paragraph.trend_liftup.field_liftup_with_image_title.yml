@@ -9,7 +9,7 @@ id: paragraph.trend_liftup.field_liftup_with_image_title
 field_name: field_liftup_with_image_title
 entity_type: paragraph
 bundle: trend_liftup
-label: Title
+label: Trend
 description: ''
 required: true
 translatable: true

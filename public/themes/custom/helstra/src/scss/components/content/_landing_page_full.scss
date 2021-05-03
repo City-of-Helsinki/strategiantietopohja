@@ -7,32 +7,5 @@
         }
       }   
     }
-
-    .trends__container {
-      display: flex;
-
-      .trends-liftup {
-        margin: 12px;
-        flex: 1 1 33%;
-
-        .paragraph {
-          max-width: 100%;
-          font-weight: bold;
-          text-decoration: none;
-
-          picture {
-            max-width: 100%;
-
-            img {
-              max-width: 100%;
-            }
-          }
-
-          p {
-            font-weight: normal;
-          }
-        }
-      }
-    }
   }
 }
