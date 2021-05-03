@@ -490,6 +490,7 @@ display:
         fields: false
         style: false
         row: false
+        header: false
       path: recently-updated
       display_description: ''
       fields:
@@ -608,6 +609,20 @@ display:
       row:
         type: fields
         options: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h2>[view:title]</h2>'
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
