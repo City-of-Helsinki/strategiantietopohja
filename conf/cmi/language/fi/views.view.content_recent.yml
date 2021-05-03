@@ -21,3 +21,10 @@ display:
       use_more_text: Lisää
   block_1:
     display_title: Lohko
+  recent_block:
+    display_options:
+      title: 'Viimeksi päivitetty'
+      use_more_text: 'Kaikki päivitykset'
+  recent_page:
+    display_options:
+      title: 'Viimeksi päivitetty'

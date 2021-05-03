@@ -1,0 +1,29 @@
+uuid: fe993c39-5d67-4271-9a1c-a94c67419287
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - system
+    - views
+  theme:
+    - helstra
+id: recent_block
+theme: helstra
+region: content
+weight: 6
+provider: null
+plugin: 'views_block:content_recent-recent_block'
+settings:
+  id: 'views_block:content_recent-recent_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false

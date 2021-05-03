@@ -36,7 +36,7 @@
  * @see template_preprocess_field()
  */
 #}
-<h3 style="text-align:center;">{{ 'Main trends'|t }}</h3>
+<h3 style="text-align:center;font-weight:bold;">{{ 'Main trends'|t }}</h3>
 {% embed "@hdbt/misc/container.twig" with {container_element: 'trends'} %}
   {% block container_content %}
     {% for item in items %}
