@@ -1,0 +1,21 @@
+uuid: e061b6b1-9954-4843-a881-09cbebf640de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_liftup_with_image_desc
+    - paragraphs.paragraphs_type.trend_liftup
+  module:
+    - text
+id: paragraph.trend_liftup.field_liftup_with_image_desc
+field_name: field_liftup_with_image_desc
+entity_type: paragraph
+bundle: trend_liftup
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

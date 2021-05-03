@@ -231,6 +231,31 @@
           bottom: 8px;
           left: 18px; }
 
+.trends__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap; }
+  .trends__container a {
+    text-decoration: none; }
+  .trends__container .trends-liftup {
+    margin: 12px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 30%;
+            flex: 1 1 30%;
+    min-width: 300px; }
+    .trends__container .trends-liftup .paragraph {
+      font-weight: bold; }
+      .trends__container .trends-liftup .paragraph img {
+        width: 100%;
+        margin-bottom: 18px; }
+      .trends__container .trends-liftup .paragraph .label {
+        font-weight: normal;
+        margin-bottom: 18px; }
+      .trends__container .trends-liftup .paragraph p {
+        font-weight: normal; }
+
 ul.sf-menu li {
   z-index: 100; }
 

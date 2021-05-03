@@ -1,0 +1,32 @@
+.trends__container {
+  display: flex;
+  flex-flow: wrap;
+
+  a {
+    text-decoration: none;
+  }
+
+  .trends-liftup {
+    margin: 12px;
+    flex: 1 1 30%;
+    min-width: 300px;
+
+    .paragraph {
+      font-weight: bold;
+
+      img {
+        width: 100%;
+        margin-bottom: 18px;
+      }
+
+      .label {
+        font-weight: normal;
+        margin-bottom: 18px;
+      }
+
+      p {
+        font-weight: normal;
+      }
+    }
+  }
+}

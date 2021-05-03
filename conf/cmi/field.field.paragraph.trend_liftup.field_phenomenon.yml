@@ -1,0 +1,29 @@
+uuid: 8e03949d-8cb0-46d3-a18b-9aef594871bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phenomenon
+    - node.type.article
+    - paragraphs.paragraphs_type.trend_liftup
+id: paragraph.trend_liftup.field_phenomenon
+field_name: field_phenomenon
+entity_type: paragraph
+bundle: trend_liftup
+label: 'Linked article'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
