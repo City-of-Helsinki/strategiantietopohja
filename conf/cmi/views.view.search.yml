@@ -280,6 +280,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: search-page
     cache_metadata:
       max-age: -1
       contexts:
@@ -299,7 +300,7 @@ display:
       display_extenders:
         metatag_display_extender: {  }
       path: search
-      exposed_block: false
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
