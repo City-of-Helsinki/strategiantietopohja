@@ -1,0 +1,31 @@
+.search-page {
+  main {
+  display: flex;
+    .layout-content {
+      flex: 0 1 66%;
+
+      #views-exposed-form-search-page-1 {
+        
+      }
+
+      .form-item-sort-by,
+      .form-actions {
+        display: none;
+      }
+    }
+
+    .layout-sidebar-first {
+      flex: 0 1 33%;
+
+      #views-exposed-form-search-page-1 {
+        padding: 36px 0;
+        background-color: transparent;
+        border-top: 1px solid black;
+      }
+
+      .form-item-search-api-fulltext {
+        display: none;
+      }
+    }
+  }
+}

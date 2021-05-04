@@ -565,5 +565,26 @@ ul.sf-menu li {
 .hero--diagonal + #views-exposed-form-search-page-1 {
   padding: 48px 15%; }
 
+.search-page main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .search-page main .layout-content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 66%;
+            flex: 0 1 66%; }
+    .search-page main .layout-content .form-item-sort-by, .search-page main .layout-content .form-actions {
+      display: none; }
+  .search-page main .layout-sidebar-first {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33%;
+            flex: 0 1 33%; }
+    .search-page main .layout-sidebar-first #views-exposed-form-search-page-1 {
+      padding: 36px 0;
+      background-color: transparent;
+      border-top: 1px solid black; }
+    .search-page main .layout-sidebar-first .form-item-search-api-fulltext {
+      display: none; }
+
 
 /*# sourceMappingURL=styles.min.css.map*/
