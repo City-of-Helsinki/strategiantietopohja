@@ -1,0 +1,19 @@
+.node--type-phenomenon  {
+  &.node--view-mode-full {
+    .hero--default:not(.hero--diagonal) {
+      @include breakpoint($breakpoint-m) {
+        .hds-koros {
+          color: var(--color-black-10);
+        }
+      }   
+    }
+    .field-phenomena {
+      label {
+        display: none;
+      }
+
+      background-color: var(--color-black-10);
+      overflow: hidden;
+    }
+  }
+}

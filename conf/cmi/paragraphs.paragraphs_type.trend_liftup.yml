@@ -1,0 +1,10 @@
+uuid: 9768716d-7089-4ad1-9d9d-dddc497f8177
+langcode: en
+status: true
+dependencies: {  }
+id: trend_liftup
+label: 'Trend liftup'
+icon_uuid: null
+icon_default: null
+description: 'A liftup card that can be linked to an article.'
+behavior_plugins: {  }

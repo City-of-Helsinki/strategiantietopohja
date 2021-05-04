@@ -1,0 +1,50 @@
+.liftup-with-image {
+  .liftup-with-image__container {
+    position: initial;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    @include breakpoint($breakpoint-l) {
+      flex-flow: row;
+    }
+
+    .liftup-with-image__image {
+      margin: 0;
+      padding: 0;
+      flex: 0 1 50%;
+      position: inherit;
+      transform: none;
+
+      max-height: 250px;
+      overflow: hidden;
+
+      @include breakpoint($breakpoint-l) {
+        max-height: unset;
+      }
+    }
+    
+    .liftup-with-image__content {
+      margin: 0;
+      padding: 24px;
+      flex: 0 1 50%;
+      position: inherit;
+      transform: none;
+
+      color: black;
+      background-color: transparent;
+
+      @include breakpoint($breakpoint-l) {
+        padding: 0 24px;
+      }
+    }
+  }
+
+  &.liftup-with-image--design-image-on-right {
+    .liftup-with-image__container {
+      @include breakpoint($breakpoint-l) {
+        flex-flow: row-reverse;
+      }
+    }
+  }
+}

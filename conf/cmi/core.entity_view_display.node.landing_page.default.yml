@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.landing_page.field_hero
     - field.field.node.landing_page.field_liftup_image
     - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_trends
     - node.type.landing_page
   module:
     - entity_reference_revisions
@@ -22,7 +23,7 @@ mode: default
 content:
   field_content:
     weight: 3
-    label: hidden
+    label: visually_hidden
     settings:
       view_mode: default
       link: ''
@@ -31,7 +32,7 @@ content:
     region: content
   field_hero:
     weight: 1
-    label: hidden
+    label: visually_hidden
     settings:
       view_mode: default
       link: ''
@@ -39,11 +40,20 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_metatags:
-    weight: 4
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
+  field_trends:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   links:
     weight: 0

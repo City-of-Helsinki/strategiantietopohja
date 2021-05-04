@@ -1,8 +1,11 @@
 .paragraph--type--phenomenon-liftup:nth-child(odd) {
   .content-card--phenomenon.content-card--design-teaser {
-    .hero__container {
-      @include breakpoint($breakpoint-l) {
-        margin-right: 12px;
+    @include breakpoint($breakpoint-l) {
+      .hero {
+        justify-content: flex-end;
+        .hero__container { 
+          margin-right: 12px;
+        }
       }
     }
   }
@@ -10,9 +13,12 @@
 
 .paragraph--type--phenomenon-liftup:nth-child(even) {
   .content-card--phenomenon.content-card--design-teaser {
-    .hero__container {
-      @include breakpoint($breakpoint-l) {
-        margin-left: 12px;
+    @include breakpoint($breakpoint-l) {
+      .hero {
+        justify-content: flex-start;
+        .hero__container { 
+          margin-left: 12px;
+        }
       }
     }
   }

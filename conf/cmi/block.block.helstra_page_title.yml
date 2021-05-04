@@ -21,8 +21,8 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      article: article
+      page: page
       unit: unit
-    negate: true
+    negate: false
     context_mapping:
       node: '@node.node_route_context:node'

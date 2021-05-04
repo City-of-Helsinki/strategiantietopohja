@@ -30,62 +30,65 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      phenomenon_liftup: phenomenon_liftup
+      liftup_with_image: liftup_with_image
       columns: columns
       banner: banner
       list_of_links: list_of_links
-      liftup_with_image: liftup_with_image
       content_cards: content_cards
-      phenomenon_liftup: phenomenon_liftup
     target_bundles_drag_drop:
       accordion:
-        weight: -22
+        weight: -31
         enabled: false
       accordion_item:
-        weight: -21
+        weight: -30
         enabled: false
       banner:
         enabled: true
-        weight: -26
+        weight: -34
       columns:
         enabled: true
-        weight: -27
+        weight: -35
       content_cards:
         enabled: true
-        weight: -23
+        weight: -32
       gallery:
-        weight: -20
+        weight: -29
         enabled: false
       gallery_slide:
-        weight: -19
+        weight: -28
         enabled: false
       hero:
-        weight: -18
+        weight: -27
         enabled: false
       image:
-        weight: -17
+        weight: -26
         enabled: false
       liftup_with_image:
         enabled: true
-        weight: -24
+        weight: -36
       list_of_links:
         enabled: true
-        weight: -25
+        weight: -33
       list_of_links_item:
-        weight: -16
+        weight: -25
         enabled: false
       phenomenon_liftup:
         enabled: true
-        weight: 30
+        weight: -37
       powerbi_embed:
-        weight: 31
+        weight: -23
         enabled: false
       section_title_text:
-        weight: 32
+        weight: -22
         enabled: false
       text:
-        weight: -15
+        weight: -24
         enabled: false
       title_text:
-        weight: 34
+        weight: -21
+        enabled: false
+      trend_liftup:
+        weight: -20
         enabled: false
 field_type: entity_reference_revisions
