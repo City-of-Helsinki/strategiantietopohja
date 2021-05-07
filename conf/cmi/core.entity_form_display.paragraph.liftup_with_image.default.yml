@@ -27,20 +27,20 @@ content:
     type: text_textarea
     region: content
   field_liftup_with_image_design:
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_liftup_with_image_image:
     type: media_library_widget
-    weight: 2
+    weight: 0
     settings:
       media_types: {  }
     third_party_settings: {  }
     region: content
   field_liftup_with_image_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
