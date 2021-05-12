@@ -12,7 +12,7 @@ dependencies:
 id: recent_block
 theme: helstra
 region: content
-weight: 6
+weight: 3
 provider: null
 plugin: 'views_block:content_recent-recent_block'
 settings:

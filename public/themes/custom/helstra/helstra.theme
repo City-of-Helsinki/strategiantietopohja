@@ -14,3 +14,13 @@ function helstra_preprocess_paragraph(&$variables) {
     $variables['parent__phenomenon_link'] = $parent->toLink();
   }
 }
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function helstra_preprocess_views_view(&$variables) {
+  // Assign searched text string as twig variable.
+  if ($_GET['search_api_fulltext']) {
+    $variables['searched_text'] = $_GET['search_api_fulltext'];
+  }
+}
