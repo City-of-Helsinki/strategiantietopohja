@@ -25,6 +25,7 @@ permissions:
   - 'administer nodes'
   - 'administer pathauto'
   - 'administer redirects'
+  - 'administer site configuration'
   - 'administer sitemap settings'
   - 'administer url aliases'
   - 'administer users'
