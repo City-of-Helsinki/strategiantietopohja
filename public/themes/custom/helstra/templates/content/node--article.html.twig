@@ -80,66 +80,60 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{# Article insights element #}
-{% if content.field_insights|render %}
-  <div class="{{ node.bundle|clean_class }}__insights">
-    <div class="insights__wrapper">
-      {{ content.field_insights }}
-    </div>
-  </div>
-{% endif %}
-<article{{ attributes.addClass(classes) }}>
-  {# Article main content column #}
-  <div class="main_content">
-  {% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_header'} %}
-    {% block container_content %}
+{% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_article'} %}
+  {% block container_content %}
+
+    <article{{ attributes.addClass(classes) }}>
+      {# Article title, lead and insights #}
       <div class="article__title">
         <h1 class="title" >{{ label }}</h1>
       </div>
+
       {% if content.field_lead|render %}
         <div class="{{ node.bundle|clean_class }}__lead">
           {{ content.field_lead }}
         </div>
       {% endif %}
-    {% endblock container_content %}
-  {% endembed %}
-  {% if content.field_content|render %}
-    <div class="{{ node.bundle|clean_class }}__content">
-      {{ content.field_content }}
-    </div>
-  {% endif %}
-  {% if content.field_downloadable_material|render %}
-    <div class="{{ node.bundle|clean_class }}__downloadable-material">
-      {% embed "@hdbt/misc/container.twig" with {container_element: 'downloadable_material'} %}
-        {% block container_content %}
+
+      {% if content.field_insights|render %}
+        <div class="{{ node.bundle|clean_class }}__insights">
+          {{ content.field_insights }}
+        </div>
+      {% endif %}    
+
+      {# Article main content column #}
+      <div class="main_content">
+
+      {% if content.field_content|render %}
+        <div class="{{ node.bundle|clean_class }}__content">
+          {{ content.field_content }}
+        </div>
+      {% endif %}
+      </div>
+
+      {# Article sidebar column #}
+      {% if content.article_toc_field|render %}
+        <div class="{{ node.bundle|clean_class }}__toc">
+          {{ content.article_toc_field }}
+        </div>
+      {% endif %}
+
+      {% if content.field_downloadable_material|render %}
+        <div class="{{ node.bundle|clean_class }}__downloadable-material">
           <div class="downloadable_material__wrapper">
             {{ content.field_downloadable_material }}
           </div>
-        {% endblock container_content %}
-      {% endembed %}
-    </div>
-  {% endif %}
-  {% if content.field_keywords|render %}
-    <div class="{{ node.bundle|clean_class }}__keywords">
-      {% embed "@hdbt/misc/container.twig" with {container_element: 'keywords'} %}
-        {% block container_content %}
+        </div>
+      {% endif %}
+
+      {% if content.field_keywords|render %}
+        <div class="{{ node.bundle|clean_class }}__keywords">
           <div class="keywords__wrapper">
             {{ content.field_keywords }}
           </div>
-        {% endblock container_content %}
-      {% endembed %}
-    </div>
-  {% endif %}
-  </div>
+        </div>
+      {% endif %}
+    </article>
 
-  {# Article sidebar column #}
-  {% if content.article_toc_field|render %}
-    {% embed "@hdbt/misc/container.twig" with {container_element: node.bundle|clean_class ~ '_toc'} %}
-      {% block container_content %}
-      <div class="{{ node.bundle|clean_class }}__toc">
-        {{ content.article_toc_field }}
-      </div>
-      {% endblock container_content %}
-    {% endembed %}
-  {% endif %}
-</article>
+  {% endblock container_content %}
+{% endembed %}

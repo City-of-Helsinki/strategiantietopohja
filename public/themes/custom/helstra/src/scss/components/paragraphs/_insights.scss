@@ -1,19 +1,26 @@
-.insights__wrapper {
+.article__insights {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -12px;
+  margin: 0 -4px;
 
   @include breakpoint($breakpoint-l) {
-    margin: 0 -4px;
+    
   }
 
   .insight-item {
-    flex: 1 1 32%;
-    position: relative;
+    flex: 1 1 100%;
     margin: 4px;
+    position: relative;
     padding: 48px 32px;
     background-color: var(--color-fog);
+
+    @include breakpoint($breakpoint-m) {
+      flex: 1 1 45%;
+    }
+
+    @include breakpoint($breakpoint-l) {
+      flex: 1 1 30%;
+    }
 
     &::before {
       content: '';
