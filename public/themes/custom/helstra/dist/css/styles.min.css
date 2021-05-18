@@ -679,6 +679,10 @@ ul.sf-menu li {
         border-bottom: 1px solid; }
         .search-page .search-page__container .search-page-content .views-row h3 {
           margin-bottom: 12px; }
+        .search-page .search-page__container .search-page-content .views-row .date {
+          display: block;
+          margin-top: 8px;
+          color: var(--color-black-50); }
     .search-page .search-page__container .search-page-sidebar {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 20%;
