@@ -644,26 +644,68 @@ ul.sf-menu li {
 .hero--diagonal + #views-exposed-form-search-page-1 {
   padding: 48px 15%; }
 
-.search-page main {
+.search-page {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  .search-page main .layout-content {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 66%;
-            flex: 0 1 66%; }
-    .search-page main .layout-content .form-item-sort-by, .search-page main .layout-content .form-actions {
-      display: none; }
-  .search-page main .layout-sidebar-first {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 33%;
-            flex: 0 1 33%; }
-    .search-page main .layout-sidebar-first #views-exposed-form-search-page-1 {
-      padding: 36px 0;
-      background-color: transparent;
-      border-top: 1px solid black; }
-    .search-page main .layout-sidebar-first .form-item-search-api-fulltext {
-      display: none; }
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -32px; }
+  .search-page .search-page-header {
+    width: 100%;
+    background-color: #9ec9eb;
+    padding: 32px 0 48px 0; }
+    .search-page .search-page-header #views-exposed-form-search-page-1 {
+      padding: 0; }
+      .search-page .search-page-header #views-exposed-form-search-page-1 .form-item-sort-by, .search-page .search-page-header #views-exposed-form-search-page-1 .form-actions {
+        display: none; }
+  .search-page .search-page__container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .search-page .search-page__container .search-page-content {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 75%;
+              flex: 0 1 75%; }
+    .search-page .search-page__container .search-page-sidebar {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 20%;
+              flex: 0 1 20%; }
+      .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 {
+        padding: 36px 0;
+        background-color: transparent;
+        border-top: 1px solid black;
+        margin-top: 8px; }
+        .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 .form-item, .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 .form-wrapper {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-flow: column;
+                  flex-flow: column; }
+          .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 .form-item label, .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 .form-wrapper label {
+            font-weight: 500; }
+          .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 .form-item select, .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 .form-wrapper select {
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
+            background: white;
+            padding: 12px 7px;
+            background-image: url(../media/icon-caret-down.png?67c660e97e58fff1d65a031cc5ea7746);
+            background-size: 12px;
+            background-repeat: no-repeat;
+            background-position-x: calc(100% - 12px);
+            background-position-y: center; }
+        .search-page .search-page__container .search-page-sidebar #views-exposed-form-search-page-1 .form-item-search-api-fulltext {
+          display: none; }
 
 
 /*# sourceMappingURL=styles.min.css.map*/
