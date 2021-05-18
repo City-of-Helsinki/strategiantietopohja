@@ -82,12 +82,12 @@
 %}
 <div {{ attributes.addClass(classes) }}>
   <div class="main_content">
-    <h2 class="title" >
+    <h3 class="title" >
       <a href="{{ url }}" rel="bookmark">
         {{ label }}
       </a>
-    </h2>
+    </h3>
     {{ content }}
-    <p>{{ node.getCreatedTime() }}</p>
+    <p>{{ node.getCreatedTime() | date("d.m.y H:i") }}</p>
   </div>
 </div>

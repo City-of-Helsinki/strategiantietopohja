@@ -26,6 +26,16 @@
 
     .search-page-content {
       flex: 0 1 75%;
+
+      .views-row {
+        padding-bottom: 48px;
+        border-bottom: 1px solid;
+
+
+        h3 {
+          margin-bottom: 12px;
+        }
+      }
     }
 
     .search-page-sidebar {

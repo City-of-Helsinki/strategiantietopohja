@@ -674,6 +674,11 @@ ul.sf-menu li {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 75%;
               flex: 0 1 75%; }
+      .search-page .search-page__container .search-page-content .views-row {
+        padding-bottom: 48px;
+        border-bottom: 1px solid; }
+        .search-page .search-page__container .search-page-content .views-row h3 {
+          margin-bottom: 12px; }
     .search-page .search-page__container .search-page-sidebar {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 20%;
