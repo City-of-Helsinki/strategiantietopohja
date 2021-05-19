@@ -7,5 +7,42 @@
         }
       }   
     }
+
+    @for $i from 0 to 9 {
+      .paragraph-content > .paragraph-content:nth-child(#{$i + 1}) {
+        position: relative;
+        z-index: #{10 - $i};
+      }
+    }
+
+    .paragraph-content > .paragraph-content:nth-child(odd) {
+      .content-card--phenomenon.content-card--design-teaser {
+        @include breakpoint($breakpoint-l) {
+          .hero {
+            justify-content: flex-end;
+            overflow: visible;
+
+            .hero__container { 
+              margin-right: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .paragraph-content > .paragraph-content:nth-child(even) {
+      .content-card--phenomenon.content-card--design-teaser {
+        @include breakpoint($breakpoint-l) {
+          .hero {
+            justify-content: flex-start;
+            overflow: visible;
+
+            .hero__container { 
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 }

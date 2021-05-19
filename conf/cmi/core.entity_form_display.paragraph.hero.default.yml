@@ -12,7 +12,6 @@ dependencies:
     - field.field.paragraph.hero.field_hero_title
     - paragraphs.paragraphs_type.hero
   module:
-    - hdbt_admin_editorial
     - media_library
     - text
 _core:
@@ -49,21 +48,6 @@ content:
       media_types: {  }
     third_party_settings: {  }
     region: content
-  field_hero_link:
-    weight: 6
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-      link_target: ''
-    third_party_settings: {  }
-    type: link_target_field_widget
-    region: content
-  field_hero_link_design:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_hero_title:
     weight: 2
     settings:
@@ -74,4 +58,6 @@ content:
     region: content
 hidden:
   created: true
+  field_hero_link: true
+  field_hero_link_design: true
   status: true
