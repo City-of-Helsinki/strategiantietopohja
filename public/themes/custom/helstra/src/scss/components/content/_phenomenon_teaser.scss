@@ -1,37 +1,14 @@
-.paragraph--type--phenomenon-liftup:nth-child(odd) {
-  .content-card--phenomenon.content-card--design-teaser {
-    @include breakpoint($breakpoint-l) {
-      .hero {
-        justify-content: flex-end;
-        .hero__container { 
-          margin-right: 12px;
-        }
-      }
-    }
-  }
-}
-
-.paragraph--type--phenomenon-liftup:nth-child(even) {
-  .content-card--phenomenon.content-card--design-teaser {
-    @include breakpoint($breakpoint-l) {
-      .hero {
-        justify-content: flex-start;
-        .hero__container { 
-          margin-left: 12px;
-        }
-      }
-    }
-  }
-}
-
 .content-card--phenomenon.content-card--design-teaser {
   padding: 24px 48px;
   width: 100%;
 
   .hero__container {
+    display: flex;
     overflow: visible;
+    min-height: 480px;
     max-width: 860px;
     width: 100%;
+    align-items: center;
 
     .hero__text-content {
       max-width: unset;

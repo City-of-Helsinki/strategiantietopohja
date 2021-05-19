@@ -69,6 +69,60 @@
   .node--type-landing-page.node--view-mode-full .hero--default:not(.hero--diagonal) .hds-koros {
     color: #9ec9eb; } }
 
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(1) {
+  position: relative;
+  z-index: 10; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(2) {
+  position: relative;
+  z-index: 9; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(3) {
+  position: relative;
+  z-index: 8; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(4) {
+  position: relative;
+  z-index: 7; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(5) {
+  position: relative;
+  z-index: 6; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(6) {
+  position: relative;
+  z-index: 5; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(7) {
+  position: relative;
+  z-index: 4; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(8) {
+  position: relative;
+  z-index: 3; }
+
+.node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(9) {
+  position: relative;
+  z-index: 2; }
+
+@media (min-width: 992px) {
+  .node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(odd) .content-card--phenomenon.content-card--design-teaser .hero {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    overflow: visible; }
+    .node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(odd) .content-card--phenomenon.content-card--design-teaser .hero .hero__container {
+      margin-right: 12px; } }
+
+@media (min-width: 992px) {
+  .node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(even) .content-card--phenomenon.content-card--design-teaser .hero {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow: visible; }
+    .node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(even) .content-card--phenomenon.content-card--design-teaser .hero .hero__container {
+      margin-left: 12px; } }
+
 @media (min-width: 768px) {
   .node--type-phenomenon.node--view-mode-full .hero--default:not(.hero--diagonal) .hds-koros {
     color: var(--color-black-10); } }
@@ -79,29 +133,20 @@
   .node--type-phenomenon.node--view-mode-full .field-phenomena label {
     display: none; }
 
-@media (min-width: 992px) {
-  .paragraph--type--phenomenon-liftup:nth-child(odd) .content-card--phenomenon.content-card--design-teaser .hero {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
-    .paragraph--type--phenomenon-liftup:nth-child(odd) .content-card--phenomenon.content-card--design-teaser .hero .hero__container {
-      margin-right: 12px; } }
-
-@media (min-width: 992px) {
-  .paragraph--type--phenomenon-liftup:nth-child(even) .content-card--phenomenon.content-card--design-teaser .hero {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    .paragraph--type--phenomenon-liftup:nth-child(even) .content-card--phenomenon.content-card--design-teaser .hero .hero__container {
-      margin-left: 12px; } }
-
 .content-card--phenomenon.content-card--design-teaser {
   padding: 24px 48px;
   width: 100%; }
   .content-card--phenomenon.content-card--design-teaser .hero__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     overflow: visible;
+    min-height: 480px;
     max-width: 860px;
-    width: 100%; }
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content {
       max-width: unset;
       width: 100%;
