@@ -111,13 +111,9 @@ content:
     region: content
   field_phenomena:
     weight: 8
-    settings:
-      width: 100%
-      match_operator: CONTAINS
-      match_limit: 10
-      autocomplete: false
+    settings: {  }
     third_party_settings: {  }
-    type: select2_entity_reference
+    type: options_buttons
     region: content
   langcode:
     type: language_select
