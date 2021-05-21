@@ -1,4 +1,21 @@
 @charset "UTF-8";
+#block-helstra-sitebranding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  #block-helstra-sitebranding .name--header {
+    font-size: 18px;
+    line-height: 18px;
+    display: none; }
+    @media (min-width: 768px) {
+      #block-helstra-sitebranding .name--header {
+        display: inline;
+        display: initial;
+        margin-left: 12px; } }
+
 .node--type-article.node--view-mode-full {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,15 +140,58 @@
     .node--type-landing-page.node--view-mode-full .paragraph-content > .paragraph-content:nth-child(even) .content-card--phenomenon.content-card--design-teaser .hero .hero__container {
       margin-left: 12px; } }
 
-@media (min-width: 768px) {
-  .node--type-phenomenon.node--view-mode-full .hero--default:not(.hero--diagonal) .hds-koros {
-    color: var(--color-black-10); } }
-
 .node--type-phenomenon.node--view-mode-full .field-phenomena {
   background-color: var(--color-black-10);
-  overflow: hidden; }
-  .node--type-phenomenon.node--view-mode-full .field-phenomena label {
-    display: none; }
+  overflow: hidden;
+  margin-top: 32px; }
+  @media (min-width: 992px) {
+    .node--type-phenomenon.node--view-mode-full .field-phenomena {
+      margin-top: 48px; } }
+  .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper {
+    background-color: var(--color-black-10);
+    padding: 32px 24px; }
+    .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .label {
+      float: left;
+      font-size: 1.75rem;
+      margin-bottom: 16px; }
+    .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .count {
+      float: right;
+      font-size: 1.2rem;
+      margin-bottom: 16px; }
+      .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .count .number {
+        font-weight: bold; }
+    .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card {
+        position: relative;
+        background-color: var(--color-white);
+        padding: 16px 24px;
+        margin: 1%;
+        width: 100%; }
+        @media (min-width: 576px) {
+          .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card {
+            width: 48%; } }
+        @media (min-width: 768px) {
+          .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card {
+            width: 31.33%; } }
+        .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__link {
+          color: var(--color-black-60);
+          height: 100%;
+          padding-bottom: 42px; }
+        .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__title {
+          color: var(--color-black);
+          display: block;
+          margin-bottom: 16px; }
+        .node--type-phenomenon.node--view-mode-full .field-phenomena .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__arrow {
+          color: var(--color-black);
+          position: absolute;
+          bottom: 8px;
+          left: 18px; }
 
 .content-card--phenomenon.content-card--design-teaser {
   padding: 24px 48px;
@@ -147,14 +207,16 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content {
+    .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper {
       max-width: unset;
       width: 100%;
       background-color: white;
       padding: 48px 64px; }
-      .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content h2 {
+      .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__title {
         margin-top: 0; }
-      .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper {
+      .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__description {
+        margin-bottom: 16px; }
+      .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -163,7 +225,7 @@
                 align-items: flex-end;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-        .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper > a {
+        .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions > a {
           border: 1px solid black;
           background-color: black;
           color: white;
@@ -178,27 +240,27 @@
               -ms-flex: 1 1 100%;
                   flex: 1 1 100%; }
           @media (min-width: 768px) {
-            .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper > a {
+            .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions > a {
               margin: 0 16px 0 0;
               -webkit-box-flex: 0;
                   -ms-flex: 0 1 35%;
                       flex: 0 1 35%; } }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper > a:hover, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper > a:focus {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions > a:hover, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions > a:focus {
             background-color: white;
             color: black; }
-        .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena {
+        .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena {
           -webkit-box-flex: 1;
               -ms-flex: 1 1 100%;
                   flex: 1 1 100%; }
           @media (min-width: 768px) {
-            .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena {
+            .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena {
               margin-right: 16px;
               -webkit-box-flex: 0;
                   -ms-flex: 0 1 55%;
                       flex: 0 1 55%; } }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .label {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .label {
             font-weight: 500; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropbtn {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropbtn {
             border: 1px solid black;
             background-color: transparent;
             color: gray;
@@ -206,11 +268,11 @@
             width: 100%;
             font-size: 16px;
             text-align: left; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown {
             position: relative;
             display: inline-block;
             width: 100%; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown-content {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f1f1f1;
@@ -218,21 +280,21 @@
             -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown-content a {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown-content a:hover {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown-content a:hover {
             background-color: #ddd; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown:hover .dropdown-content, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown[focus-within] .dropdown-content {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown:hover .dropdown-content, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown[focus-within] .dropdown-content {
             display: block; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown:hover .dropdown-content, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown:focus-within .dropdown-content {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown:hover .dropdown-content, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown:focus-within .dropdown-content {
             display: block; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown:hover .dropbtn, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown[focus-within] .dropbtn {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown:hover .dropbtn, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown[focus-within] .dropbtn {
             background-color: gray;
             color: white; }
-          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown:hover .dropbtn, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__text-content .widget-wrapper .field-phenomena .dropdown:focus-within .dropbtn {
+          .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown:hover .dropbtn, .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions .field-phenomena .dropdown:focus-within .dropbtn {
             background-color: gray;
             color: white; }
   .content-card--phenomenon.content-card--design-teaser .hds-koros {
@@ -312,53 +374,6 @@
       font-size: 1.5rem;
       margin-bottom: 16px; }
 
-.phenomena-grid__container {
-  margin-top: -128px; }
-  .phenomena-grid__container .phenomena-grid__wrapper {
-    background-color: var(--color-black-10);
-    padding: 128px 24px 32px 24px; }
-    .phenomena-grid__container .phenomena-grid__wrapper .label {
-      float: left;
-      font-size: 1.75rem;
-      margin-bottom: 16px; }
-    .phenomena-grid__container .phenomena-grid__wrapper .count {
-      float: right;
-      font-size: 1.2rem;
-      margin-bottom: 16px; }
-      .phenomena-grid__container .phenomena-grid__wrapper .count .number {
-        font-weight: bold; }
-    .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper {
-      width: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card {
-        position: relative;
-        -webkit-box-flex: 1;
-            -ms-flex: 1 1 25%;
-                flex: 1 1 25%;
-        background-color: var(--color-white);
-        padding: 16px 24px;
-        margin: 4px; }
-        .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__link {
-          color: var(--color-black-60);
-          height: 100%;
-          padding-bottom: 42px; }
-        .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__title {
-          color: var(--color-black);
-          display: block;
-          margin-bottom: 8px; }
-        .phenomena-grid__container .phenomena-grid__wrapper .content__wrapper .content-card .content-card__arrow {
-          color: var(--color-black);
-          position: absolute;
-          bottom: 8px;
-          left: 18px; }
-
 .trends__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,29 +399,32 @@
       .trends__container .trends-liftup .paragraph p {
         font-weight: normal; }
 
-.sf-accordion-toggle {
-  margin: 0 -24px; }
-  .sf-accordion-toggle a {
-    padding: 1em 1.5em;
+#block-helstra-mainnavigation {
+  margin-bottom: 8px; }
+  @media (min-width: 992px) {
+    #block-helstra-mainnavigation {
+      margin-left: 8px; } }
+
+.sf-accordion-toggle a {
+  padding: 1em 1.5em;
+  display: block;
+  color: transparent; }
+  .sf-accordion-toggle a span {
+    height: 24px;
     display: block;
-    color: transparent; }
-    .sf-accordion-toggle a span {
-      height: 24px;
-      display: block; }
-      .sf-accordion-toggle a span::before {
-        content: '';
-        display: inline-block;
-        height: 24px;
-        width: 24px;
-        background-image: url(../media/icon-hamburger.png?98e90677417695eef9a6232d696c613d);
-        background-size: contain; }
-    .sf-accordion-toggle a:hover, .sf-accordion-toggle a:focus {
-      background: var(--color-black-10); }
+    background-image: url(../media/icon-hamburger.png?98e90677417695eef9a6232d696c613d);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 100%; }
+  .sf-accordion-toggle a:hover, .sf-accordion-toggle a:focus {
+    background: var(--color-black-10); }
 
 ul.sf-menu li {
   z-index: 100; }
-  ul.sf-menu li a:hover, ul.sf-menu li a:focus {
-    background: var(--color-black-10); }
+  ul.sf-menu li a {
+    font-size: 18px; }
+    ul.sf-menu li a:hover, ul.sf-menu li a:focus {
+      background: var(--color-black-10); }
 
 /*
  * DO NOT EDIT THIS FILE.

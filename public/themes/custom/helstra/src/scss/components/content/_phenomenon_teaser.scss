@@ -10,17 +10,21 @@
     width: 100%;
     align-items: center;
 
-    .hero__text-content {
+    .hero__wrapper {
       max-width: unset;
       width: 100%;
       background-color: white;
       padding: 48px 64px;
 
-      h2 {
+      .hero__title {
         margin-top: 0;
       }
 
-      .widget-wrapper {
+      .hero__description {
+        margin-bottom: 16px;
+      }
+
+      .hero__actions {
         display: flex;
         align-items: flex-end;
         flex-wrap: wrap;
