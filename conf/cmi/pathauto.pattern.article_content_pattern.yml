@@ -9,16 +9,16 @@ _core:
 id: article_content_pattern
 label: 'Article content pattern'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+pattern: '[node:field_phenomena:entity:name]/[node:title]'
 selection_criteria:
-  02f068b0-826e-4d95-b8c0-a552a60d1ee6:
+  531e0d0f-a85f-4d38-8255-d26ce2a3bc4e:
     id: node_type
     bundles:
       article: article
     negate: false
     context_mapping:
       node: node
-    uuid: 02f068b0-826e-4d95-b8c0-a552a60d1ee6
+    uuid: 531e0d0f-a85f-4d38-8255-d26ce2a3bc4e
 selection_logic: and
 weight: -5
 relationships: {  }
