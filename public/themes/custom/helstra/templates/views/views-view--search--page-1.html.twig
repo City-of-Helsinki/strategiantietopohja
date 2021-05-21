@@ -51,6 +51,7 @@
           <h2>{{ 'Search results for'|t }} "{{ searched_text }}"</h2>
         {% endif %}
         {% if rows -%}
+          {{ header }}
           {{ rows }}
         {% elseif empty -%}
           {{ empty }}
