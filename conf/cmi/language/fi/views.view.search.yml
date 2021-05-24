@@ -18,7 +18,7 @@ display:
             label: 'Uusimmat ensin'
       header:
         result:
-          content: '@total hakutulosta'
+          content: '<p><span class="count">@total</span> hakutulosta</p>'
       empty:
         area:
           content:
