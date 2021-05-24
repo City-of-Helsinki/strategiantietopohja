@@ -81,7 +81,7 @@
 ]
 %}
 {%
-  set teaser = content.field_content|render|striptags('<div><h2><p>')|preg_replace('/(<h2).*(h2>)/', '')|striptags
+  set teaser = content.field_content|render|spaceless|striptags('<div><h2><p>')|preg_replace('/(<h2).*(h2>)/', '')|striptags|preg_replace('/(  )/', '')
 %}
 <div {{ attributes.addClass(classes) }}>
   <div class="main_content">
