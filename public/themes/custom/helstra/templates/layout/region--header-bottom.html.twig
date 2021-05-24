@@ -20,11 +20,7 @@
     'clearfix',
   ]
 %}
-  {% embed "@hdbt/misc/container.twig" with {container_element: region} %}
-    {% block container_content %}
-      <div{{ attributes.addClass(classes) }}>
-        {{ content }}
-      </div>
-    {% endblock container_content %}
-  {% endembed %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
 {% endif %}

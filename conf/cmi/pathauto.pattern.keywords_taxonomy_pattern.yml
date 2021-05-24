@@ -1,0 +1,23 @@
+uuid: 63657622-3375-474b-84a7-ef86675aaacf
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: keywords_taxonomy_pattern
+label: 'Keywords taxonomy pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary:name]/[term:name]'
+selection_criteria:
+  ca0c3026-3786-4144-8f31-b115fe05af02:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      keywords: keywords
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: ca0c3026-3786-4144-8f31-b115fe05af02
+selection_logic: and
+weight: -5
+relationships: {  }

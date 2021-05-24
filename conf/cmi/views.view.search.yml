@@ -273,7 +273,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: '@total results'
+          content: '<p><span class="count">@total</span> results</p>'
           plugin_id: result
       footer: {  }
       empty:

@@ -56,14 +56,14 @@
   <div{{ attributes.addClass(classes) }} style="background-image:url('{{ background_img }}');background-size:cover;background-position: center;">
     {% embed "@hdbt/misc/container.twig" with {container_element: 'hero'} %}
       {% block container_content %}
-        <div class="hero__text-content">
+        <div class="hero__wrapper">
           <h2 class="hero__title">
             {{ content.field_hero_title }}
           </h2>
           <div class="hero__description">
             {{ description }}
           </div>
-          <div class="widget-wrapper">
+          <div class="hero__actions">
             <a href="{{ parent__phenomenon_link.url }}">{{ 'Explore phenomenon'|t }}</a>
             {{ parent__field_phenomena }}
           </div>
