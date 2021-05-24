@@ -80,6 +80,9 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
+{%
+  set teaser = content.field_content|render|striptags('<div><h2><p>')|preg_replace('/(<h2).*(h2>)/', '')|striptags
+%}
 <div {{ attributes.addClass(classes) }}>
   <div class="main_content">
     <h3 class="title" >
@@ -87,7 +90,7 @@
         {{ label }}
       </a>
     </h3>
-    {{ content }}
+    <p>{{ teaser|length > 500 ? teaser|truncate(500, true, true) : teaser  }}</p>
     <span class="date">{{ node.getCreatedTime() | date("d.m.y H:i") }}</span>
   </div>
 </div>

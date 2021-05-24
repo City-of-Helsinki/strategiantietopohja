@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.article.field_phenomena
     - node.type.article
   module:
+    - paragraphs
     - user
 _core:
   default_config_hash: iP63ruNj8P30AR0u-V9j_M03qHUEpzx-qneyWJtGvNw
@@ -23,28 +24,23 @@ targetEntityType: node
 bundle: article
 mode: search_result
 content:
-  field_phenomena:
-    type: entity_reference_label
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-  search_api_excerpt:
+  field_content:
+    type: paragraph_summary
     weight: 0
     region: content
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
 hidden:
   article_toc_field: true
   field_author: true
-  field_content: true
   field_downloadable_material: true
   field_insights: true
   field_keywords: true
   field_lead: true
   field_liftup_image: true
   field_metatags: true
+  field_phenomena: true
   langcode: true
   links: true
+  search_api_excerpt: true
