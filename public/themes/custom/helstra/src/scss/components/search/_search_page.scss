@@ -22,11 +22,11 @@
   .search-page__container {
     width: 100%;
     display: flex;
-    flex-flow: row;
+    flex-flow: column-reverse;
     justify-content: space-between;
 
-    @include breakpoint($breakpoint-m) {
-      flex-flow: column-reverse;
+    @include breakpoint($breakpoint-l) {
+      flex-flow: row;
     }
 
     .search-page-content {
