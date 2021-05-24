@@ -20,5 +20,5 @@ selection_criteria:
       node: node
     uuid: 531e0d0f-a85f-4d38-8255-d26ce2a3bc4e
 selection_logic: and
-weight: -5
+weight: -10
 relationships: {  }

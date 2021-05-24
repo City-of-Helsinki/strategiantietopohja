@@ -6,6 +6,7 @@
     font-size: 18px;
     line-height: 18px;
     display: none;
+    text-decoration: none;
 
     @include breakpoint($breakpoint-m) {
       display: initial;
