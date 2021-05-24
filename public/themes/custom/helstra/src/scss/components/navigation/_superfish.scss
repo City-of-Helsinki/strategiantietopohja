@@ -1,3 +1,39 @@
+.sf-accordion-toggle {
+  margin: 0 -24px;
+
+  a {
+    padding: 1em 1.5em;
+    display: block;
+    color: transparent;
+
+    span {
+      height: 24px;
+      display: block;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        background-image: url('../../src/images/icon-hamburger.png');
+        background-size: contain;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--color-black-10);
+    }
+  }
+}
+
 ul.sf-menu li {
   z-index: 100;
+
+  a {
+    &:hover,
+    &:focus {
+      background: var(--color-black-10);
+    }
+  }
 }

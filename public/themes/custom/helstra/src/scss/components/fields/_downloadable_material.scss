@@ -1,21 +1,27 @@
-.downloadable_material__wrapper {
-  background-color: var(--color-black-10);
-  padding: 32px 24px;
+.article__downloadable-material {
+  background: var(--color-black-10);
+  margin-top: 48px;
+  width: 100%;
+  order: 5;
 
-  .label {
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-  }
+  .downloadable_material__wrapper {
+    padding: 32px 24px;
 
-  .hds-button {
-    background-color: var(--hdbt-color-black);
-    border-color: var(--hdbt-color-black);
+    .label {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
 
-    &:hover,
-    &:focus {
-      background-color: var(--color-black-80);
-      border-color: var(--color-black-80);
+    .hds-button {
+      background-color: var(--hdbt-color-black);
+      border-color: var(--hdbt-color-black);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-black-80);
+        border-color: var(--color-black-80);
+      }
     }
   }
 }
