@@ -91,6 +91,7 @@
       </a>
     </h3>
     <p>{{ teaser|length > 500 ? teaser|truncate(500, true, true) : teaser  }}</p>
+    <a class="term" href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.field_phenomena.entity.tid.value}) }}" hreflang="fi">{{ node.field_phenomena.entity.name.value }}</a>
     <span class="date">{{ node.getCreatedTime() | date("d.m.y H:i") }}</span>
   </div>
 </div>
