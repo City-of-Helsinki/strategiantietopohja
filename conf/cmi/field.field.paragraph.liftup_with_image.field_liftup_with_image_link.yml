@@ -1,0 +1,23 @@
+uuid: 6eb99693-0875-4b10-a64d-88521498c357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_liftup_with_image_link
+    - paragraphs.paragraphs_type.liftup_with_image
+  module:
+    - link
+id: paragraph.liftup_with_image.field_liftup_with_image_link
+field_name: field_liftup_with_image_link
+entity_type: paragraph
+bundle: liftup_with_image
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

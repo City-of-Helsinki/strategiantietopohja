@@ -679,6 +679,26 @@ ul.sf-menu li {
     @media (min-width: 992px) {
       .liftup-with-image .liftup-with-image__container .liftup-with-image__content {
         padding: 0 24px; } }
+    .liftup-with-image .liftup-with-image__container .liftup-with-image__content .liftup-with-image__link {
+      margin-top: 33px;
+      text-align: center; }
+      @media (min-width: 768px) {
+        .liftup-with-image .liftup-with-image__container .liftup-with-image__content .liftup-with-image__link {
+          text-align: left;
+          text-align: initial; } }
+      .liftup-with-image .liftup-with-image__container .liftup-with-image__content .liftup-with-image__link a {
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        padding: 17px;
+        line-height: 1;
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none; }
+        .liftup-with-image .liftup-with-image__container .liftup-with-image__content .liftup-with-image__link a:hover, .liftup-with-image .liftup-with-image__container .liftup-with-image__content .liftup-with-image__link a:focus {
+          background-color: white;
+          color: black; }
 
 @media (min-width: 992px) {
   .liftup-with-image.liftup-with-image--design-image-on-right .liftup-with-image__container {
