@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - linkit
+    - media
     - token_filter
 _core:
   default_config_hash: kAnW32pUe3wfz47POpRuUBWgnZ2i65lujy4tPAZN9GI
@@ -53,3 +54,12 @@ filters:
     weight: 0
     settings:
       replace_empty: '0'
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }
