@@ -6,9 +6,11 @@ dependencies:
     - field.field.paragraph.liftup_with_image.field_liftup_with_image_desc
     - field.field.paragraph.liftup_with_image.field_liftup_with_image_design
     - field.field.paragraph.liftup_with_image.field_liftup_with_image_image
+    - field.field.paragraph.liftup_with_image.field_liftup_with_image_link
     - field.field.paragraph.liftup_with_image.field_liftup_with_image_title
     - paragraphs.paragraphs_type.liftup_with_image
   module:
+    - link
     - options
     - text
 _core:
@@ -41,6 +43,18 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_liftup_with_image_link:
+    weight: 4
+    label: visually_hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
   field_liftup_with_image_title:
     weight: 0
     label: hidden
@@ -49,4 +63,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true
