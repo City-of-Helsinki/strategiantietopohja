@@ -788,7 +788,7 @@ ul.sf-menu li {
         .search-page .search-page__container .search-page-content > p .count {
           font-weight: 600; }
       .search-page .search-page__container .search-page-content .views-row {
-        padding-bottom: 48px;
+        padding-bottom: 32px;
         border-top: 1px solid; }
         @media (min-width: 992px) {
           .search-page .search-page__container .search-page-content .views-row {
