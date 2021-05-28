@@ -37,6 +37,33 @@
       @include breakpoint($breakpoint-l) {
         padding: 0 24px;
       }
+
+      .liftup-with-image__link {
+        margin-top: 33px;
+        text-align: center;
+
+        @include breakpoint($breakpoint-m) {
+          text-align: initial;
+        }
+
+        a {
+          border: 1px solid black;
+          background-color: black;
+          color: white;
+          padding: 17px;
+          line-height: 1;
+          width: 100%;
+          font-size: 16px;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
     }
   }
 

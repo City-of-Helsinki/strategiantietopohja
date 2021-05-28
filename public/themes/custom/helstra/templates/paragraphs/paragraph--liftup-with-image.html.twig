@@ -82,6 +82,9 @@
           {% if content.field_liftup_with_image_desc|render %}
             <div class="liftup-with-image__desc">{{ content.field_liftup_with_image_desc }}</div>
           {% endif %}
+          {% if content.field_liftup_with_image_link|render %}
+            <div class="liftup-with-image__link"><a href="{{ content.field_liftup_with_image_link[0]['#url'] }}">{{ content.field_liftup_with_image_link[0]['#title'] }}</a></div>
+          {% endif %}
         </div>
       {% endblock %}
     {% endembed %}
