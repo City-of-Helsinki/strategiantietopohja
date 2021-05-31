@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - search_api.index.site_search
+    - taxonomy.vocabulary.phenomena
   module:
     - search_api
 id: search
@@ -238,6 +239,54 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: search_api_language
+        field_phenomena:
+          id: field_phenomena
+          table: search_api_index_site_search
+          field: field_phenomena
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_phenomena_op
+            label: Phenomenon
+            description: ''
+            use_operator: false
+            operator: field_phenomena_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_phenomena
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_producer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: phenomena
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
       sorts:
         search_api_relevance:
           id: search_api_relevance
@@ -301,6 +350,7 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
+        - user
         - 'user.node_grants:view'
       tags:
         - 'config:search_api.index.site_search'
@@ -321,6 +371,7 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
+        - user
         - 'user.node_grants:view'
       tags:
         - 'config:search_api.index.site_search'

@@ -9,6 +9,9 @@ display:
         search_api_fulltext:
           expose:
             label: 'Hae tietopohjasta'
+        field_phenomena:
+          expose:
+            label: Ilmiö
       sorts:
         search_api_relevance:
           expose:
@@ -22,5 +25,5 @@ display:
       empty:
         area:
           content:
-            value: 'Ei hakutuloksia.'
+            value: "<p>Ei hakutuloksia.</p>\r\n"
             format: full_html
