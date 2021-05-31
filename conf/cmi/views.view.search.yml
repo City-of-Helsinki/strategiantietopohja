@@ -5,6 +5,11 @@ dependencies:
   config:
     - search_api.index.site_search
     - taxonomy.vocabulary.phenomena
+  content:
+    - 'taxonomy_term:phenomena:0827e87c-2fdf-4803-a18b-a115482623ed'
+    - 'taxonomy_term:phenomena:28ebd8e8-c7e1-4642-8642-251fbaa4f277'
+    - 'taxonomy_term:phenomena:2d9ba028-8754-4b5e-b4e3-20523bea963b'
+    - 'taxonomy_term:phenomena:3cb94e74-bd4b-4af3-a97c-a8b4a3755208'
   module:
     - search_api
 id: search
@@ -247,7 +252,11 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value: {  }
+          value:
+            11: 11
+            12: 12
+            13: 13
+            14: 14
           group: 1
           exposed: true
           expose:
