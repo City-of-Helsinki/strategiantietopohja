@@ -2,13 +2,14 @@ uuid: 70142625-1495-4423-a126-1a5ec2bb74de
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - search_api
   config:
     - field.storage.node.field_author
     - field.storage.node.field_lead
+    - field.storage.node.field_phenomena
     - search_api.server.search
+  module:
+    - node
+    - search_api
 id: site_search
 name: 'Site search'
 description: ''
@@ -47,6 +48,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_lead
+  field_phenomena:
+    label: Phenomenon
+    datasource_id: 'entity:node'
+    property_path: field_phenomena
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_phenomena
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
