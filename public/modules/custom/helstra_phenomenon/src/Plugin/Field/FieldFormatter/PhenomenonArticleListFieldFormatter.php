@@ -7,6 +7,10 @@ use Drupal\Core\Field\FieldItemInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Plugin\views\wizard\TaxonomyTerm;
 
@@ -83,46 +87,91 @@ class PhenomenonArticleListFieldFormatter extends FormatterBase {
    *   The textual output generated.
    */
   protected function viewValue(FieldItemInterface $item) {
-    $term = $item->entity;
-    $nodes = $this->getArticles($term);
-    if (empty($nodes))
+    $parent_entity = $item->getEntity();
+    $links = $this->getArticles($parent_entity);
+    if (empty($links))
       return '';
+
     $template = sprintf('helstra_phenomenon_field_%s', $this->getSetting('display_type'));
     $content = [];
-    foreach ($nodes as $node) {
+    $tags = [
+      'config:menu_list',
+      'menu_link_content_list',
+      'menu_link_content_list:menu_link_content',
+    ];
+
+    foreach ($links as $link) {
+      $menu_link = $link['menu_link'];
       $content['nodes'][] = [
-        'entity' => \Drupal::entityTypeManager()->getViewBuilder('node')->view($node, 'teaser'),
-        'label' => $node->getTitle(),
-        'link' => $node->toLink()->toRenderable(),
+        'entity' => \Drupal::entityTypeManager()->getViewBuilder('node')->view($link['node'], 'teaser'),
+        'label' => $menu_link->getPluginDefinition()['title'],
+        'link' => Link::createFromRoute($menu_link->getTitle(), $menu_link->getRouteName(), $menu_link->getRouteParameters())->toRenderable(),
       ];
+      $tags[] = 'menu_link_content:' . $menu_link->getMetadata()['entity_id'];
     }
+
     $render = [
       '#theme' => $template,
       '#content' => $content,
-      '#count' => count($nodes)
+      '#count' => count($links),
+      '#cache' => [
+        'tags' => $tags
+      ]
     ];
-    $renderer = \Drupal::service('renderer');
-    return $renderer->render($render);
+    return \Drupal::service('renderer')->render($render);
   }
 
   /**
    * Returns articles tagged with phenomena term.
-   *
-   * @param Term $term
+   * @param NodeInterface $node
    * @return array
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  protected function getArticles(Term $term) : array {
-    $nodes = $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
-      'type' => 'article',
-      'field_phenomena' => $term->id(),
-    ]);
+  protected function getArticles(NodeInterface $node) : array {
+    $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+    $menu_link_tree = \Drupal::service('menu.link_tree');
+    $result = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $node->id()));
 
-    if (empty($nodes))
+    if (empty($result))
       return [];
 
-    return $nodes;
+    $links = [];
+    $menu_tree_parameters = new MenuTreeParameters();
+    $menu_tree_parameters->setMinDepth(1);
+
+    foreach ($result as $menu_link) {
+      if ($menu_link->getMenuName() != 'main')
+        continue;
+
+      $menu_tree_parameters->setRoot($menu_link->getPluginId());
+      $children = $menu_link_tree->load('main', $menu_tree_parameters);
+
+      foreach ($children as $child) {
+        $link = $child->link;
+        // Don't render disabled links.
+        if (!$link->isEnabled())
+          continue;
+
+        // Check that the link is node.
+        $params = $link->getRouteParameters();
+        if (empty($params['node']))
+          continue;
+
+        $links[$link->getWeight()] = [
+          'node' => $node_storage->load($params['node']),
+          'menu_link' => $link,
+        ];
+      }
+    }
+
+    if (empty($links))
+      return [];
+
+    ksort($links);
+
+    return $links;
   }
 
 }
