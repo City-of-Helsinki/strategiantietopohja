@@ -1,31 +1,43 @@
 .trends__container {
-  display: flex;
-  flex-flow: wrap;
+  .trends-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
 
-  a {
-    text-decoration: none;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  .trends-liftup {
-    margin: 12px;
-    flex: 1 1 30%;
-    min-width: 300px;
+    .trends-liftup {
+      flex: 1 1 30%;
+      min-width: 300px;
+      margin-top: 12px;
+      margin-bottom: 12px;
 
-    .paragraph {
-      font-weight: bold;
-
-      img {
-        width: 100%;
-        margin-bottom: 18px;
+      &:not(:first-child) {
+        margin-left: 12px;
       }
 
-      .label {
-        font-weight: normal;
-        margin-bottom: 18px;
+      &:not(:last-child) {
+        margin-right: 12px;
       }
 
-      p {
-        font-weight: normal;
+      .paragraph {
+        font-weight: bold;
+
+        img {
+          width: 100%;
+          margin-bottom: 18px;
+        }
+
+        .label {
+          font-weight: normal;
+          margin-bottom: 18px;
+        }
+
+        p {
+          font-weight: normal;
+        }
       }
     }
   }

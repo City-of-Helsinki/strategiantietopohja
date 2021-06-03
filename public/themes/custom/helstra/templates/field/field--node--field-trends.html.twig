@@ -37,19 +37,17 @@
  */
 #}
 <h3 style="text-align:center;font-weight:bold;">{{ 'Main trends'|t }}</h3>
-{% embed "@hdbt/misc/container.twig" with {container_element: 'trends'} %}
-  {% block container_content %}
-    {% for item in items %}
-      <div class="trends-liftup">
-        {% if item.content['#paragraph'].field_phenomenon.0.target_id %}
-          {% set link_url = 'node/' ~ item.content['#paragraph'].field_phenomenon.0.target_id %}
-          <a href={{ drupal_url(link_url) }}>
-        {% endif %}
-          {{ item.content }}
-        {% if item.content['#paragraph'].field_phenomenon.0.target_id %}
-          </a>
-        {% endif %}
-      </div>
-    {% endfor %}
-  {% endblock %}
-{% endembed %}
+<div class="trends-wrapper">
+  {% for item in items %}
+    <div class="trends-liftup">
+      {% if item.content['#paragraph'].field_phenomenon.0.target_id %}
+        {% set link_url = 'node/' ~ item.content['#paragraph'].field_phenomenon.0.target_id %}
+        <a href={{ drupal_url(link_url) }}>
+      {% endif %}
+        {{ item.content }}
+      {% if item.content['#paragraph'].field_phenomenon.0.target_id %}
+        </a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

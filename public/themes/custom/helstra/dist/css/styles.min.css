@@ -209,7 +209,7 @@
           left: 18px; }
 
 .content-card--phenomenon.content-card--design-teaser {
-  padding: 24px 48px;
+  padding: 24px 0;
   width: 100%; }
   .content-card--phenomenon.content-card--design-teaser .hero__container {
     display: -webkit-box;
@@ -389,29 +389,37 @@
       font-size: 1.5rem;
       margin-bottom: 16px; }
 
-.trends__container {
+.trends__container .trends-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: wrap;
-      flex-flow: wrap; }
-  .trends__container a {
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .trends__container .trends-wrapper a {
     text-decoration: none; }
-  .trends__container .trends-liftup {
-    margin: 12px;
+  .trends__container .trends-wrapper .trends-liftup {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 30%;
             flex: 1 1 30%;
-    min-width: 300px; }
-    .trends__container .trends-liftup .paragraph {
+    min-width: 300px;
+    margin-top: 12px;
+    margin-bottom: 12px; }
+    .trends__container .trends-wrapper .trends-liftup:not(:first-child) {
+      margin-left: 12px; }
+    .trends__container .trends-wrapper .trends-liftup:not(:last-child) {
+      margin-right: 12px; }
+    .trends__container .trends-wrapper .trends-liftup .paragraph {
       font-weight: bold; }
-      .trends__container .trends-liftup .paragraph img {
+      .trends__container .trends-wrapper .trends-liftup .paragraph img {
         width: 100%;
         margin-bottom: 18px; }
-      .trends__container .trends-liftup .paragraph .label {
+      .trends__container .trends-wrapper .trends-liftup .paragraph .label {
         font-weight: normal;
         margin-bottom: 18px; }
-      .trends__container .trends-liftup .paragraph p {
+      .trends__container .trends-wrapper .trends-liftup .paragraph p {
         font-weight: normal; }
 
 #block-helstra-mainnavigation {
@@ -718,11 +726,17 @@ ul.sf-menu li {
     position: absolute; }
 
 #views-exposed-form-search-page-1 {
-  padding: 12px 15% 48px;
+  padding: 48px 24px;
   background-color: #9ec9eb; }
+  #views-exposed-form-search-page-1 > div {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
   #views-exposed-form-search-page-1 .form-item-search-api-fulltext label {
+    display: block;
     font-size: 1.25rem;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-bottom: 8px; }
   #views-exposed-form-search-page-1 .form-item-search-api-fulltext input {
     width: 100%;
     padding: 12px; }
@@ -738,9 +752,6 @@ ul.sf-menu li {
       margin-top: 24px; }
     #views-exposed-form-search-page-1 ~ .views-row .main_content strong {
       background-color: yellow; }
-
-.hero--diagonal + #views-exposed-form-search-page-1 {
-  padding: 48px 15%; }
 
 .search-page {
   display: -webkit-box;
