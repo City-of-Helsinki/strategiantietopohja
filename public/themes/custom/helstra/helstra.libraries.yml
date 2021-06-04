@@ -3,3 +3,8 @@ global-styling:
   css:
     theme:
       dist/css/styles.min.css: {}
+  js:
+    src/js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

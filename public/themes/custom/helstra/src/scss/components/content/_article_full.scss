@@ -46,20 +46,69 @@
       width: 100%;
       order: 1;
 
+      &.sticky {
+        position: fixed;
+        margin-top: 0px;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+      }
+
       @include breakpoint($breakpoint-l) {
+        position: initial;
         margin-top: 64px;
         width: 25%;
         order: 2;
       }
 
+      button {
+        appearance: none;
+        border: none;
+        border-top: 1px solid black;
+        width: 100%;
+        padding: 12px 0;
+        background-color: #f7f7f8;
+
+        background-image: url('../../src/images/icon-toc.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          background-color: var(--color-black-10);
+        }
+
+        @include breakpoint($breakpoint-m) {
+          display: none;
+        }
+      }
+
       .article-table-of-contents {
         background-color: var(--color-black-10);
         padding: 32px 24px;
+        margin-bottom: -999px;
+        transition: margin 0.5s ease;
+
+        &.open {
+          margin-top: -16px;
+          margin-bottom: 0 !important;
+        }
+
+        @include breakpoint($breakpoint-m) {
+          margin-bottom: 0 !important;
+          transition: none;
+        }
 
         .label {
-          display: block;
+          display: none;
           font-size: 1.5rem;
           margin-bottom: 16px;
+
+          @include breakpoint($breakpoint-m) {
+            display: block;
+          }
         }
 
         ul {
@@ -70,6 +119,11 @@
           li {
             font-size: 1.2rem;
             line-height: 1.5;
+            margin-bottom: 8px;
+
+            @include breakpoint($breakpoint-m) {
+              margin-bottom: 4px;
+            }
           }
         }
       }
