@@ -8,3 +8,12 @@ global-styling:
   dependencies:
     - core/jquery
     - core/drupal
+
+matomo:
+  header: true
+  js:
+    src/js/matomo.js: {}
+
+snoobi:
+  js:
+    src/js/snoobi.js: {}
