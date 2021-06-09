@@ -19,7 +19,7 @@ bundle: phenomenon
 mode: default
 content:
   field_content:
-    weight: 3
+    weight: 2
     label: visually_hidden
     settings:
       view_mode: default
@@ -38,7 +38,7 @@ content:
     region: content
   field_phenomena:
     type: phenomenon_article_list_field_formatter
-    weight: 2
+    weight: 3
     region: content
     label: visually_hidden
     settings:

@@ -41,7 +41,7 @@
     'label',
   ]
 %}
-<span{{ title_attributes.addClass(title_classes) }}>{{ label }}: </span>
+<span{{ title_attributes.addClass(title_classes) }}>{{ label }}</span>
 {% for item in items %}
   {% set link = item.content['#media'].field_media_file|file_url %}
   {% set text = item.content['#media'].name.value %}
