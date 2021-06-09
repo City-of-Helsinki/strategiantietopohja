@@ -88,6 +88,28 @@
       button:focus + .article-table-of-contents,
       .article-table-of-contents:focus-within {
         margin-bottom: 0 !important;
+
+        #article-toc {
+          .shadow {
+            bottom:0;      
+            left:0;
+            pointer-events:none;
+            position:absolute;
+            right:0;
+            top:0;
+            transition:all .2s ease-out;
+          }
+          &.off-top {
+            .shadow-top {
+              box-shadow:0 1em 1em -1em black inset;
+            }
+          }
+          &.off-bottom {    
+            .shadow-bottom {
+              box-shadow:0 -1em 1em -1em black inset;
+            }
+          }
+        }
       }
 
       .article-table-of-contents {
@@ -109,6 +131,16 @@
 
           @include breakpoint($breakpoint-m) {
             display: block;
+          }
+        }
+
+        #article-toc {
+          overflow-y: auto;
+          max-height: 45vh;
+
+          @include breakpoint($breakpoint-m) {
+            overflow-y: initial;
+            max-height: unset;
           }
         }
 

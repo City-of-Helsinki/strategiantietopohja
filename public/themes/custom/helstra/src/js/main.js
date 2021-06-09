@@ -12,31 +12,46 @@
     // Sticky mobile TOC
     // ------------
     mobileTOC: function() {
-      setTimeout(function() {
-        $('.article-table-of-contents').css("margin-bottom", -$('.article-table-of-contents').height() + "px");
-      }, 500);
-  
-      $('.article__toc button').on("click", function() {
-        if ($(this).hasClass('focused')) {
-          $(this).removeClass('focused');
-          $(this).blur();
-        } else {
-          $(this).addClass('focused');
-        }
-      });
+      if ($('#article-toc').length){
 
-      $('.article__toc button').focusout(function() {
-        $(this).removeClass('focused');
-      });
-
-      $(window).on("load resize", function() {
-        if ($(window).outerWidth() < Drupal.behaviors.helstra_theme.breakpoints['md']) {
+        setTimeout(function() {
           $('.article-table-of-contents').css("margin-bottom", -$('.article-table-of-contents').height() + "px");
-          $('.article__toc').addClass("sticky");
-        } else {
-          $('.article__toc').removeClass("sticky ");
+        }, 500);
+    
+        $('.article__toc button').on("click", function() {
+          if ($(this).hasClass('focused')) {
+            $(this).removeClass('focused');
+            $(this).blur();
+          } else {
+            $(this).addClass('focused');
+          }
+        });
+
+        $('.article__toc button').focusout(function() {
+          $(this).removeClass('focused');
+        });
+
+        $(window).on("load resize", function() {
+          if ($(window).outerWidth() < Drupal.behaviors.helstra_theme.breakpoints['md']) {
+            $('.article-table-of-contents').css("margin-bottom", -$('.article-table-of-contents').height() + "px");
+            $('.article__toc').addClass("sticky");
+          } else {
+            $('.article__toc').removeClass("sticky ");
+          }
+        });
+
+        if($('#article-toc').scrollTop() + $('#article-toc').innerHeight() < $('#article-toc')[0].scrollHeight) {
+          $('#article-toc').addClass('off-bottom');
         }
-      });
+
+        $('#article-toc').on('scroll', function() {
+          if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+            $('#article-toc').removeClass('off-bottom');
+          } else {
+            $('#article-toc').addClass('off-bottom');
+          }
+        });
+      }
     },
 
     smoothScroll: function() {
