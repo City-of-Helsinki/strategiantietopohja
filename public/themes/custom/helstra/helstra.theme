@@ -24,3 +24,12 @@ function helstra_preprocess_views_view(&$variables) {
     $variables['searched_text'] = $_GET['search_api_fulltext'];
   }
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function helstra_page_attachments(array &$attachments) {
+  // TODO: find out why this doesn't work even though defined in .info and .libraries
+  $attachments['#attached']['library'][] = 'helstra/matomo';
+  $attachments['#attached']['library'][] = 'helstra/snoobi';
+}

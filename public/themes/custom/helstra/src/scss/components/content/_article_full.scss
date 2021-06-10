@@ -46,30 +46,131 @@
       width: 100%;
       order: 1;
 
+      &.sticky {
+        position: fixed;
+        margin-top: 0px;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+      }
+
       @include breakpoint($breakpoint-l) {
+        position: initial;
         margin-top: 64px;
         width: 25%;
         order: 2;
       }
 
+      button {
+        appearance: none;
+        border: none;
+        border-top: 1px solid black;
+        width: 100%;
+        padding: 12px 0;
+        background-color: #f7f7f8;
+
+        background-image: url('../../src/images/icon-toc.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--color-black-10);
+        }
+
+        @include breakpoint($breakpoint-m) {
+          display: none;
+        }
+      }
+
+      // Slide up/down behaviour
+      button:focus + .article-table-of-contents,
+      .article-table-of-contents:focus-within {
+        margin-bottom: 0 !important;
+
+        #article-toc {
+          .shadow {
+            bottom:0;      
+            left:0;
+            pointer-events:none;
+            position:absolute;
+            right:0;
+            top:0;
+            transition:all .2s ease-out;
+          }
+          &.off-top {
+            .shadow-top {
+              box-shadow:0 1em 1em -1em black inset;
+            }
+          }
+          &.off-bottom {    
+            .shadow-bottom {
+              box-shadow:0 -1em 1em -1em black inset;
+            }
+          }
+        }
+      }
+
       .article-table-of-contents {
         background-color: var(--color-black-10);
-        padding: 32px 24px;
+        padding: 0;
+        margin-bottom: -999px;
+        transition: margin 0.5s ease;
+
+        @include breakpoint($breakpoint-m) {
+          margin-bottom: 0 !important;
+          padding: 32px 24px;
+          transition: none;
+        }
 
         .label {
-          display: block;
+          display: none;
           font-size: 1.5rem;
           margin-bottom: 16px;
+
+          @include breakpoint($breakpoint-m) {
+            display: block;
+          }
+        }
+
+        #article-toc {
+          overflow-y: auto;
+          max-height: 45vh;
+
+          @include breakpoint($breakpoint-m) {
+            overflow-y: initial;
+            max-height: unset;
+          }
         }
 
         ul {
           list-style: none;
-          margin: 0 16px;
+          margin: 0;
           padding: 0;
 
+          @include breakpoint($breakpoint-m) {
+            margin: 0 16px;
+          }
+          
           li {
             font-size: 1.2rem;
             line-height: 1.5;
+
+            @include breakpoint($breakpoint-m) {
+              margin-bottom: 8px;
+            }
+
+            a {
+              display: block;
+              width: 100%;
+              padding: 12px 24px;
+
+              @include breakpoint($breakpoint-m) {
+                display: flex;
+                padding: 0;
+              }
+            }
           }
         }
       }

@@ -8,9 +8,10 @@
     'label',
   ]
 %}
+<button class="dropbtn">{{ 'Table of contents'|t }}</button>
 <div{{ attributes.addClass(classes) }}>
   <span{{ title_attributes.addClass(title_classes) }}>{{ 'Table of contents'|t }}: </span>
-  <ul class="article-toc">
+  <ul id="article-toc">
     {% for item in toc %}
       <li class="item"><a href="{{ item.link_url }}">{{ item.section}} {{ item.title }}</a></li>
       {% if item.children %}
@@ -21,5 +22,7 @@
         </ul>
       {% endif %}
     {% endfor %}
+    <div class="shadow shadow-top" aria-hidden="true"></div>
+    <div class="shadow shadow-bottom" aria-hidden="true">
   </ul>
 </div>
