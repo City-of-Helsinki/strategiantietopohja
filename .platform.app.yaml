@@ -57,7 +57,6 @@ hooks:
     drush -y updb
     drush -y cache-rebuild
     drush -y cim
-  # drush -y deploy
     drush -y locale-check
     drush -y locale-update
     drush -y cache-rebuild
