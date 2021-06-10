@@ -26,3 +26,8 @@ display:
         area:
           content:
             value: '<p>Ei hakutuloksia.</p>'
+      pager:
+        options:
+          tags:
+            first: '« Alkuun'
+            last: 'Loppuun »'

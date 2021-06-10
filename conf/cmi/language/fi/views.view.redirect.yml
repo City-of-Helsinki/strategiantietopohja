@@ -1,3 +1,4 @@
+label: Uudelleenohjaukset
 description: Uudelleenohjaukset
 display:
   default:
@@ -59,6 +60,7 @@ display:
         language:
           expose:
             label: 'Alkuperäinen kieli'
+      title: Uudelleenohjaukset
       empty:
         area_text_custom:
           content: 'Ei ole vielä uudelleenohjaksia.'

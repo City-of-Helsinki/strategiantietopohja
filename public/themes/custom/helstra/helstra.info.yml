@@ -24,3 +24,5 @@ regions:
 # Libraries
 libraries:
   - helstra/global-styling
+  - helstra/matomo
+  - helstra/snoobi

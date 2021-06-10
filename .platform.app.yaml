@@ -54,7 +54,9 @@ hooks:
     set -e
     cd public
     drush -y cache-rebuild
-    drush -y deploy
+    drush -y updb
+    drush -y cache-rebuild
+    drush -y cim
     drush -y locale-check
     drush -y locale-update
     drush -y cache-rebuild

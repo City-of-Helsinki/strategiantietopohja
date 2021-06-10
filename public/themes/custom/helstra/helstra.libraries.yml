@@ -3,3 +3,17 @@ global-styling:
   css:
     theme:
       dist/css/styles.min.css: {}
+  js:
+    src/js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+matomo:
+  header: true
+  js:
+    src/js/matomo.js: {}
+
+snoobi:
+  js:
+    src/js/snoobi.js: {}
