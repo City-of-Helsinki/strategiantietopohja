@@ -22,6 +22,10 @@
 
       .hero__description {
         margin-bottom: 16px;
+
+        p {
+          line-height: 1.5rem;
+        }
       }
 
       .hero__actions {

@@ -328,6 +328,8 @@
         margin-top: 0; }
       .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__description {
         margin-bottom: 16px; }
+        .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__description p {
+          line-height: 1.5rem; }
       .content-card--phenomenon.content-card--design-teaser .hero__container .hero__wrapper .hero__actions {
         display: -webkit-box;
         display: -ms-flexbox;
