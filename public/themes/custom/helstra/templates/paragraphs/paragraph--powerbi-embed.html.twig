@@ -41,15 +41,16 @@
 {%
   set classes = [
   'text',
-  view_mode ? 'text--' ~ view_mode|clean_class,
+  'powerbi-embed',
+  view_mode ? 'powerbi-embed--' ~ view_mode|clean_class,
 ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% embed "@hdbt/misc/container.twig" with {container_element: 'text'} %}
       {% block container_content %}
-        <div class="text__text-content">
-          <iframe tabindex="-1" allowfullscreen="true" frameborder="0" src="{{ url }}"></iframe>
+        <div class="text__text-content powerbi-embed">
+          <iframe tabindex="-1" allowfullscreen="true" frameborder="0" src="{{ content.field_powebi_url.0 }}" {% if content.field_title.0 %} title="{{ content.field_title.0 }}" {% endif %}></iframe>
         </div>
       {% endblock %}
     {% endembed %}

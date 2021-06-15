@@ -79,10 +79,5 @@ function helstra_article_theme() {
       ],
       'render element' => 'children',
     ],
-    'powerbi_embed_paragraph' => [
-      'variables' => [
-        'url' => NULL
-      ],
-    ],
   ];
 }
