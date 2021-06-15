@@ -33,8 +33,8 @@ mobile_popup_info:
   format: full_html
 popup_info_template: new
 mobile_breakpoint: 768
-popup_link: /node/1
-popup_link_new_window: false
+popup_link: 'https://www.hel.fi/helsinki/fi/kaupunki-ja-hallinto/tietoa-helsingista/tietosuoja/'
+popup_link_new_window: true
 popup_position: false
 fixed_top_position: true
 popup_text_hex: ''
