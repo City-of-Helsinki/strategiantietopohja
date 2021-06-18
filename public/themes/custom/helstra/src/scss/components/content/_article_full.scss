@@ -103,6 +103,7 @@
       button:focus + .article-table-of-contents,
       .article-table-of-contents:focus-within {
         margin-bottom: 0 !important;
+        margin-top: -1px;
 
         #article-toc {
           .shadow {
