@@ -17,6 +17,15 @@
         display: initial;
         margin-left: 12px; } }
 
+.page-type--article .layout-content {
+  margin: 0; }
+  @media (min-width: 768px) {
+    .page-type--article .layout-content {
+      margin: 0 16px; } }
+  @media (min-width: 992px) {
+    .page-type--article .layout-content {
+      margin: 0 32px; } }
+
 .node--type-article.node--view-mode-full {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,9 +105,11 @@
         .node--type-article.node--view-mode-full .article__toc button {
           display: none; } }
     .node--type-article.node--view-mode-full .article__toc button:focus + .article-table-of-contents, .node--type-article.node--view-mode-full .article__toc .article-table-of-contents[focus-within] {
-      margin-bottom: 0 !important; }
+      margin-bottom: 0 !important;
+      margin-top: -1px; }
     .node--type-article.node--view-mode-full .article__toc button:focus + .article-table-of-contents, .node--type-article.node--view-mode-full .article__toc .article-table-of-contents:focus-within {
-      margin-bottom: 0 !important; }
+      margin-bottom: 0 !important;
+      margin-top: -1px; }
       .node--type-article.node--view-mode-full .article__toc button:focus + .article-table-of-contents #article-toc .shadow, .node--type-article.node--view-mode-full .article__toc .article-table-of-contents[focus-within] #article-toc .shadow {
         bottom: 0;
         left: 0;
@@ -816,12 +827,12 @@ ul.sf-menu li {
         -ms-flex-flow: row-reverse;
             flex-flow: row-reverse; } }
 
-.paragraph--type--powerbi-embed .text__text-content {
+.powerbi-embed--default .text__text-content {
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 56%; }
-  .paragraph--type--powerbi-embed .text__text-content iframe {
+  .powerbi-embed--default .text__text-content iframe {
     width: 100%;
     height: 100%;
     position: absolute; }
