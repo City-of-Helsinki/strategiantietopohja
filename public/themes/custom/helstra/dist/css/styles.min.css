@@ -17,6 +17,15 @@
         display: initial;
         margin-left: 12px; } }
 
+.page-type--article .layout-content {
+  margin: 0; }
+  @media (min-width: 768px) {
+    .page-type--article .layout-content {
+      margin: 0 16px; } }
+  @media (min-width: 992px) {
+    .page-type--article .layout-content {
+      margin: 0 32px; } }
+
 .node--type-article.node--view-mode-full {
   display: -webkit-box;
   display: -ms-flexbox;
