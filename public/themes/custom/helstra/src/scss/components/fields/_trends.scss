@@ -9,17 +9,17 @@
     }
 
     .trends-liftup {
-      flex: 1 1 30%;
-      min-width: 300px;
+      flex: 1 1 100%;
+      max-width: 100%;
       margin-top: 12px;
       margin-bottom: 12px;
 
-      &:not(:first-child) {
-        margin-left: 12px;
+      @include breakpoint($breakpoint-s) {
+        max-width: 49%;
       }
 
-      &:not(:last-child) {
-        margin-right: 12px;
+      @include breakpoint($breakpoint-l) {
+        max-width: 24%;
       }
 
       .paragraph {

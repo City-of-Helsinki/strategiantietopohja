@@ -1,3 +1,18 @@
+// Override Helsinki layout-content margin on mobile
+.page-type--article {
+  .layout-content {
+    margin: 0;
+
+    @include breakpoint($breakpoint-m) {
+      margin: 0 16px;
+    }
+
+    @include breakpoint($breakpoint-l) {
+      margin: 0 32px;
+    }
+  }
+}
+
 .node--type-article  {
   &.node--view-mode-full {
     display: flex;
@@ -88,6 +103,7 @@
       button:focus + .article-table-of-contents,
       .article-table-of-contents:focus-within {
         margin-bottom: 0 !important;
+        margin-top: -1px;
 
         #article-toc {
           .shadow {
