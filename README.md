@@ -3,6 +3,9 @@
 This is a skeleton repository which will create a new Drupal 9 project for you and setup Docker based development
 environment with Stonehenge.
 
+## Basic installation instructions (in Finnish)
+https://github.com/City-of-Helsinki/drupal-helfi-platform/wiki/Hel.fi-platform-k%C3%A4ytt%C3%B6%C3%B6notto-hankkeissa
+
 ## Includes
 
 - Drupal 9.0.x
@@ -62,6 +65,10 @@ Rename `.github/workflows/test.yml.dist` to `.github/workflows/test.yml` to enab
 ## Automatic deploy on Azure
 
 Rename all `azure-pipelines-*.yml.dist` files to `azure-pipelines-*.yml` and replace `drupal-REPLACEME` values to match your own project.
+
+## OpenShift
+
+See [docker/openshift](docker/openshift) for documentation.
 
 ## Contact
 
