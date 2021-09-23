@@ -1,6 +1,6 @@
 uuid: a5dcd7e5-865c-404d-bfbb-313fa1c0b210
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -12,7 +12,7 @@ _core:
   default_config_hash: zSvqGMlhIHfM1eegCM8Ac0GLT1dhK62SG6upu3PiS2c
 id: mobile_navigation
 theme: hdbt
-region: header_branding
+region: header_top
 weight: 4
 provider: null
 plugin: 'menu_block_current_language:main'

@@ -1,6 +1,6 @@
 uuid: 34c015ef-e1e6-43eb-88cd-d41138223f51
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.branding-navigation
@@ -12,7 +12,7 @@ _core:
   default_config_hash: vQ4mUU3haOTfe32xjXYEKN1kU9SHBIBCeM15nmCzwqI
 id: brandingnavigation
 theme: hdbt
-region: header_branding
+region: header_top
 weight: 3
 provider: null
 plugin: 'menu_block_current_language:branding-navigation'
