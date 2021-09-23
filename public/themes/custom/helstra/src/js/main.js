@@ -75,6 +75,8 @@
         $('html, body').animate({
             scrollTop: $(anchor).offset().top - 20
         }, 500);
+
+        $(anchor).focus();
       });
     },
 
