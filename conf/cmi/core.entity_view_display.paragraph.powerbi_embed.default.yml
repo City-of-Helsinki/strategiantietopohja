@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.powerbi_embed.field_powebi_url
+    - field.field.paragraph.powerbi_embed.field_powerbi_transcript
     - field.field.paragraph.powerbi_embed.field_title
     - paragraphs.paragraphs_type.powerbi_embed
 id: paragraph.powerbi_embed.default
@@ -18,6 +19,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_powerbi_transcript:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_title:
     weight: 0

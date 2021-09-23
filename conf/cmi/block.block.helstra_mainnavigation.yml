@@ -19,10 +19,6 @@ settings:
   label: 'Main navigation'
   provider: superfish
   label_display: '0'
-  translation_providers:
-    views: views
-    menu_link_content: menu_link_content
-    default: 0
   level: '1'
   depth: '1'
   expand_all_items: false
@@ -72,4 +68,8 @@ settings:
   custom_list_class: ''
   custom_item_class: ''
   custom_link_class: ''
+  translation_providers:
+    views: views
+    menu_link_content: menu_link_content
+    default: 0
 visibility: {  }
