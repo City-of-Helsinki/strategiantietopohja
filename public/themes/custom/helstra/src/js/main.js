@@ -78,9 +78,32 @@
       });
     },
 
+    phenomenaSelect: function() {
+      $('.dropdown').on('focusin', function (event) {
+        $(this).attr( "aria-expanded", "true" );
+      });
+
+      $('.dropdown').on('focusout', function (event) {
+        $(this).attr( "aria-expanded", "false" );
+      });
+
+      $('.dropbtn').hover(function (event) {
+        $(this).parents('.dropdown').attr( "aria-expanded", "true" );
+      }, function(event) {
+        $(this).parents('.dropdown').attr( "aria-expanded", "false" );
+      });
+
+      $('.dropdown-content a').hover(function (event) {
+        $(this).parents('.dropdown').attr( "aria-expanded", "true" );
+      }, function(event) {
+        $(this).parents('.dropdown').attr( "aria-expanded", "false" );
+      });
+    },
+
     attach: function () {
       Drupal.behaviors.helstra_theme.mobileTOC();
       Drupal.behaviors.helstra_theme.smoothScroll();
+      Drupal.behaviors.helstra_theme.phenomenaSelect();
     }
   };
 
