@@ -82,23 +82,23 @@
 
     phenomenaSelect: function() {
       $('.dropdown').on('focusin', function (event) {
-        $(this).attr( "aria-expanded", "true" );
+        $(this).find('.dropbtn').attr( "aria-expanded", "true" );
       });
 
       $('.dropdown').on('focusout', function (event) {
-        $(this).attr( "aria-expanded", "false" );
+        $(this).find('.dropbtn').attr( "aria-expanded", "false" );
       });
 
       $('.dropbtn').hover(function (event) {
-        $(this).parents('.dropdown').attr( "aria-expanded", "true" );
+        $(this).attr( "aria-expanded", "true" );
       }, function(event) {
-        $(this).parents('.dropdown').attr( "aria-expanded", "false" );
+        $(this).attr( "aria-expanded", "false" );
       });
 
       $('.dropdown-content a').hover(function (event) {
-        $(this).parents('.dropdown').attr( "aria-expanded", "true" );
+        $(this).parents('.dropdown').find('.dropbtn').attr( "aria-expanded", "true" );
       }, function(event) {
-        $(this).parents('.dropdown').attr( "aria-expanded", "false" );
+        $(this).parents('.dropdown').find('.dropbtn').attr( "aria-expanded", "false" );
       });
     },
 
