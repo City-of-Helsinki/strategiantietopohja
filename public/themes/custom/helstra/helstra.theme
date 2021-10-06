@@ -35,8 +35,8 @@ function helstra_page_attachments(array &$attachments) {
 }
 
 /**
- * Implements hook_preprocess_html().
+ * Implements hook_preprocess_block().
  */
-function helstra_preprocess_html(&$variables) {
-  $variables["page"]["content"]["messages"]["#include_fallback"] = false;
+function helstra_preprocess_block__system_messages_block(&$variables) {
+  $variables['content']['#include_fallback'] = FALSE;
 }
