@@ -68,7 +68,7 @@
     },
 
     smoothScroll: function() {
-      $('a[href^="#"]').on('click', function (event) {
+      $('a[href^="#"]:not([href="#"])').on('click', function (event) {
         event.preventDefault();
         anchor = $(this).attr('href').replace(".", "\\.");
 
@@ -76,6 +76,7 @@
             scrollTop: $(anchor).offset().top - 20
         }, 500);
 
+        $(anchor).attr('tabindex','-1')
         $(anchor).focus();
       });
     },

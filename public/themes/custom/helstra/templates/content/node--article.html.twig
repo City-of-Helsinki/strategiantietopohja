@@ -101,6 +101,13 @@
         </div>
       {% endif %}    
 
+      {# Article sidebar column #}
+      {% if content.article_toc_field|render %}
+        <div class="{{ node.bundle|clean_class }}__toc">
+          {{ content.article_toc_field }}
+        </div>
+      {% endif %}
+
       {# Article main content column #}
       <div class="main_content">
 
@@ -110,13 +117,6 @@
         </div>
       {% endif %}
       </div>
-
-      {# Article sidebar column #}
-      {% if content.article_toc_field|render %}
-        <div class="{{ node.bundle|clean_class }}__toc">
-          {{ content.article_toc_field }}
-        </div>
-      {% endif %}
 
       {% if content.field_downloadable_material|render %}
         <div class="{{ node.bundle|clean_class }}__downloadable-material">
