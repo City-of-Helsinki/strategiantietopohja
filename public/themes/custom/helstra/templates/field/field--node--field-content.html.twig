@@ -43,14 +43,7 @@
   ]
 %}
 
-{%
-  set title_classes = [
-    'visually_hidden'
-  ]
-%}
-
 <div{{ attributes.addClass(classes) }}>
-  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
   {% for item in items %}
     <div{{ item.attributes.addClass(classes) }}>{{ item.content }}</div>
   {% endfor %}
