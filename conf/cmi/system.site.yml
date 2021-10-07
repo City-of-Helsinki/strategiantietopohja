@@ -1,0 +1,14 @@
+uuid: 87fddaa8-520a-4d73-b0a1-0928649f0f95
+name: 'Strategy knowledge base'
+mail: drupal@citrus.fi
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/13
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

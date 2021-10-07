@@ -1,0 +1,15 @@
+uuid: a5de1e69-36ca-4153-997b-5d9c00d0d413
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: akfMZKbbDlCyIEtmbuAMd7jSSwu8eFf5bjOr87xDx1A
+id: file
+label: File
+description: 'Media type file for general files such as documents and charts.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

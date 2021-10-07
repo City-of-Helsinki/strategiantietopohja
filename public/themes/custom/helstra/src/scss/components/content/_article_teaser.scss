@@ -1,0 +1,13 @@
+.content-card--article.content-card--design-teaser {
+  float: left;
+  padding: 24px;
+
+  a {
+    display: flex;
+    flex-flow: column;
+
+    .content-card__title {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+#block-helstra-mainnavigation {
+  margin-bottom: 8px;
+
+  @include breakpoint($breakpoint-l) {
+    margin-left: 8px;
+  }
+}
+
+.sf-accordion-toggle {
+  a {
+    padding: 1em 1.5em;
+    display: block;
+    color: transparent;
+
+    span {
+      height: 24px;
+      display: block;
+      background-image: url('../../src/images/icon-hamburger.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--color-black-10);
+    }
+  }
+}
+
+ul.sf-menu li {
+  z-index: 100;
+
+  a {
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      background: var(--color-black-10);
+    }
+  }
+}

@@ -1,0 +1,195 @@
+// Override Helsinki layout-content margin on mobile
+.page-type--article {
+  .layout-content {
+    margin: 0;
+
+    @include breakpoint($breakpoint-m) {
+      margin: 0 16px;
+    }
+
+    @include breakpoint($breakpoint-l) {
+      margin: 0 32px;
+    }
+  }
+}
+
+.node--type-article  {
+  &.node--view-mode-full {
+    display: flex;
+    flex-flow: row wrap;
+
+    @media (max-width: 767px) {
+      flex-flow: column;
+    }
+
+      .article__title {
+        margin-bottom: 48px;
+      }
+
+    .article__lead {
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 48px;
+        width: 60px;
+        height: 3px;
+        background-color: var(--hdbt-color-black);
+      }
+    }
+
+    .main_content {
+      width: 100%;
+      order: 2;
+
+      @include breakpoint($breakpoint-l) {
+        width: 75%;
+        order: 1;
+      }
+
+      // Override Helsinki text paragraph left padding
+      .text__container {
+        padding-left: 0 !important;
+
+        .text__text-content {
+          padding-left: 0 !important;
+        }
+      }
+    }
+
+    .article__toc {
+      margin-top: 24px;
+      width: 100%;
+      order: 1;
+
+      &.sticky {
+        position: fixed;
+        margin-top: 0px;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+      }
+
+      @include breakpoint($breakpoint-l) {
+        position: initial;
+        margin-top: 64px;
+        width: 25%;
+        order: 2;
+      }
+
+      button {
+        appearance: none;
+        border: none;
+        border-top: 1px solid black;
+        width: 100%;
+        padding: 12px 0;
+        background-color: #f7f7f8;
+
+        background-image: url('../../src/images/icon-toc.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--color-black-10);
+        }
+
+        @include breakpoint($breakpoint-m) {
+          display: none;
+        }
+      }
+
+      // Slide up/down behaviour
+      button:focus + .article-table-of-contents,
+      .article-table-of-contents:focus-within {
+        margin-bottom: 0 !important;
+        margin-top: -1px;
+
+        #article-toc {
+          .shadow {
+            bottom:0;      
+            left:0;
+            pointer-events:none;
+            position:absolute;
+            right:0;
+            top:0;
+            transition:all .2s ease-out;
+          }
+          &.off-top {
+            .shadow-top {
+              box-shadow:0 1em 1em -1em black inset;
+            }
+          }
+          &.off-bottom {    
+            .shadow-bottom {
+              box-shadow:0 -1em 1em -1em black inset;
+            }
+          }
+        }
+      }
+
+      .article-table-of-contents {
+        background-color: var(--color-black-10);
+        padding: 0;
+        margin-bottom: -999px;
+        transition: margin 0.5s ease;
+
+        @include breakpoint($breakpoint-m) {
+          margin-bottom: 0 !important;
+          padding: 32px 24px;
+          transition: none;
+        }
+
+        .label {
+          display: none;
+          font-size: 1.5rem;
+          margin-bottom: 16px;
+
+          @include breakpoint($breakpoint-m) {
+            display: block;
+          }
+        }
+
+        #article-toc {
+          overflow-y: auto;
+          max-height: 45vh;
+
+          @include breakpoint($breakpoint-m) {
+            overflow-y: initial;
+            max-height: unset;
+          }
+        }
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          @include breakpoint($breakpoint-m) {
+            margin: 0 16px;
+          }
+          
+          li {
+            font-size: 1.2rem;
+            line-height: 1.5;
+
+            @include breakpoint($breakpoint-m) {
+              margin-bottom: 8px;
+            }
+
+            a {
+              display: block;
+              width: 100%;
+              padding: 12px 24px;
+
+              @include breakpoint($breakpoint-m) {
+                display: flex;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

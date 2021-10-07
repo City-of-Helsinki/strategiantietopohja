@@ -1,0 +1,46 @@
+#views-exposed-form-search-page-1 {
+  padding: 48px 24px;
+  background-color: #9ec9eb;
+
+  & > div {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-item-search-api-fulltext {
+    label {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+
+      &.form-autocomplete {
+        background-image: url('../../src/images/icon-search.png');
+        background-size: 25px;
+        background-position-x: 99%;
+      }
+    }
+  }
+
+  & ~ .views-row {
+    margin: 0 48px;
+    border-bottom: 1px solid #9ec9eb;
+    padding-bottom: 24px;
+
+    .main_content {
+      h2 {
+        margin-top: 24px;
+      }
+
+      strong {
+        background-color: yellow;
+      }
+    }
+  }
+}

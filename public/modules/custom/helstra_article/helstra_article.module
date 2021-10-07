@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * @file
+ * Contains helstra_article.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\helstra_article\ArticleTocController;
+
+/**
+ * Implements hook_help().
+ */
+function helstra_article_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the helstra_article module.
+    case 'help.page.helstra_article':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides customizations for articles') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function helstra_article_entity_extra_field_info() {
+  $extra = array();
+  $extra['node']['article']['display']['article_toc_field'] = array(
+    'label' => t('Table of contents'),
+    'description' => t('Table of contents field'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function helstra_article_node_view(array &$build, EntityInterface $entity, EntityViewDisplay $display, $view_mode) {
+  if ($display->getComponent('article_toc_field')) {
+    $toc_controller = new ArticleTocController();
+    $build['article_toc_field'] =  $toc_controller->build($entity);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function helstra_article_form_node_form_alter(&$form, &$form_state, $form_id) {
+  if (
+    $form_id == 'node_article_edit_form' ||
+    $form_id == 'node_article_form'
+  ) {
+    // Control Hero paragraph visibility via checkbox states.
+    $form['field_hero']['#states'] = [
+      'visible' => [
+        ':input[name="field_has_hero[value]"]' => ['checked' => TRUE],
+      ],
+    ];
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function helstra_article_theme() {
+  return [
+    'article_toc' => [
+      'variables' => [
+        'toc' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

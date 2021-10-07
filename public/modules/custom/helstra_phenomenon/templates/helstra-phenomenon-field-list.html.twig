@@ -1,0 +1,11 @@
+{% if content.nodes is not empty %}
+  <span class="label">{{ 'Articles related to the phenomenon'|t }}</span>
+  <div class="dropdown">
+    <button class="dropbtn" aria-expanded="false" aria-controls="dropdown-phenomenon-{{ content.parent }}">{{ 'Select'|t }}</button>
+    <div id="dropdown-phenomenon-{{ content.parent }}" class="dropdown-content">
+      {% for node in content.nodes %}
+        {{ node.link|render }}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

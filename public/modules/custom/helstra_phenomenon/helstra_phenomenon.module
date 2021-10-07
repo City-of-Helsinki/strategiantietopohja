@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains helstra_phenomenon.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function helstra_phenomenon_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the helstra_phenomenon module.
+    case 'help.page.helstra_phenomenon':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides customization for phenomenons') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ *
+ */
+function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  // Perform alterations to liftup_with_image paragraph.
+  if ($element['#paragraph_type'] == 'liftup_with_image') {
+    // Design selection.
+    $design_select = 'select[name="field_content[' . $element['#delta'] . '][subform][field_liftup_with_image_design]"';
+    // Hide design selection field, defaults to image-on-right. 
+    // TODO: instead of hiding, make this limit options to
+    //  image-on-right|Kuva oikealla
+    //  image-on-left|Kuva vasemmalla
+    $element['subform']['field_liftup_with_image_design'] = [];
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function helstra_phenomenon_theme() {
+  return [
+    'helstra_phenomenon' => [
+      'render element' => 'children',
+    ],
+    'helstra_phenomenon_field_grid' => [
+      'variables' => [
+        'content' => NULL,
+        'count' => NULL
+      ],
+    ],
+    'helstra_phenomenon_field_list' => [
+      'variables' => [
+        'content' => NULL,
+        'count' => NULL
+      ]
+    ]
+  ];
+}

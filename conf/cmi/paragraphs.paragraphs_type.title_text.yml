@@ -1,0 +1,10 @@
+uuid: f2584a88-0978-43ce-9847-17dbc7211c6b
+langcode: en
+status: true
+dependencies: {  }
+id: title_text
+label: 'Title + Text'
+icon_uuid: null
+icon_default: null
+description: 'Provides title and text element used for e.g. quote and notification elements.'
+behavior_plugins: {  }

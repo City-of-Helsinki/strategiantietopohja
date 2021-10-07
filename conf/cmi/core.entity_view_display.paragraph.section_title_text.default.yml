@@ -1,0 +1,35 @@
+uuid: e895ff42-0780-41b6-ab86-09bc8ead3c1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section_title_text.field_section
+    - field.field.paragraph.section_title_text.field_section_title
+    - field.field.paragraph.section_title_text.field_subsection
+    - field.field.paragraph.section_title_text.field_text
+    - paragraphs.paragraphs_type.section_title_text
+  module:
+    - helstra_article
+    - text
+id: paragraph.section_title_text.default
+targetEntityType: paragraph
+bundle: section_title_text
+mode: default
+content:
+  field_section_title:
+    type: article_section_title_formatter
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_section: true
+  field_subsection: true

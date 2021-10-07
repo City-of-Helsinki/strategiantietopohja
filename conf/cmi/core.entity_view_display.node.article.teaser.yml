@@ -1,0 +1,44 @@
+uuid: 490f6af6-ed3d-4507-a27d-8e5531bcfd18
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.field_author
+    - field.field.node.article.field_content
+    - field.field.node.article.field_downloadable_material
+    - field.field.node.article.field_insights
+    - field.field.node.article.field_keywords
+    - field.field.node.article.field_lead
+    - field.field.node.article.field_liftup_image
+    - field.field.node.article.field_metatags
+    - field.field.node.article.field_phenomena
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: lDD0tiFeM_J6S9Jh-oN7tmzE_59JPqkLYj56MMKxmE0
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  field_lead:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  article_toc_field: true
+  field_author: true
+  field_content: true
+  field_downloadable_material: true
+  field_insights: true
+  field_keywords: true
+  field_liftup_image: true
+  field_metatags: true
+  field_phenomena: true
+  langcode: true
+  links: true

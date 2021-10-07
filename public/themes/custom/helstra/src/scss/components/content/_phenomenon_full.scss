@@ -1,0 +1,76 @@
+.node--type-phenomenon  {
+  &.node--view-mode-full {
+    .field-phenomena {
+      background-color: var(--color-black-10);
+      overflow: hidden;
+      margin-top: 32px;
+
+      @include breakpoint($breakpoint-l) {
+        margin-top: 48px;
+      }
+
+      .phenomena-grid__container {
+        .phenomena-grid__wrapper {
+          background-color: var(--color-black-10);
+          padding: 32px 24px;
+      
+          .label {
+            float: left;
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+          }
+          .count {
+            float: right;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+      
+            .number {
+              font-weight: bold;
+            }
+          }
+      
+          .content__wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+          
+            .content-card {
+              position: relative;
+              background-color: var(--color-white);
+              padding: 16px 24px;
+              margin: 1%;
+              width: 100%;
+
+              @include breakpoint($breakpoint-s) {
+                width: 48%;
+              }
+
+              @include breakpoint($breakpoint-m) {
+                width: 31.33%;
+              }
+      
+              .content-card__link {
+                color: var(--color-black-60);
+                height: 100%;
+                padding-bottom: 42px;
+              }
+      
+              .content-card__title {
+                color: var(--color-black);
+                display: block;
+                margin-bottom: 16px;
+              }
+      
+              .content-card__arrow {
+                color: var(--color-black);
+                position: absolute;
+                bottom: 8px;
+                left: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

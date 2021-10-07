@@ -1,0 +1,19 @@
+uuid: 8a81805d-0ea6-4013-9817-34fba598d85d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_powerbi_transcript
+    - paragraphs.paragraphs_type.powerbi_embed
+id: paragraph.powerbi_embed.field_powerbi_transcript
+field_name: field_powerbi_transcript
+entity_type: paragraph
+bundle: powerbi_embed
+label: Transcript
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,77 @@
+.liftup-with-image {
+  .liftup-with-image__container {
+    position: initial;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    @include breakpoint($breakpoint-l) {
+      flex-flow: row;
+    }
+
+    .liftup-with-image__image {
+      margin: 0;
+      padding: 0;
+      flex: 0 1 50%;
+      position: inherit;
+      transform: none;
+
+      max-height: 250px;
+      overflow: hidden;
+
+      @include breakpoint($breakpoint-l) {
+        max-height: unset;
+      }
+    }
+    
+    .liftup-with-image__content {
+      margin: 0;
+      padding: 24px;
+      flex: 0 1 50%;
+      position: inherit;
+      transform: none;
+
+      color: black;
+      background-color: transparent;
+
+      @include breakpoint($breakpoint-l) {
+        padding: 0 24px;
+      }
+
+      .liftup-with-image__link {
+        margin-top: 33px;
+        text-align: center;
+
+        @include breakpoint($breakpoint-m) {
+          text-align: initial;
+        }
+
+        a {
+          border: 1px solid black;
+          background-color: black;
+          color: white;
+          padding: 17px;
+          line-height: 1;
+          width: 100%;
+          font-size: 16px;
+          text-align: center;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  &.liftup-with-image--design-image-on-right {
+    .liftup-with-image__container {
+      @include breakpoint($breakpoint-l) {
+        flex-flow: row-reverse;
+      }
+    }
+  }
+}

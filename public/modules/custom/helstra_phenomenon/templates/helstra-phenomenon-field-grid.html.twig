@@ -1,0 +1,16 @@
+<!-- Add you custom twig html here -->
+{% if content.nodes is not empty %}
+  {% embed "@hdbt/misc/container.twig" with {container_element: 'phenomena_grid'} %}
+    {% block container_content %}
+      <div class="phenomena-grid__wrapper">
+        <span class="label">{{ 'Articles related to the phenomenon'|t }}</span>
+        <span class="count"><span class="number">{{ count }}</span> {{ 'articles'|t }}</span>
+        <div class="content__wrapper">
+          {% for node in content.nodes %}
+            {{ node.entity }}
+          {% endfor %}
+        </div>
+      </div>
+    {% endblock container_content %}
+  {% endembed %}
+{% endif %}

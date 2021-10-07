@@ -1,0 +1,48 @@
+uuid: 6f7cbab0-4579-4d44-838c-27d78c5de607
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.article.field_author
+    - field.field.node.article.field_content
+    - field.field.node.article.field_downloadable_material
+    - field.field.node.article.field_insights
+    - field.field.node.article.field_keywords
+    - field.field.node.article.field_lead
+    - field.field.node.article.field_liftup_image
+    - field.field.node.article.field_metatags
+    - field.field.node.article.field_phenomena
+    - node.type.article
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: iP63ruNj8P30AR0u-V9j_M03qHUEpzx-qneyWJtGvNw
+id: node.article.search_result
+targetEntityType: node
+bundle: article
+mode: search_result
+content:
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  article_toc_field: true
+  field_author: true
+  field_downloadable_material: true
+  field_insights: true
+  field_keywords: true
+  field_lead: true
+  field_liftup_image: true
+  field_metatags: true
+  field_phenomena: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

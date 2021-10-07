@@ -1,0 +1,18 @@
+uuid: 8d62da5a-b71b-4dbb-82bf-7e31434120f0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - helstra
+id: helstra_local_actions
+theme: helstra
+region: tools
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

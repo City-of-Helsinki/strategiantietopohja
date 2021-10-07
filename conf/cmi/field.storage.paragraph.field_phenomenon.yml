@@ -1,0 +1,20 @@
+uuid: 5c896048-48d5-4ffb-b50d-22443501dea4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_phenomenon
+field_name: field_phenomenon
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

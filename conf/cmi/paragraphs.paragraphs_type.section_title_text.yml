@@ -1,0 +1,10 @@
+uuid: e97f79e6-5618-4736-b808-c4872e49602e
+langcode: en
+status: true
+dependencies: {  }
+id: section_title_text
+label: 'Section title + text'
+icon_uuid: null
+icon_default: null
+description: 'With this you can create sections with section numbers and titles. In articles this is used to create content index listing.'
+behavior_plugins: {  }

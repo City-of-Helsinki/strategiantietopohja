@@ -1,0 +1,98 @@
+uuid: 31c1bee4-9a13-41b5-9db1-955f7a9e7e5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.article
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.powerbi_embed
+    - paragraphs.paragraphs_type.section_title_text
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: sd97ognTVgckfNOfCIDuo9sB2tWzdkZFB5tNhMCesnc
+id: node.article.field_content
+field_name: field_content
+entity_type: node
+bundle: article
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      section_title_text: section_title_text
+      text: text
+      image: image
+      powerbi_embed: powerbi_embed
+      columns: columns
+      gallery: gallery
+      list_of_links: list_of_links
+      content_cards: content_cards
+    target_bundles_drag_drop:
+      accordion:
+        weight: -29
+        enabled: false
+      accordion_item:
+        weight: -28
+        enabled: false
+      banner:
+        weight: -24
+        enabled: false
+      columns:
+        enabled: true
+        weight: -33
+      content_cards:
+        enabled: true
+        weight: -30
+      gallery:
+        enabled: true
+        weight: -32
+      gallery_slide:
+        weight: -27
+        enabled: false
+      hero:
+        weight: -26
+        enabled: false
+      image:
+        enabled: true
+        weight: -35
+      liftup_with_image:
+        weight: -23
+        enabled: false
+      list_of_links:
+        enabled: true
+        weight: -31
+      list_of_links_item:
+        weight: -25
+        enabled: false
+      phenomenon_liftup:
+        weight: -22
+        enabled: false
+      powerbi_embed:
+        enabled: true
+        weight: -34
+      section_title_text:
+        enabled: true
+        weight: -37
+      text:
+        enabled: true
+        weight: -36
+      title_text:
+        weight: -21
+        enabled: false
+      trend_liftup:
+        weight: -20
+        enabled: false
+field_type: entity_reference_revisions

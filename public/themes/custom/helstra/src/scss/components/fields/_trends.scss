@@ -1,0 +1,44 @@
+.trends__container {
+  .trends-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+    }
+
+    .trends-liftup {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin-top: 12px;
+      margin-bottom: 12px;
+
+      @include breakpoint($breakpoint-s) {
+        max-width: 49%;
+      }
+
+      @include breakpoint($breakpoint-l) {
+        max-width: 24%;
+      }
+
+      .paragraph {
+        font-weight: bold;
+
+        img {
+          width: 100%;
+          margin-bottom: 18px;
+        }
+
+        .label {
+          font-weight: normal;
+          margin-bottom: 18px;
+        }
+
+        p {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

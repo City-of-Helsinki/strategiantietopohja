@@ -1,0 +1,14 @@
+.powerbi-embed--default {
+  .text__text-content {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+}

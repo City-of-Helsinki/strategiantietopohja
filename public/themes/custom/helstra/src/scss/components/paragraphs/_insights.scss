@@ -1,0 +1,46 @@
+.article__insights {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -4px;
+
+  @include breakpoint($breakpoint-l) {
+    
+  }
+
+  .insight-item {
+    flex: 1 1 100%;
+    margin: 4px;
+    position: relative;
+    padding: 48px 32px;
+    background-color: var(--color-fog);
+
+    @include breakpoint($breakpoint-m) {
+      flex: 1 1 45%;
+    }
+
+    @include breakpoint($breakpoint-l) {
+      flex: 1 1 30%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: 10px;
+      width: 90px;
+      height: 90px;
+      background-image: url('../../src/images/icon-insight.png');
+      background-size: contain;
+      filter: brightness(0.4);
+    }
+
+    .title {
+      font-size: 1.25rem;
+    }
+
+    .text {
+      font-size: 1.05rem;
+      margin-top: 8px;
+    }
+  }
+}

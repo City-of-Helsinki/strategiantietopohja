@@ -1,0 +1,82 @@
+uuid: 91ff479a-4a41-4d5e-9952-79b66276db54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trends
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.trend_liftup
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_trends
+field_name: field_trends
+entity_type: node
+bundle: landing_page
+label: Trends
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      trend_liftup: trend_liftup
+    target_bundles_drag_drop:
+      accordion:
+        weight: 19
+        enabled: false
+      accordion_item:
+        weight: 20
+        enabled: false
+      banner:
+        weight: 21
+        enabled: false
+      columns:
+        weight: 22
+        enabled: false
+      content_cards:
+        weight: 23
+        enabled: false
+      gallery:
+        weight: 24
+        enabled: false
+      gallery_slide:
+        weight: 25
+        enabled: false
+      hero:
+        weight: 26
+        enabled: false
+      image:
+        weight: 27
+        enabled: false
+      liftup_with_image:
+        weight: 28
+        enabled: false
+      list_of_links:
+        weight: 29
+        enabled: false
+      list_of_links_item:
+        weight: 30
+        enabled: false
+      phenomenon_liftup:
+        weight: 31
+        enabled: false
+      powerbi_embed:
+        weight: 32
+        enabled: false
+      section_title_text:
+        weight: 33
+        enabled: false
+      text:
+        weight: 34
+        enabled: false
+      title_text:
+        weight: 35
+        enabled: false
+      trend_liftup:
+        enabled: true
+        weight: 36
+field_type: entity_reference_revisions

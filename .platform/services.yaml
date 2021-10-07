@@ -1,0 +1,13 @@
+# The services of the project.
+
+mysqldb:
+  type: mysql:10.3
+  disk: 2048
+rediscache:
+  type: redis:3.2
+elasticsearch:
+  type: elasticsearch:7.9
+  disk: 256
+#solrsearch:
+#    type: solr:6.6
+#    disk: 1024

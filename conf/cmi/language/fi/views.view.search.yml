@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Hae
+          exposed_sorts_label: Järjestä
+      filters:
+        search_api_fulltext:
+          expose:
+            label: 'Hae tietopohjasta'
+        field_phenomena:
+          expose:
+            label: Ilmiö
+      sorts:
+        search_api_relevance:
+          expose:
+            label: 'Osuvimmat ensin'
+        created:
+          expose:
+            label: 'Uusimmat ensin'
+      header:
+        result:
+          content: '<p><span class="count">@total</span> hakutulosta</p>'
+      empty:
+        area:
+          content:
+            value: '<p>Ei hakutuloksia.</p>'
+      pager:
+        options:
+          tags:
+            first: '« Alkuun'
+            last: 'Loppuun »'

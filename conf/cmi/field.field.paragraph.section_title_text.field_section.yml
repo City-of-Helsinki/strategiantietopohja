@@ -1,0 +1,23 @@
+uuid: de831182-8dea-4cbd-aeb6-53e172d001f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section
+    - paragraphs.paragraphs_type.section_title_text
+id: paragraph.section_title_text.field_section
+field_name: field_section
+entity_type: paragraph
+bundle: section_title_text
+label: Section
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

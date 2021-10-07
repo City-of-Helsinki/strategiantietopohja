@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function helstra_search_install() {
+  // Run hooks on install.
+  helstra_search_update_9001();
+}
+
+/**
+ * Create path aliases for search page.
+ */
+function helstra_search_update_9001() {
+  $alias_storage = \Drupal::service('entity_type.manager')->getStorage('path_alias');
+  $aliases = [
+    'fi' => '/haku',
+    'sv' => '/sok',
+  ];
+  foreach ($aliases as $langcode => $alias) {
+    $alias_entity = $alias_storage->loadByProperties([
+      'alias' => $alias,
+    ]);
+    if (!empty($alias_entity)) {
+      continue;
+    }
+    $path_alias = \Drupal\path_alias\Entity\PathAlias::create([
+      'path' => '/search',
+      'alias' => $alias,
+      'langcode' => $langcode
+    ]);
+    $alias_storage->save($path_alias);
+  }
+}
