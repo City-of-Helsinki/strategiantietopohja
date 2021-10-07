@@ -68,19 +68,45 @@
     },
 
     smoothScroll: function() {
-      $('a[href^="#"]').on('click', function (event) {
+      $('a[href^="#"]:not([href="#"])').on('click', function (event) {
         event.preventDefault();
         anchor = $(this).attr('href').replace(".", "\\.");
 
         $('html, body').animate({
             scrollTop: $(anchor).offset().top - 20
         }, 500);
+
+        $(anchor).attr('tabindex','-1')
+        $(anchor).focus();
+      });
+    },
+
+    phenomenaSelect: function() {
+      $('.dropdown').on('focusin', function (event) {
+        $(this).find('.dropbtn').attr( "aria-expanded", "true" );
+      });
+
+      $('.dropdown').on('focusout', function (event) {
+        $(this).find('.dropbtn').attr( "aria-expanded", "false" );
+      });
+
+      $('.dropbtn').hover(function (event) {
+        $(this).attr( "aria-expanded", "true" );
+      }, function(event) {
+        $(this).attr( "aria-expanded", "false" );
+      });
+
+      $('.dropdown-content a').hover(function (event) {
+        $(this).parents('.dropdown').find('.dropbtn').attr( "aria-expanded", "true" );
+      }, function(event) {
+        $(this).parents('.dropdown').find('.dropbtn').attr( "aria-expanded", "false" );
       });
     },
 
     attach: function () {
       Drupal.behaviors.helstra_theme.mobileTOC();
       Drupal.behaviors.helstra_theme.smoothScroll();
+      Drupal.behaviors.helstra_theme.phenomenaSelect();
     }
   };
 

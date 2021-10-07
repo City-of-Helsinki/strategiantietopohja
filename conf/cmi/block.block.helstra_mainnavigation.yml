@@ -68,4 +68,8 @@ settings:
   custom_list_class: ''
   custom_item_class: ''
   custom_link_class: ''
+  translation_providers:
+    views: views
+    menu_link_content: menu_link_content
+    default: 0
 visibility: {  }

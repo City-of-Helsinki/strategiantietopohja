@@ -102,6 +102,7 @@ class PhenomenonArticleListFieldFormatter extends FormatterBase {
 
     foreach ($links as $link) {
       $menu_link = $link['menu_link'];
+      $content['parent'] = $parent_entity->id();
       $content['nodes'][] = [
         'entity' => \Drupal::entityTypeManager()->getViewBuilder('node')->view($link['node'], 'teaser'),
         'label' => $menu_link->getPluginDefinition()['title'],

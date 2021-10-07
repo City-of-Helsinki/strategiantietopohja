@@ -33,3 +33,10 @@ function helstra_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'helstra/matomo';
   $attachments['#attached']['library'][] = 'helstra/snoobi';
 }
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function helstra_preprocess_html(&$variables) {
+  $variables['page']['content']['messages']['#include_fallback'] = FALSE;
+}
