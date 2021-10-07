@@ -1,17 +1,17 @@
 uuid: a3bd3a1d-a5c1-4006-9634-67daa348fb62
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
   theme:
     - hdbt
 _core:
-  default_config_hash: ZzdJcSkjBoQgZejw_QMj17rr48OGJ1nrMTff0Ll9Hhw
+  default_config_hash: zieswfNu7cMhhsRwkEpe2HFgOvWeHcKNW9iXlTcq49k
 id: sitebranding
 theme: hdbt
 region: header_top
-weight: -4
+weight: 1
 provider: null
 plugin: system_branding_block
 settings:

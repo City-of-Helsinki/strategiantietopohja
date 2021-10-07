@@ -43,6 +43,8 @@ permissions:
   - 'delete own remote_video media'
   - 'delete own soundcloud media'
   - 'delete own unit content'
+  - 'edit any article content'
+  - 'edit any phenomenon content'
   - 'edit own article content'
   - 'edit own file media'
   - 'edit own image media'

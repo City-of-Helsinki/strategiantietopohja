@@ -1,17 +1,17 @@
 uuid: d73c3ac5-de9d-4dba-86d2-08805453f270
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - language
   theme:
     - hdbt
 _core:
-  default_config_hash: jDpKvB-ZNjf7l-dHk_CINYgToXHW1HAv6Yf9ZBphRYQ
+  default_config_hash: exT4lfsQK-ekjJqsVu1l0uJ7eGvkRqcwOZdzEXQFBqw
 id: language_switcher
 theme: hdbt
 region: header_top
-weight: 0
+weight: 2
 provider: null
 plugin: 'language_block:language_content'
 settings:

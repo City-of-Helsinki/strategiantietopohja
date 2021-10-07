@@ -14,5 +14,5 @@
  */
 #}
 {% block content %}
-  {% embed "@hdbt/misc/logo.twig" with {logo_position: 'header'} %}{% endembed %} <a class="name--header" href="/">{{ site_name }}</a>
+  {% embed "@helstra/misc/logo.twig" with {logo_position: 'header'} %}{% endembed %} <a class="name--header" href="{{ path('<front>') }}" title="{{ 'Back to front page'|t }}" rel="home">{{ site_name }}</a>
 {% endblock %}
