@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: section_title_text
 label: 'Section title'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

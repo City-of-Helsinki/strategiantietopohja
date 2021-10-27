@@ -4,7 +4,3 @@ settings:
       label: 'Kuva oikealla'
     -
       label: 'Kuva vasemmalla'
-    -
-      label: 'Taustakuva, teksti oikealla'
-    -
-      label: 'Taustakuva, teksti vasemmalla'
