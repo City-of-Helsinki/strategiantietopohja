@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: section_title_text
 label: Text
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
