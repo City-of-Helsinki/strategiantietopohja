@@ -1,5 +1,6 @@
 module:
   admin_toolbar: 0
+  admin_toolbar_tools: 0
   aet: 0
   api_tools: 0
   block: 0
