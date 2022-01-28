@@ -13,12 +13,12 @@ pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   63da1714-dc46-4865-aa0f-d3650b65f8ad:
     id: node_type
-    bundles:
-      phenomenon: phenomenon
     negate: false
+    uuid: 63da1714-dc46-4865-aa0f-d3650b65f8ad
     context_mapping:
       node: node
-    uuid: 63da1714-dc46-4865-aa0f-d3650b65f8ad
+    bundles:
+      phenomenon: phenomenon
 selection_logic: and
 weight: -7
 relationships: {  }

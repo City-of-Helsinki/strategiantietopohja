@@ -21,9 +21,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       trend_liftup: trend_liftup
+    negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 19
@@ -77,6 +77,6 @@ settings:
         weight: 35
         enabled: false
       trend_liftup:
-        enabled: true
         weight: 36
+        enabled: true
 field_type: entity_reference_revisions

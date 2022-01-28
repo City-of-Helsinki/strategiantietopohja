@@ -20,13 +20,13 @@ mode: search_result
 content:
   field_content:
     type: entity_reference_revisions_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_hero: true
   field_lead: true
