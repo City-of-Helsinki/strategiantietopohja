@@ -6,11 +6,11 @@ dependencies:
     - hdbt_content
     - node
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: 78yiI6vde7AAMhp5ktXyPS5VcKtVs4_JuJccNBI1K7Q
 id: sidebarcontentblock
-theme: hdbt
+theme: helstra
 region: sidebar_first
 weight: 1
 provider: null

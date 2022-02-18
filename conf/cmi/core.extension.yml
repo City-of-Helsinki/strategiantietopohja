@@ -4,6 +4,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   aet: 0
+  allowed_formats: 0
   api_tools: 0
   block: 0
   breakpoint: 0

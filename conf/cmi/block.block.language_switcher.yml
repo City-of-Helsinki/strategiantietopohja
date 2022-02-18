@@ -5,11 +5,11 @@ dependencies:
   module:
     - language
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: exT4lfsQK-ekjJqsVu1l0uJ7eGvkRqcwOZdzEXQFBqw
 id: language_switcher
-theme: hdbt
+theme: helstra
 region: header_branding
 weight: 2
 provider: null

@@ -5,11 +5,11 @@ dependencies:
   module:
     - node
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: cWAyHuLWbIx_Tsd04YPaUUGBOdvtYeKIjFXBXJhmi2w
 id: hdbt_page_title
-theme: hdbt
+theme: helstra
 region: before_content
 weight: -6
 provider: null

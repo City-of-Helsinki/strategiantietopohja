@@ -5,11 +5,11 @@ dependencies:
   module:
     - system
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: X6F3oSAls1r1jwOVU5n7EG6Uaz0yFqo-GQcEXDzxxLk
 id: breadcrumbs
-theme: hdbt
+theme: helstra
 region: breadcrumb
 weight: 0
 provider: null

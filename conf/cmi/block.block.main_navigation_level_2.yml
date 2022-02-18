@@ -8,11 +8,11 @@ dependencies:
     - menu_block_current_language
     - node
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: zS9zgTlcanrv75vk0WibXcekGUttnN4EwP1pwFdTAcM
 id: main_navigation_level_2
-theme: hdbt
+theme: helstra
 region: sidebar_first
 weight: 0
 provider: null

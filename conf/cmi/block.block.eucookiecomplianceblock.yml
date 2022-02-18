@@ -6,11 +6,11 @@ dependencies:
     - eu_cookie_compliance
     - system
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: 28-kb7jihf_0-XOrfhlEDbsUyoxMcH4YtOMyietA-vA
 id: eucookiecomplianceblock
-theme: hdbt
+theme: helstra
 region: after_content
 weight: -8
 provider: null

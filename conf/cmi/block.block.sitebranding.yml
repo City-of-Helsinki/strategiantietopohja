@@ -5,11 +5,11 @@ dependencies:
   module:
     - system
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: zieswfNu7cMhhsRwkEpe2HFgOvWeHcKNW9iXlTcq49k
 id: sitebranding
-theme: hdbt
+theme: helstra
 region: header_branding
 weight: 1
 provider: null

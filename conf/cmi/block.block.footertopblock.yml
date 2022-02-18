@@ -5,11 +5,11 @@ dependencies:
   module:
     - hdbt_content
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: IsZxrQIR5fs_5xZDQ1BJ8K5LXwiaRAM3Gk-HY4vuVb4
 id: footertopblock
-theme: hdbt
+theme: helstra
 region: footer_top
 weight: -3
 provider: null

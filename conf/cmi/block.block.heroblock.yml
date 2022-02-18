@@ -1,16 +1,16 @@
 uuid: 9c02338f-0b2c-42f2-8a5b-d2375f2ceadd
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - hdbt_content
     - node
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: nH8M6u66xNnGzjplyiDZAKKeyzDR6NFyTMXNwDYzldk
 id: heroblock
-theme: hdbt
+theme: helstra
 region: before_content
 weight: -5
 provider: null
