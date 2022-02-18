@@ -46,12 +46,28 @@
         order: 1;
       }
 
+      .paragraph-content {
+        margin-top: 36px;
+
+        @include breakpoint($breakpoint-l) {
+          margin-top: 64px;
+        }
+      }
+
       // Override Helsinki text paragraph left padding
       .text__container {
         padding-left: 0 !important;
 
         .text__text-content {
           padding-left: 0 !important;
+
+          h2 {
+            margin: 36px 0 12px 0;
+
+            @include breakpoint($breakpoint-l) {
+              margin: 0 0 36px 0;
+            }
+          }
         }
       }
     }
