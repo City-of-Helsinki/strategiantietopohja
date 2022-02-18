@@ -26,5 +26,6 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
-      unit: unit
-      service: service
+      landing_page: landing_page
+      page: page
+      phenomenon: phenomenon
