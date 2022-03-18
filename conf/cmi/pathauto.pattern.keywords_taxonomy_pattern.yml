@@ -12,12 +12,12 @@ pattern: '[term:vocabulary:name]/[term:name]'
 selection_criteria:
   ca0c3026-3786-4144-8f31-b115fe05af02:
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      keywords: keywords
     negate: false
+    uuid: ca0c3026-3786-4144-8f31-b115fe05af02
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: ca0c3026-3786-4144-8f31-b115fe05af02
+    bundles:
+      keywords: keywords
 selection_logic: and
 weight: -5
 relationships: {  }

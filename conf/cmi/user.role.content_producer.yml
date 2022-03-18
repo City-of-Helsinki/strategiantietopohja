@@ -1,11 +1,35 @@
 uuid: af445896-10ad-4c35-a463-a4a01d5e2d75
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - media.type.soundcloud
+    - node.type.article
+    - node.type.landing_page
+    - node.type.page
+    - node.type.phenomenon
+    - taxonomy.vocabulary.keywords
+    - taxonomy.vocabulary.phenomena
+  module:
+    - content_translation
+    - file
+    - helfi_api_base
+    - media
+    - node
+    - paragraphs
+    - path
+    - scheduler
+    - system
+    - taxonomy
+    - toolbar
+    - view_unpublished
 _core:
   default_config_hash: XhNzDGDspXeMyW4TAki8MB6z-vzBwmtP_efemgX6-HI
 id: content_producer
-label: 'Content producer'
+label: Sisällöntuottaja
 weight: 3
 is_admin: null
 permissions:
@@ -31,7 +55,6 @@ permissions:
   - 'create soundcloud media'
   - 'create terms in keywords'
   - 'create terms in phenomena'
-  - 'create unit content'
   - 'create url aliases'
   - 'delete media'
   - 'delete own article content'
@@ -42,7 +65,6 @@ permissions:
   - 'delete own phenomenon content'
   - 'delete own remote_video media'
   - 'delete own soundcloud media'
-  - 'delete own unit content'
   - 'edit any article content'
   - 'edit any phenomenon content'
   - 'edit own article content'
@@ -53,19 +75,19 @@ permissions:
   - 'edit own phenomenon content'
   - 'edit own remote_video media'
   - 'edit own soundcloud media'
-  - 'edit own unit content'
   - 'edit terms in keywords'
   - 'edit terms in phenomena'
   - 'revert article revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'
   - 'revert phenomenon revisions'
-  - 'revert unit revisions'
   - 'schedule publishing of nodes'
   - 'translate editable entities'
   - 'update media'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any unpublished landing_page content'
+  - 'view any unpublished page content'
   - 'view article revisions'
   - 'view landing_page revisions'
   - 'view own unpublished content'
@@ -75,5 +97,4 @@ permissions:
   - 'view remote entities'
   - 'view scheduled content'
   - 'view the administration theme'
-  - 'view unit revisions'
   - 'view unpublished paragraphs'

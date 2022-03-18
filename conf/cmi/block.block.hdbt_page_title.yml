@@ -1,15 +1,15 @@
 uuid: 52a3dd93-897a-44a5-b3ae-2398e8bbb2a3
 langcode: en
-status: true
+status: false
 dependencies:
   module:
-    - ctools
+    - node
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: cWAyHuLWbIx_Tsd04YPaUUGBOdvtYeKIjFXBXJhmi2w
 id: hdbt_page_title
-theme: hdbt
+theme: helstra
 region: before_content
 weight: -6
 provider: null
@@ -17,14 +17,12 @@ plugin: page_title_block
 settings:
   id: page_title_block
   label: 'Page title'
-  provider: core
   label_display: '0'
+  provider: core
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      unit: unit
-      service: service
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles: {  }
