@@ -4,3 +4,7 @@ settings:
       label: 'Kuva oikealla'
     -
       label: 'Kuva vasemmalla'
+    -
+      label: 'Background image, text on right'
+    -
+      label: 'Background image, text on left'

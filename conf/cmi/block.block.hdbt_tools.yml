@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - hdbt
+    - helstra
 _core:
   default_config_hash: z1s_0oxpOjcA1atdCgI_EmNSXDJj76BuQclUwezMmcw
 id: hdbt_tools
-theme: hdbt
+theme: helstra
 region: tools
 weight: -3
 provider: null
@@ -19,8 +19,8 @@ plugin: 'system_menu_block:tools'
 settings:
   id: 'system_menu_block:tools'
   label: Tools
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false

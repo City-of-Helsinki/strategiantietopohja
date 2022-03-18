@@ -54,7 +54,7 @@
 %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }} role="banner">
+  <div{{ attributes.addClass(classes) }}>
     {% embed "@hdbt/misc/container.twig" with {container_element: 'hero'} %}
       {% block container_content %}
         <div class="hero__text-content">
@@ -86,24 +86,26 @@
                 {% set link = item['#url'] %}
                 {% set text = item['#title'] %}
                 {% set target_new = item['#options']['target_new'] %}
+                {% set icon = item['#options']['icon'] %}
 
-                <a href="{{ link }}" {% if target_new %}target="_blank"{% endif %} class="hero__button hds-button {% if link_type %}{{ 'hds-button--' ~ link_type }}{% endif %}">
-                  {% if icon_first == true %}<span aria-hidden="true" class="hds-icon {{ 'hds-icon--' ~ icon_first_type }}"></span>{% endif %}
+                {%
+                  set link_classes = [
+                    'hero__button',
+                    'hds-button',
+                    link_type ? 'hds-button--' ~ link_type|clean_class,
+                    icon or target_new ? 'hdbt-icon',
+                    icon ? 'hdbt-icon--' ~ icon|clean_class,
+                    target_new and not icon ? 'hdbt-icon--link-external'
+                  ]
+                %}
+                <a href="{{ link }}" {% if target_new %}target="_blank"{% endif %}{{ create_attribute({'class': link_classes} ) }}>
                   <span class="hds-button__label">{{ text }}</span>
-                  {% if link_type == 'supplementary' %}
-                    {% if target_new %}
-                      <span aria-hidden="true" class="hds-icon hds-icon--link-external"></span>
-                    {% else %}
-                      <span aria-hidden="true" class="hds-icon hds-icon--arrow-right"></span>
-                    {% endif %}
-                  {% elseif target_new %}
-                    <span aria-hidden="true" class="hds-icon hds-icon--link-external"></span>
-                  {% endif %}
                 </a>
               {% endfor %}
             </div>
           {% endif %}
         </div>
+        {# <span class="hero__arrow" aria-hidden="true"></span> #}
       {% endblock %}
     {% endembed %}
 
@@ -114,11 +116,9 @@
       design == "background-image" or
       design == "diagonal"
     %}
-      {% set image_id = content.field_hero_image[0]['#media'].field_media_image.entity.id %}
-      {% set image_alt = content.field_hero_image[0]['#media'].field_media_image.alt %}
-
+      {% set image_uri = content.field_hero_image[0]['#media'].field_media_image.entity.uri.value %}
       {# This check should be done in edit form. #}
-      {% if image_id %}
+      {% if image_uri %}
         {% set image_style = 'hero__background' %}
 
         {% if design == "with-image-right" or design == "with-image-left" %}
@@ -131,7 +131,7 @@
 
         <div class="hero__image-container">
           {% include '@hdbt/misc/koro.twig' with {koro: koro, flip: true } %}
-          {{ drupal_image(image_id, image_style, {alt: image_alt }, responsive=true) }}
+          {{ drupal_image(image_uri, image_style, responsive=true) }}
         </div>
       {% endif %}
     {% endif %}

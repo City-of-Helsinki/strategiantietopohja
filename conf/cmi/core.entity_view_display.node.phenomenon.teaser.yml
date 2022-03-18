@@ -21,21 +21,21 @@ mode: teaser
 content:
   field_hero:
     type: entity_reference_revisions_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: preview
       link: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_phenomena:
     type: phenomenon_article_list_field_formatter
-    weight: 1
-    region: content
     label: above
     settings:
       display_type: list
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   field_content: true
   field_lead: true
