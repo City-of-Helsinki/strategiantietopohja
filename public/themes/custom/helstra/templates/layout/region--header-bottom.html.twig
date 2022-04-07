@@ -13,14 +13,7 @@
  */
 #}
 {% if content %}
-{%
-  set classes = [
-    'region',
-    'region-' ~ region|clean_class,
-    'clearfix',
-  ]
-%}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass('header-bottom') }}>
     {{ content }}
   </div>
 {% endif %}

@@ -13,6 +13,12 @@
  * - site_slogan: Slogan for site as defined in Site information settings.
  */
 #}
+
+{% set attributes = attributes.addClass('block--branding') %}
+
 {% block content %}
-  {% embed "@helstra/misc/logo.twig" with {logo_position: 'header'} %}{% endembed %} <a class="name--header" href="{{ path('<front>') }}" title="{{ 'Back to front page'|t }}" rel="home">{{ site_name }}</a>
+  <a href="{{ path('<front>') }}" class="logo logo--header" title="{{ site_name }}" id="logo--header" rel="home">
+    {% embed "@helstra/misc/logo.twig" %}{% endembed %}
+    <span class="site-name">{{ site_name }}</span>
+  </a>
 {% endblock %}

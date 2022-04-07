@@ -1,11 +1,16 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   admin_toolbar: 0
+  admin_toolbar_tools: 0
   aet: 0
+  allowed_formats: 0
   api_tools: 0
   block: 0
   breakpoint: 0
   ckeditor: 0
   config: 0
+  config_rewrite: 0
   config_translation: 0
   config_update: 0
   crop: 0
@@ -19,7 +24,6 @@ module:
   editor: 0
   elasticsearch_connector: 0
   entity_reference_revisions: 0
-  features: 0
   field: 0
   field_ui: 0
   file: 0
@@ -31,7 +35,6 @@ module:
   hdbt_admin_tools: 0
   hdbt_component_library: 0
   hdbt_content: 0
-  hdbt_hyphenopoly: 0
   helfi_api_base: 0
   helfi_base_config: 0
   helfi_content: 0
@@ -40,6 +43,7 @@ module:
   helfi_languages: 0
   helfi_media: 0
   helfi_platform_config: 0
+  helfi_toc: 0
   helstra_article: 0
   helstra_phenomenon: 0
   helstra_search: 0
@@ -62,6 +66,7 @@ module:
   metatag_views: 0
   migrate: 0
   node: 0
+  oembed_providers: 0
   options: 0
   page_cache: 0
   paragraphs_asymmetric_translation_widgets: 0
@@ -84,9 +89,12 @@ module:
   token: 0
   token_filter: 0
   toolbar: 0
+  translatable_menu_link_uri: 0
   twig_tweak: 0
   update: 0
+  update_helper: 0
   user: 0
+  view_unpublished: 0
   views_ui: 0
   pathauto: 1
   content_translation: 10
@@ -103,5 +111,3 @@ theme:
   hdbt_admin: 0
   helstra: 0
 profile: minimal
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

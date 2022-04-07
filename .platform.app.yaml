@@ -7,7 +7,7 @@
 name: "app"
 
 # The runtime the application uses.
-type: "php:7.4"
+type: "php:8.0"
 
 # Additional extensions
 runtime:
@@ -49,6 +49,7 @@ hooks:
     curl -sS https://platform.sh/cli/installer | php
     composer clear-cache
     composer --no-ansi --no-interaction install --no-dev --no-progress --prefer-dist --optimize-autoloader
+    cp public/themes/custom/helstra/assets/images/*.svg public/themes/contrib/hdbt_admin/modules/hdbt_admin_editorial/assets/images/
   # The deploy hook runs after your application has been deployed and started.
   deploy: |
     set -e
