@@ -49,6 +49,4 @@ options:
 pipelines: # More info here: https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html
   branches:
     master:
-      - step: *install-php-extensions
-      - step: *install-composer
       - step: *build-test-sonarcloud
