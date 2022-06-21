@@ -5,7 +5,17 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.phenomenon
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.content_cards
+    - paragraphs.paragraphs_type.content_liftup
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.liftup_with_image
+    - paragraphs.paragraphs_type.list_of_links
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.title_text
   module:
     - entity_reference_revisions
 id: node.phenomenon.field_content
@@ -22,27 +32,43 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      accordion: accordion
+      banner: banner
+      columns: columns
+      content_cards: content_cards
+      gallery: gallery
+      image: image
       liftup_with_image: liftup_with_image
+      content_liftup: content_liftup
+      list_of_links: list_of_links
+      text: text
+      title_text: title_text
     negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 18
-        enabled: false
+        enabled: true
       accordion_item:
         weight: 19
         enabled: false
       banner:
         weight: 20
-        enabled: false
+        enabled: true
       columns:
         weight: 21
-        enabled: false
+        enabled: true
       content_cards:
         weight: 22
+        enabled: true
+      content_liftup:
+        weight: 28
+        enabled: true
+      from_library:
+        weight: 29
         enabled: false
       gallery:
         weight: 23
-        enabled: false
+        enabled: true
       gallery_slide:
         weight: 24
         enabled: false
@@ -51,13 +77,13 @@ settings:
         enabled: false
       image:
         weight: 26
-        enabled: false
+        enabled: true
       liftup_with_image:
         weight: 27
         enabled: true
       list_of_links:
         weight: 28
-        enabled: false
+        enabled: true
       list_of_links_item:
         weight: 29
         enabled: false
@@ -67,13 +93,22 @@ settings:
       powerbi_embed:
         weight: 31
         enabled: false
+      remote_video:
+        weight: 39
+        enabled: false
       section_title_text:
         weight: 32
         enabled: false
+      sidebar_text:
+        weight: 41
+        enabled: false
       text:
         weight: 33
-        enabled: false
+        enabled: true
       title_text:
         weight: 34
+        enabled: true
+      trend_liftup:
+        weight: 44
         enabled: false
 field_type: entity_reference_revisions

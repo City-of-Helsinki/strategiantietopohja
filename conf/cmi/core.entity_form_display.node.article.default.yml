@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.article.field_phenomena
     - node.type.article
   module:
+    - hdbt_admin_editorial
     - media_library
     - metatag
     - paragraphs
@@ -29,13 +30,21 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_author:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_content:
     type: paragraphs
-    weight: 5
+    weight: 6
     region: content
     settings:
       title: Lohko
@@ -54,14 +63,14 @@ content:
     third_party_settings: {  }
   field_downloadable_material:
     type: media_library_widget
-    weight: 6
+    weight: 7
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_insights:
     type: paragraphs
-    weight: 3
+    weight: 4
     region: content
     settings:
       title: Paragraph
@@ -79,7 +88,7 @@ content:
     third_party_settings: {  }
   field_keywords:
     type: select2_entity_reference
-    weight: 7
+    weight: 8
     region: content
     settings:
       width: 100%
@@ -97,21 +106,22 @@ content:
     third_party_settings: {  }
   field_liftup_image:
     type: media_library_widget
-    weight: 4
+    weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 20
+    weight: 21
     region: content
     settings:
       sidebar: false
+      use_details: true
     third_party_settings: {  }
   field_phenomena:
     type: options_buttons
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -124,38 +134,38 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 13
+    weight: 14
     region: content
     settings:
       display_label: true
@@ -169,13 +179,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 10
     region: content
     settings:
       match_operator: CONTAINS
@@ -185,14 +195,13 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 18
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  url_redirects:
     weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_author: true
+  url_redirects:
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
