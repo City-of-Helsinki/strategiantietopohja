@@ -12,7 +12,7 @@ entity_type: node
 bundle: phenomenon
 label: 'Related articles'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
