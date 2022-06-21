@@ -33,3 +33,4 @@ content:
 hidden:
   field_section: true
   field_subsection: true
+  search_api_excerpt: true

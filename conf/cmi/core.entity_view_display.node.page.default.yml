@@ -45,11 +45,6 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -59,8 +54,16 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_has_hero: true
+  field_lead_in: true
   field_liftup_image: true
+  field_lower_content: true
   langcode: true
   search_api_excerpt: true
+  toc_enabled: true

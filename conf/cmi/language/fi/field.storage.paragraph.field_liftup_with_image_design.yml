@@ -5,6 +5,6 @@ settings:
     -
       label: 'Kuva vasemmalla'
     -
-      label: 'Background image, text on right'
+      label: 'Taustakuva, teksti oikealla'
     -
-      label: 'Background image, text on left'
+      label: 'Taustakuva, teksti vasemmalla'
