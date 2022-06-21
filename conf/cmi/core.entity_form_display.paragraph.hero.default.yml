@@ -12,6 +12,7 @@ dependencies:
     - field.field.paragraph.hero.field_hero_title
     - paragraphs.paragraphs_type.hero
   module:
+    - hdbt_admin_editorial
     - media_library
     - text
 _core:
@@ -36,7 +37,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_hero_design:
-    type: options_select
+    type: design_field_widget
     weight: 0
     region: content
     settings: {  }
@@ -48,6 +49,24 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_hero_link:
+    type: link_target_icon_field_widget
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      linkit_profile: tpr_content
+      linkit_auto_link_text: 0
+      link_target: ''
+      icon: ''
+    third_party_settings: {  }
+  field_hero_link_design:
+    type: design_field_widget
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_hero_title:
     type: string_textfield
     weight: 2
@@ -56,12 +75,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_hero_link:
-    settings:
-      linkit_auto_link_text: 0
-      linkit_profile: tpr_content
 hidden:
   created: true
-  field_hero_link: true
-  field_hero_link_design: true
   status: true
