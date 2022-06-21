@@ -41,6 +41,26 @@ function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form
 }
 
 /**
+ * Implements hook_entity_access().
+ */
+function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  // Restrict access to specific path by IP or authentication.
+  if (\Drupal::currentUser()->isAuthenticated()) {
+  
+  } else {
+    if ($entity->bundle() == 'phenomenon') {
+      $path = $entity->toUrl()->toString();
+      if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
+        $ip = \Drupal::request()->getClientIp();
+        if (substr($ip, 0, 8 ) != "137.163.") {
+          return \Drupal\Core\Access\AccessResult::forbidden();
+        }
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_theme().
  */
 function helstra_phenomenon_theme() {
