@@ -53,6 +53,7 @@ function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $e
       if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
         $ip = \Drupal::request()->getClientIp();
         if (substr($ip, 0, 8 ) != "137.163.") {
+          \Drupal::logger('helstra_phenomenon')->error('Access denied from: ' . $ip);
           return \Drupal\Core\Access\AccessResult::forbidden();
         }
       }
