@@ -44,7 +44,7 @@ function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form
  * Implements hook_entity_access().
  */
 function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
-  // Restrict access to specific path by IP or authentication.
+  // Restrict access to path "fi/tilannekuva" by IP or authentication.
   if (\Drupal::currentUser()->isAuthenticated()) {
   
   } else {
@@ -58,6 +58,18 @@ function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $e
         }
       }
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function helstra_phenomenon_preprocess_node__phenomenon(&$variables) {
+  // Don't cache path "fi/tilannekuva".
+  $node = $variables['node'];
+  $path = $node->toUrl()->toString();
+  if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
+    $variables['#cache']['contexts'][] = 'ip';
   }
 }
 
