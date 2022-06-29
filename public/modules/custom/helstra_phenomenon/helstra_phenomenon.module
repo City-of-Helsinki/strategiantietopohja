@@ -54,7 +54,11 @@ function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $e
         $ip = \Drupal::request()->getClientIp();
         if (substr($ip, 0, 8 ) != "137.163.") {
           \Drupal::logger('helstra_phenomenon')->error('Access denied from: ' . $ip);
-          return \Drupal\Core\Access\AccessResult::forbidden();
+          $access_result = \Drupal\Core\Access\AccessResult::forbidden();
+          $access_result->setCacheMaxAge(0);
+          $access_result->resetCacheContexts();
+          $access_result->addCacheContexts(['ip']);
+          return $access_result;
         }
       }
     }
