@@ -48,7 +48,7 @@ function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $e
   if (\Drupal::currentUser()->isAuthenticated()) {
   
   } else {
-    if ($entity->bundle() == 'phenomenon') {
+    if ($entity->bundle() == 'phenomenon' && $operation == 'view') {
       $path = $entity->toUrl()->toString();
       if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
         $ip = \Drupal::request()->getClientIp();
@@ -61,6 +61,7 @@ function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $e
           $access_result->addCacheContexts(['ip']);
           return $access_result;
         } else {
+          \Drupal::service('page_cache_kill_switch')->trigger();
           \Drupal::logger('helstra_phenomenon')->error('Access denied from: ' . $ip);
           $access_result = \Drupal\Core\Access\AccessResult::forbidden();
           $access_result->setCacheMaxAge(0);
