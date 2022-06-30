@@ -52,7 +52,15 @@ function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $e
       $path = $entity->toUrl()->toString();
       if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
         $ip = \Drupal::request()->getClientIp();
-        if (substr($ip, 0, 8 ) != "137.163.") {
+        if (substr($ip, 0, 8 ) == "137.163.") {
+          \Drupal::service('page_cache_kill_switch')->trigger();
+          \Drupal::logger('helstra_phenomenon')->error('Access granted from: ' . $ip);
+          $access_result = \Drupal\Core\Access\AccessResult::allowed();
+          $access_result->setCacheMaxAge(0);
+          $access_result->resetCacheContexts();
+          $access_result->addCacheContexts(['ip']);
+          return $access_result;
+        } else {
           \Drupal::logger('helstra_phenomenon')->error('Access denied from: ' . $ip);
           $access_result = \Drupal\Core\Access\AccessResult::forbidden();
           $access_result->setCacheMaxAge(0);
