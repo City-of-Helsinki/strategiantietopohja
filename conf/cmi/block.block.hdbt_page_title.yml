@@ -25,4 +25,6 @@ visibility:
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
-    bundles: {  }
+    bundles:
+      unit: unit
+      service: service
