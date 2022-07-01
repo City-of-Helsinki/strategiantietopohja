@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.columns.field_columns_title
     - paragraphs.paragraphs_type.columns
   module:
+    - hdbt_admin_editorial
     - paragraphs
 _core:
   default_config_hash: oC4p3Pa-hbvu66uKypdcCIhFQspVgIqfYsbLe7hVLMg
@@ -18,7 +19,7 @@ bundle: columns
 mode: default
 content:
   field_columns_design:
-    type: options_select
+    type: design_field_widget
     weight: 1
     region: content
     settings: {  }

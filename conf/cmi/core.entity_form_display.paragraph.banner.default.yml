@@ -30,24 +30,25 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_banner_design:
-    type: options_select
+    type: design_field_widget
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_banner_link:
-    type: link_target_field_widget
+    type: link_target_icon_field_widget
     weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      link_target: ''
-      linkit_auto_link_text: 0
       linkit_profile: tpr_content
+      linkit_auto_link_text: 0
+      link_target: ''
+      icon: ''
     third_party_settings: {  }
   field_banner_link_design:
-    type: options_select
+    type: design_field_widget
     weight: 5
     region: content
     settings: {  }

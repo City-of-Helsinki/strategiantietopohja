@@ -41,6 +41,52 @@ function helstra_phenomenon_field_widget_paragraphs_form_alter(&$element, &$form
 }
 
 /**
+ * Implements hook_entity_access().
+ */
+function helstra_phenomenon_entity_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  // Restrict access to path "fi/tilannekuva" by IP or authentication.
+  if (\Drupal::currentUser()->isAuthenticated()) {
+  
+  } else {
+    if ($entity->bundle() == 'phenomenon' && $operation == 'view') {
+      $path = $entity->toUrl()->toString();
+      if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
+        $ip = \Drupal::request()->getClientIp();
+        if (substr($ip, 0, 8 ) == "137.163.") {
+          \Drupal::service('page_cache_kill_switch')->trigger();
+          \Drupal::logger('helstra_phenomenon')->error('Access granted from: ' . $ip);
+          $access_result = \Drupal\Core\Access\AccessResult::allowed();
+          $access_result->setCacheMaxAge(0);
+          $access_result->resetCacheContexts();
+          $access_result->addCacheContexts(['ip']);
+          return $access_result;
+        } else {
+          \Drupal::service('page_cache_kill_switch')->trigger();
+          \Drupal::logger('helstra_phenomenon')->error('Access denied from: ' . $ip);
+          $access_result = \Drupal\Core\Access\AccessResult::forbidden();
+          $access_result->setCacheMaxAge(0);
+          $access_result->resetCacheContexts();
+          $access_result->addCacheContexts(['ip']);
+          return $access_result;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function helstra_phenomenon_preprocess_node__phenomenon(&$variables) {
+  // Don't cache path "fi/tilannekuva".
+  $node = $variables['node'];
+  $path = $node->toUrl()->toString();
+  if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
+    $variables['#cache']['contexts'][] = 'ip';
+  }
+}
+
+/**
  * Implements hook_theme().
  */
 function helstra_phenomenon_theme() {

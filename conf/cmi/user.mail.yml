@@ -4,7 +4,7 @@ langcode: en
 cancel_confirm:
   subject: 'Account cancellation request for [user:display-name] at [site:name]'
   body: |-
-    [user:display-name],
+    [user:display-name]
 
     A request to cancel your account has been made at [site:name].
 

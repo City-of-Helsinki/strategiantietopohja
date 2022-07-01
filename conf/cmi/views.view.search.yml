@@ -270,7 +270,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_term
-          operator: or
+          operator: 'not empty'
           value: {  }
           group: 1
           exposed: true
@@ -291,6 +291,7 @@ display:
               anonymous: '0'
               admin: '0'
               content_producer: '0'
+              read_only: '0'
             reduce: false
           is_grouped: false
           group_info:
