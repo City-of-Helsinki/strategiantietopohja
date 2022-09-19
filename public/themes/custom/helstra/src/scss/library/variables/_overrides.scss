@@ -1,0 +1,16 @@
+a.link {
+  color: var(--hdbt-default-link-color);
+
+  &[target="_blank"]::after {
+    background-color: var(--hdbt-default-link-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--hdbt-color-bus--primary);
+
+    &[target="_blank"]::after {
+      background-color: var(--hdbt-color-bus--primary);
+    }
+  }
+}
