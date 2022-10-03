@@ -74,6 +74,7 @@ module:
   metatag_twitter_cards: 0
   metatag_views: 0
   migrate: 0
+  mysql: 0
   node: 0
   oembed_providers: 0
   options: 0
