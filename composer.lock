@@ -4,70 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19b40a7fea2efc064730d0fee97ef48b",
+    "content-hash": "5156be884e2933d58d8e170ea9f62e6d",
     "packages": [
-        {
-            "name": "City-of-Helsinki/php-hauki-client",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/City-of-Helsinki/php-hauki-client.git",
-                "reference": "41f9eacfe61731132d0d32e4e6acfdddf7919a8e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/City-of-Helsinki/php-hauki-client/zipball/41f9eacfe61731132d0d32e4e6acfdddf7919a8e",
-                "reference": "41f9eacfe61731132d0d32e4e6acfdddf7919a8e",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "guzzlehttp/guzzle": "^6.2",
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.12",
-                "phpunit/phpunit": "^8.0 || ^9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Hauki\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Hauki\\Test\\": "test/"
-                }
-            },
-            "license": [
-                "unlicense"
-            ],
-            "authors": [
-                {
-                    "name": "OpenAPI-Generator contributors",
-                    "homepage": "https://openapi-generator.tech"
-                }
-            ],
-            "description": "API for the City of Helsinki opening hours database  # Introduction  To do.  # Authentication methods  <SecurityDefinitions />",
-            "homepage": "https://openapi-generator.tech",
-            "keywords": [
-                "api",
-                "openapi",
-                "openapi-generator",
-                "openapitools",
-                "php",
-                "rest",
-                "sdk"
-            ],
-            "support": {
-                "source": "https://github.com/City-of-Helsinki/php-hauki-client/tree/1.0.0",
-                "issues": "https://github.com/City-of-Helsinki/php-hauki-client/issues"
-            },
-            "time": "2021-02-09T10:01:52+00:00"
-        },
         {
             "name": "alchemy/zippy",
             "version": "0.4.9",
@@ -304,6 +242,68 @@
                 "source": "https://github.com/Chi-teck/drupal-code-generator/tree/1.33.1"
             },
             "time": "2020-12-05T05:59:11+00:00"
+        },
+        {
+            "name": "city-of-helsinki/php-hauki-client",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/City-of-Helsinki/php-hauki-client.git",
+                "reference": "41f9eacfe61731132d0d32e4e6acfdddf7919a8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/City-of-Helsinki/php-hauki-client/zipball/41f9eacfe61731132d0d32e4e6acfdddf7919a8e",
+                "reference": "41f9eacfe61731132d0d32e4e6acfdddf7919a8e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^6.2",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.12",
+                "phpunit/phpunit": "^8.0 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hauki\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Hauki\\Test\\": "test/"
+                }
+            },
+            "license": [
+                "unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "OpenAPI-Generator contributors",
+                    "homepage": "https://openapi-generator.tech"
+                }
+            ],
+            "description": "API for the City of Helsinki opening hours database  # Introduction  To do.  # Authentication methods  <SecurityDefinitions />",
+            "homepage": "https://openapi-generator.tech",
+            "keywords": [
+                "api",
+                "openapi",
+                "openapi-generator",
+                "openapitools",
+                "php",
+                "rest",
+                "sdk"
+            ],
+            "support": {
+                "source": "https://github.com/City-of-Helsinki/php-hauki-client/tree/1.0.0",
+                "issues": "https://github.com/City-of-Helsinki/php-hauki-client/issues"
+            },
+            "time": "2021-02-09T10:01:52+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -1808,12 +1808,12 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
-                    "homepage": "https://www.drupal.org/user/3661446"
-                },
-                {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
                     "name": "dww",
@@ -1897,12 +1897,12 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "fethi.krout",
-                    "homepage": "https://www.drupal.org/user/3206765"
-                },
-                {
                     "name": "matio89",
                     "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "Musa.thomas",
+                    "homepage": "https://www.drupal.org/user/1213824"
                 },
                 {
                     "name": "romainj",
@@ -1958,12 +1958,12 @@
             ],
             "authors": [
                 {
-                    "name": "Eyal Shalev",
-                    "homepage": "https://www.drupal.org/user/1418090"
-                },
-                {
                     "name": "colan",
                     "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "Eyal Shalev",
+                    "homepage": "https://www.drupal.org/user/1418090"
                 }
             ],
             "description": "Queries the database for entities using tokens",
@@ -3236,7 +3236,8 @@
                 "shasum": "0d534ab8e44786a352e24c7cec3dc06bef155f66"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.7.7 || ^9",
+                "drupal/hal": "*"
             },
             "require-dev": {
                 "drupal/paragraphs": "^1"
@@ -3263,20 +3264,16 @@
             ],
             "authors": [
                 {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
                     "name": "andypost",
                     "homepage": "https://www.drupal.org/user/118908"
                 },
                 {
                     "name": "benjy",
                     "homepage": "https://www.drupal.org/user/1852732"
+                },
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
                     "name": "dawehner",
@@ -3289,6 +3286,10 @@
                 {
                     "name": "larowlan",
                     "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
                 }
             ],
             "description": "Imports default content when a module is enabled",
@@ -3428,20 +3429,20 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "RenatoG",
-                    "homepage": "https://www.drupal.org/user/3326031"
-                },
-                {
-                    "name": "diamondsea",
-                    "homepage": "https://www.drupal.org/user/430714"
-                },
-                {
                     "name": "hmartens",
                     "homepage": "https://www.drupal.org/user/622826"
                 },
                 {
                     "name": "loopduplicate",
                     "homepage": "https://www.drupal.org/user/717290"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "RenatoG",
+                    "homepage": "https://www.drupal.org/user/3326031"
                 },
                 {
                     "name": "sonemonu",
@@ -3571,10 +3572,6 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "TR",
-                    "homepage": "https://www.drupal.org/user/202830"
-                },
-                {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
                 },
@@ -3593,6 +3590,10 @@
                 {
                     "name": "mglaman",
                     "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "TR",
+                    "homepage": "https://www.drupal.org/user/202830"
                 }
             ],
             "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
@@ -3663,16 +3664,16 @@
                     "homepage": "https://www.drupal.org/user/3260690"
                 },
                 {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
                     "name": "marcingy",
                     "homepage": "https://www.drupal.org/user/77320"
                 },
                 {
                     "name": "oknate",
                     "homepage": "https://www.drupal.org/user/471638"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
                 },
                 {
                     "name": "samuel.mortenson",
@@ -4019,10 +4020,6 @@
                 {
                     "name": "nedjo",
                     "homepage": "https://www.drupal.org/user/4481"
-                },
-                {
-                    "name": "tim.plunkett",
-                    "homepage": "https://www.drupal.org/user/241634"
                 }
             ],
             "description": "Enables administrators to package configuration into modules",
@@ -4072,16 +4069,16 @@
                     "homepage": "https://www.drupal.org/user/647364"
                 },
                 {
-                    "name": "Stalski",
-                    "homepage": "https://www.drupal.org/user/322618"
-                },
-                {
                     "name": "jyve",
                     "homepage": "https://www.drupal.org/user/591438"
                 },
                 {
                     "name": "nils.destoop",
                     "homepage": "https://www.drupal.org/user/361625"
+                },
+                {
+                    "name": "Stalski",
+                    "homepage": "https://www.drupal.org/user/322618"
                 },
                 {
                     "name": "swentel",
@@ -5221,8 +5218,12 @@
                     "homepage": "https://www.drupal.org/user/210762"
                 },
                 {
-                    "name": "jcisio",
-                    "homepage": "https://www.drupal.org/user/210762"
+                    "name": "Rajeshreeputra",
+                    "homepage": "https://www.drupal.org/user/3418561"
+                },
+                {
+                    "name": "shadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
                 }
             ],
             "description": "Soundcloud integration for the Media Entity module",
@@ -5490,10 +5491,6 @@
             ],
             "authors": [
                 {
-                    "name": "Mario Steinitz",
-                    "homepage": "https://www.drupal.org/user/2536014"
-                },
-                {
                     "name": "balintk",
                     "homepage": "https://www.drupal.org/user/613760"
                 },
@@ -5504,6 +5501,10 @@
                 {
                     "name": "jcnventura",
                     "homepage": "https://www.drupal.org/user/122464"
+                },
+                {
+                    "name": "Mario Steinitz",
+                    "homepage": "https://www.drupal.org/user/2536014"
                 },
                 {
                     "name": "pfrilling",
@@ -5591,10 +5592,6 @@
                     "homepage": "https://www.drupal.org/user/514222"
                 },
                 {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
                     "name": "jeroen.b",
                     "homepage": "https://www.drupal.org/user/1853532"
                 },
@@ -5605,6 +5602,10 @@
                 {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
                 }
             ],
             "description": "Enables the creation of Paragraphs entities.",
@@ -5648,16 +5649,16 @@
             ],
             "authors": [
                 {
-                    "name": "Grayle",
-                    "homepage": "https://www.drupal.org/user/3145497"
-                },
-                {
                     "name": "efpapado",
                     "homepage": "https://www.drupal.org/user/1009348"
                 },
                 {
                     "name": "esolitos",
                     "homepage": "https://www.drupal.org/user/1567500"
+                },
+                {
+                    "name": "Grayle",
+                    "homepage": "https://www.drupal.org/user/3145497"
                 },
                 {
                     "name": "penyaskito",
@@ -5780,16 +5781,16 @@
                     "homepage": "https://www.drupal.org/user/547746"
                 },
                 {
-                    "name": "Sheldon Rampton",
-                    "homepage": "https://www.drupal.org/user/13085"
-                },
-                {
                     "name": "dgtlmoon",
                     "homepage": "https://www.drupal.org/user/25027"
                 },
                 {
                     "name": "jstoller",
                     "homepage": "https://www.drupal.org/user/99012"
+                },
+                {
+                    "name": "Sheldon Rampton",
+                    "homepage": "https://www.drupal.org/user/13085"
                 },
                 {
                     "name": "tmarly",
@@ -5928,7 +5929,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.4",
-                    "datestamp": "1637145565",
+                    "datestamp": "1654699160",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6140,16 +6141,8 @@
             "authors": [
                 {
                     "name": "Christian Fritsch",
-                    "homepage": "https://www.drupal.org/user/1133806",
+                    "homepage": "https://www.drupal.org/user/2103716",
                     "email": "christian.fritsch@burda.com"
-                },
-                {
-                    "name": "chr.fritsch",
-                    "homepage": "https://www.drupal.org/user/2103716"
-                },
-                {
-                    "name": "oushen",
-                    "homepage": "https://www.drupal.org/user/1200780"
                 },
                 {
                     "name": "thunderbot",
@@ -6184,7 +6177,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.11",
-                    "datestamp": "1634344305",
+                    "datestamp": "1658781789",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6208,8 +6201,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "gbyte",
-                    "homepage": "https://www.drupal.org/user/2381352"
+                    "name": "WalkingDexter",
+                    "homepage": "https://www.drupal.org/user/3251330"
                 }
             ],
             "description": "Creates a standard conform hreflang XML sitemap of the site content and provides a framework for developing other sitemap types.",
@@ -6498,14 +6491,6 @@
             ],
             "authors": [
                 {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "Deciphered",
-                    "homepage": "https://www.drupal.org/user/103796"
-                },
-                {
                     "name": "ademarco",
                     "homepage": "https://www.drupal.org/user/186696"
                 },
@@ -6516,6 +6501,14 @@
                 {
                     "name": "darvanen",
                     "homepage": "https://www.drupal.org/user/1068770"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
                 },
                 {
                     "name": "pescetti",
@@ -6794,7 +6787,7 @@
             ],
             "authors": [
                 {
-                    "name": "Bobík",
+                    "name": "Honza Pobořil",
                     "homepage": "https://www.drupal.org/user/123612"
                 },
                 {
@@ -7291,12 +7284,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "library/"
-                },
                 "files": [
                     "library/HTMLPurifier.composer.php"
                 ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
                 "exclude-from-classmap": [
                     "/library/HTMLPurifier/Language/"
                 ]
@@ -7524,12 +7517,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8500,12 +8493,12 @@
             },
             "type": "library",
             "autoload": {
-                "exclude-from-classmap": [
-                    "src/Tests/"
-                ],
                 "psr-4": {
                     "MakinaCorpus\\Lucene\\": "src/"
-                }
+                },
+                "exclude-from-classmap": [
+                    "src/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8829,52 +8822,7 @@
                 "url": "https://github.com/nodespark/des-connector.git",
                 "reference": "cf8b047734ecb2aed3d8fe9a7629af30e303896c"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nodespark/des-connector/zipball/cf8b047734ecb2aed3d8fe9a7629af30e303896c",
-                "reference": "cf8b047734ecb2aed3d8fe9a7629af30e303896c",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0",
-                "ruflin/elastica": "dev-master"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.4.1 || ^9"
-            },
             "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "nodespark\\DESConnector\\": "src/DESConnector/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "nodespark\\DESConnector\\Test\\": "tests/"
-                }
-            },
-            "license": [
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "Nikolay Ignatov",
-                    "email": "nignatov@nodespark.com",
-                    "homepage": "http://www.nodespark.com",
-                    "role": "Creator and Maintainer"
-                },
-                {
-                    "name": "Lachezar Valchev",
-                    "email": "lachezar.valchev@gmail.com",
-                    "homepage": "https://drupal.org/u/lachezar.valchev",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "An abstraction library for Elasticsearch Connector module for Drupal.",
-            "homepage": "https://github.com/nodespark/des-connector",
-            "support": {
-                "source": "https://github.com/nodespark/des-connector"
-            },
             "time": "2021-05-12T13:05:02+00:00"
         },
         {
@@ -9641,7 +9589,7 @@
                 "shasum": ""
             },
             "require": {
-                "elasticsearch/elasticsearch": "^7.1.1",
+                "elasticsearch/elasticsearch": "^7.10",
                 "ext-json": "*",
                 "nyholm/dsn": "^2.0.0",
                 "php": "^7.2 || ^8.0",
@@ -9652,12 +9600,13 @@
             "require-dev": {
                 "aws/aws-sdk-php": "^3.155",
                 "guzzlehttp/guzzle": "^6.3 || ^7.2",
+                "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.1",
                 "phpunit/phpunit": "^8.5.8 || ^9.4",
-                "symfony/phpunit-bridge": "^5.1.1"
+                "symfony/phpunit-bridge": "^6.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow using IAM authentication with Amazon ElasticSearch Service",
-                "egeloen/http-adapter": "Allow using httpadapter as transport",
                 "guzzlehttp/guzzle": "Allow using guzzle as transport",
                 "monolog/monolog": "Logging request"
             },
@@ -10161,6 +10110,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/error-handler",
             "time": "2021-09-24T13:30:14+00:00"
         },
         {
@@ -11110,12 +11060,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [

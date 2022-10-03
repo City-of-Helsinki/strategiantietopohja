@@ -94,6 +94,19 @@
     },
     "repositories": [
         {
+            "type": "package",
+            "package": {
+              "name": "nodespark/des-connector",
+                "version": "7.x-dev",
+                "type": "library",
+                "source": {
+                  "url": "https://github.com/nodespark/des-connector.git",
+                  "type": "git",
+                  "reference": "cf8b047734ecb2aed3d8fe9a7629af30e303896c"
+                }
+            }
+          },
+        {
             "type": "composer",
             "url": "https://repository.drupal.hel.ninja"
         },
