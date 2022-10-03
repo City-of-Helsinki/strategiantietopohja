@@ -104,13 +104,26 @@
         {
             "type": "package",
             "package": {
-            "name": "mehrpadin/Superfish-for-Drupal",
+            "name": "mehrpadin/superfish-for-drupal",
             "version": "2.1",
             "type": "drupal-library",
             "source": {
-                "url": "https://github.com/mehrpadin/Superfish-for-Drupal.git",
+                "url": "https://github.com/mehrpadin/superfish-for-drupal.git",
                 "type": "git",
                 "reference": "2.1"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "nodespark/des-connector",
+                "version": "7.x-dev",
+                "type": "library",
+                "source": {
+                  "url": "https://github.com/nodespark/des-connector.git",
+                  "type": "git",
+                  "reference": "7.x-dev"
                 }
             }
         }
