@@ -8826,12 +8826,12 @@
             "version": "7.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tuutti/des-connector.git",
+                "url": "https://github.com/nodespark/des-connector.git",
                 "reference": "cf8b047734ecb2aed3d8fe9a7629af30e303896c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tuutti/des-connector/zipball/cf8b047734ecb2aed3d8fe9a7629af30e303896c",
+                "url": "https://api.github.com/repos/nodespark/des-connector/zipball/cf8b047734ecb2aed3d8fe9a7629af30e303896c",
                 "reference": "cf8b047734ecb2aed3d8fe9a7629af30e303896c",
                 "shasum": ""
             },
