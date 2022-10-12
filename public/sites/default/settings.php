@@ -2,11 +2,17 @@
 
 use Symfony\Component\HttpFoundation\Request;
 
+// Increase PHP limits.
 if (PHP_SAPI === 'cli') {
   ini_set('memory_limit', '512M');
   ini_set('upload_max_filesize', '64M');
   ini_set('post_max_size', '64M');
 }
+
+// Disable the Render & Dynamic Page Caches.
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+$settings['cache']['bins']['render'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 if ($simpletest_db = getenv('SIMPLETEST_DB')) {
   $parts = parse_url($simpletest_db);
