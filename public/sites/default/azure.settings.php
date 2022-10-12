@@ -20,3 +20,7 @@ $config['filelog.settings']['location'] = '/tmp';
 
 // Keep old assets for three months (default is one month).
 $config['system.performance']['stale_file_threshold'] = 7776000;
+
+// Disable the Render & Dynamic Page Caches.
+$settings['cache']['bins']['render'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
