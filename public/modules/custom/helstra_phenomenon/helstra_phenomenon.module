@@ -82,6 +82,7 @@ function helstra_phenomenon_preprocess_node__phenomenon(&$variables) {
   $node = $variables['node'];
   $path = $node->toUrl()->toString();
   if (substr($path, 0, 15 ) == "/fi/tilannekuva") {
+    $variables['#cache']['max-age'] = 0;
     $variables['#cache']['contexts'][] = 'ip';
   }
 }
