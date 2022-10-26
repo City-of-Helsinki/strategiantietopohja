@@ -1,0 +1,8 @@
+# Prevent Apache from serving .ht* files:
+<FilesMatch "^\.ht">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+php_value post_max_size 64M
+php_value upload_max_filesize 64M
