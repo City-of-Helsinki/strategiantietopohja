@@ -12,6 +12,10 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml'
 $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
+// Set value for max-age in Cache-Control header.
+$config['system.performance']['cache']['page']['max_age'] = 0;
+$config['system.performance']['cache']['page']['4xx_max_age'] = 0;
+
 if ($simpletest_db = getenv('SIMPLETEST_DB')) {
   $parts = parse_url($simpletest_db);
   putenv(sprintf('DRUPAL_DB_NAME=%s', substr($parts['path'], 1)));
